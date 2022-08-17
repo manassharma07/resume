@@ -1,25 +1,25 @@
 import streamlit as st
 from PIL import Image
-st.set_page_config(page_title="Manas Sharma", layout='centered')
+# st.set_page_config(page_title="Manas Sharma", layout='centered')
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 #####################
 # Header 
 st.write('''
-# Manas Sharma (PhD Student)
-##### *Resume* 
+# Manas Sharma 
+##### **(PhD Student)**
 ''')
 
 image = Image.open('dp.png')
 # st.image(image, width=450)
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1, 2.5, 1])
 
 with col1:
     st.write(' ')
 
 with col2:
-    st.image(image, width=900, use_column_width=True)
+    st.image(image, use_column_width=True)
 
 with col3:
     st.write(' ')
