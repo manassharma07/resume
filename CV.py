@@ -12,14 +12,14 @@ st.write('''
 ''')
 
 image = Image.open('dp.png')
-st.image(image, width=450)
+# st.image(image, width=450)
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.write(' ')
 
 with col2:
-    st.image(image, width=450)
+    st.image(image, width=900, use_column_width=True)
 
 with col3:
     st.write(' ')
