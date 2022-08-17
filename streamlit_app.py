@@ -1,19 +1,28 @@
 import streamlit as st
 from PIL import Image
-
+st.set_page_config(page_title="Manas Sharma", layout='centered')
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 #####################
 # Header 
 st.write('''
-# Chanin Nantasenamat, Ph.D.
+# Manas Sharma (PhD Student)
 ##### *Resume* 
 ''')
 
 image = Image.open('dp.png')
-st.image(image, width=150)
+st.image(image, width=450)
+col1, col2, col3 = st.columns(3)
 
+with col1:
+    st.write(' ')
+
+with col2:
+    st.image(image, width=450)
+
+with col3:
+    st.write(' ')
 st.markdown('## Summary', unsafe_allow_html=True)
 st.info('''
 - Experienced Educator, Researcher and Administrator with almost twenty years of experience in data-oriented environment and a passion for delivering insights based on predictive modeling. 
