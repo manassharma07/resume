@@ -1,4 +1,5 @@
 import streamlit as st
+# import streamlit.components.v1 as components
 from PIL import Image
 # st.set_page_config(page_title="Manas Sharma", layout='centered')
 with open("style.css") as f:
@@ -41,7 +42,7 @@ st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst
 
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #16A2CB;">
-  <a class="navbar-brand" href="https://youtube.com/dataprofessor" target="_blank">Manas Sharma</a>
+  <a class="navbar-brand" href="https://www.bragitoff.com/about/" target="_blank">Manas Sharma</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -57,7 +58,13 @@ st.markdown("""
         <a class="nav-link" href="#about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#code">Code Dev</a>
+        <a class="nav-link" href="#code-development">Code Dev</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#publications">Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#conferences-and-workshops">Conferences</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#social-media">Contact</a>
@@ -98,6 +105,44 @@ def txt4(a, b, c):
     st.markdown(b)
   with col3:
     st.markdown(c)
+
+######################
+## About #############
+st.markdown('''
+## About
+''')
+st.markdown('''
+I am a fourth-year PhD student in Physics at Friedrich Schiller University of Jena (FSU) Germany, fortunate to be advised by [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
+
+Prior to joining FSU, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
+I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
+I am originally from a small, but beautiful town Haldwani, a few minutes from the Nainital in India.
+''')
+
+
+######################
+## NEWS #############
+st.markdown('''
+## News
+''')
+txt('Released ONLINE DEMO of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
+txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
+txt('Gave a talk at ETSF 2022 held at imec in Leuven, Belgium','14 Jun 2022')
+txt('Released Basis Set Converter [Web App](https://www.bragitoff.com/2022/04/basis-set-converter-web-app/)','18 Apr 2022')
+txt('Presented my contributions in TURBOMOLE at the TURBOMOLE developers seminar series','22 Feb 2022')
+# LONG_TEXT = '''ssss
+# sss
+# ss
+# ss
+# s
+# s
+# s
+# s
+# s
+# s
+# s
+# s'''
+# components.html(f"<pre>{LONG_TEXT}</pre>", height=600)
 
 #####################
 # st.markdown('''
@@ -182,48 +227,71 @@ def txt4(a, b, c):
 st.markdown('''
 ## Code development
 ''')
+st.write('#### Contributions')
 txt4('TURBOMOLE', 'DFT based embedding coupled with WFT and RT-TDDFT methods within the RIPER module of the popular TURBOMOLE package', 'https://www.turbomole.org/')
+st.write('#### Independently developed software')
 txt4('CrysX-NN', 'An efficient neural network library from scratch that supports parallelization and GPUs', 'https://github.com/manassharma07/crysx_nn')
 txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality visualizations using complex shaders developed using Unity gaming engine. Avaliable on Android, Windows, Mac and Linux','https://www.bragitoff.com/crysx-3d-viewer/')
 txt4('CrysX-AR', 'An android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
-txt4('CrysX-Crystallographic Tools', 'A web server for classifying antifreeze proteins from non-antifreeze proteins','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
-txt4('ERpred', 'A web server for the prediction of subtype-specific estrogen receptor antagonists', 'http://codes.bio/erpred')
-txt4('HCVpred', 'A web server for predicting the bioactivity of Hepatitis C virus NS5B inhibitors', 'http://codes.bio/hemopred/')
-txt4('HemoPred', 'A web server for predicting the hemolytic activity of peptides', 'http://codes.bio/hemopred/')
-txt4('iQSP', 'A sequence-based tool for the prediction and analysis of quorum sensing peptides', 'http://codes.bio/iqsp/')
-txt4('Meta-iAVP', 'A sequence-based meta-predictor for improving the prediction of antiviral peptides', 'http://codes.bio/meta-iavp/')
-txt4('osFP', 'A web server for predicting the oligomeric state of fluorescent proteins', 'http://codes.bio/osfp/')
-txt4('PAAP', 'A web server for predicting antihypertensive activity of peptides', 'http://codes.bio/paap/')
-txt4('PepBio', 'A web server for predicting the bioactivity of host defense peptide', 'http://codes.bio/pepbio')
-txt4('PyBact', 'Open source software written in Python for bacterial identification', 'https://sourceforge.net/projects/pybact/')
-txt4('TargetAntiAngio', 'A sequence-based tool for the prediction and analysis of anti-angiogenic peptides','http://codes.bio/targetantiangio/')
-txt4('ThalPred', 'Development of decision model for discriminating Thalassemia trait and Iron deficiency anemia','http://codes.bio/thalpred/')
-txt4('THPep', 'A web server for predicting tumor homing peptides','http://codes.bio/thpep/')
+txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
+st.write('#### Web Apps, Tools and Other Projects')
+txt4('CrysX-CompChem File Converter', 'Online demo of frozen density embedding and projection based embedding', '')
+txt4('CrysX-CompChem File Converter', 'Web app that allows inter-conversion between various chemical file formats in current use', 'https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/')
+txt4('Basis Set Converter', 'Web app to inter-convert between various basis set formats', 'https://www.bragitoff.com/2022/04/basis-set-converter-web-app/')
+txt4('The Math App', '', '')
+
+# #####################
+# st.markdown('''
+# ## Skills
+# ''')
+# txt3('Programming', '`Python`, `R`, `Linux`')
+# txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
+# txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `altair`, `ggplot2`')
+# txt3('Machine Learning', '`scikit-learn`')
+# txt3('Deep Learning', '`TensorFlow`')
+# txt3('Web development', '`Flask`, `HTML`, `CSS`')
+# txt3('Model deployment', '`streamlit`, `gradio`, `R Shiny`, `Heroku`, `AWS`, `Digital Ocean`')
 
 
 #####################
 st.markdown('''
-## Skills
+## Publications
 ''')
-txt3('Programming', '`Python`, `R`, `Linux`')
-txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
-txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `altair`, `ggplot2`')
-txt3('Machine Learning', '`scikit-learn`')
-txt3('Deep Learning', '`TensorFlow`')
-txt3('Web development', '`Flask`, `HTML`, `CSS`')
-txt3('Model deployment', '`streamlit`, `gradio`, `R Shiny`, `Heroku`, `AWS`, `Digital Ocean`')
+st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
+txt('','')
+txt('','')
+txt('','')
+txt('','')
 
+
+#####################
+st.markdown('''
+## Conferences and Workshops
+''')
+txt4('Poster', 'WATOC 2022', '4 Jul 2022')
+txt4('Talk', 'ETSF 2022', '14 Jun 2022')
+txt4('Talk', 'Turbomole Developers Seminar Series', '14 Jun 2022')
+txt4('Talk', 'NOA Spring Meeting', '14 Jun 2022')
+txt4('Talk', 'CMMS 2021', '14 Jun 2022')
+txt4('Talk', 'EMRS 2021', '14 Jun 2022')
+txt4('Poster', 'STC 2021', '14 Jun 2022')
+txt4('Poster', 'CMMS 2021', '14 Jun 2022')
 #####################
 st.markdown('''
 ## Social Media
 ''')
-txt2('LinkedIn', 'https://www.linkedin.com/in/chanin-nantasenamat')
-txt2('Twitter', 'https://twitter.com/thedataprof')
-txt2('GitHub', 'https://github.com/chaninn/')
-txt2('', 'https://github.com/chaninlab/')
-txt2('', 'https://github.com/dataprofessor')
-txt2('ORCID', 'http://orcid.org/0000-0003-1040-663X')
-txt2('Scopus', 'http://www.scopus.com/authid/detail.url?authorId=12039071300')
-txt2('ResearcherID', 'http://www.researcherid.com/rid/F-1021-2010')
-txt2('ResearchGate', 'https://www.researchgate.net/profile/Chanin_Nantasenamat')
-txt2('Publons', 'https://publons.com/a/303133/')
+txt2('LinkedIn', 'https://www.linkedin.com/in/manassharma07')
+txt2('Blog', 'https://bragitoff.com')
+txt2('YouTube', 'https://www.youtube.com/c/Bragitoff_physics')
+txt2('Twitter', 'https://twitter.com/manassharma07')
+txt2('GitHub', 'https://github.com/manassharma07/')
+txt2('Instagram', 'https://www.instagram.com/___physwhiz___')
+txt2('', 'https://www.instagram.com/ducktape07/')
+txt2('', 'https://www.instagram.com/crysx_3d/')
+txt2('Facebook', 'https://www.facebook.com/ducktape07')
+txt2('', 'https://www.facebook.com/bragitoff/')
+txt2('', 'https://www.facebook.com/physwhizforum/')
+txt2('ORCID', 'https://orcid.org/0000-0002-5346-6280')
+txt2('Google Scholar', 'https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en')
+txt2('ResearchGate', 'https://www.researchgate.net/profile/Manas-Sharma-5')
+
