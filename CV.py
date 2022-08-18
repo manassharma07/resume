@@ -24,15 +24,16 @@ with col2:
 
 with col3:
     st.write(' ')
-st.write('## Research Interest', unsafe_allow_html=True)
+st.write('## Research Interests', unsafe_allow_html=True)
 st.info('''
 My passion lies in **developing codes and methods** to model the **light-matter interaction of hybrid systems**. More specifically, I am working on improving and accelerating **quantum embedding** techniques for molecular and periodic systems. 
 A core focus of my Ph.D. has been on implementing **density functional theory (DFT) based embedding techniques** and coupling them to real time-time dependent DFT (**RT-TDDFT**) and wavefunction theory (**WFT**) methods. 
 Most notably, I was able to calculate the excitation energies of solvated molecules and adsorption energies of **molecule-periodic** systems using **WFT-in-DFT** method at only a fraction of cost of a traditional calculation.
 More recently, my work has been focused on accurate molecule-in-periodic embedding and high harmonic generation via RT-TDDFT. 
-Recently, I have also started taking interest in **deep learning** and created a performant neural network library from scratch which supports parallelization and GPUs.
-I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>10` conferences (`5` talks; `5` posters)** as well as publishing **`5` research articles**.
-Besides all this, I love to make YouTube tutorials, web & android apps, and computer software/libraries for researchers and students.
+Recently, I have also started taking interest in **deep learning** and created a performant neural network library from scratch which supports parallelization and GPUs. 
+I am also experienced in creating GUIs for material modeling, visualizations and input file creations.
+
+Besides all this, I love making [YouTube tutorials](https://www.youtube.com/c/Bragitoff_physics), web & [android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) for researchers and students.
 ''')
 
 #####################
@@ -61,10 +62,13 @@ st.markdown("""
         <a class="nav-link" href="#code-development">Code Dev</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#publications">Publications</a>
+        <a class="nav-link" href="#selected-publications">Publications</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#conferences-and-workshops">Conferences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Skills</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#social-media">Contact</a>
@@ -114,9 +118,11 @@ st.markdown('''
 st.markdown('''
 I am a fourth-year PhD student in Physics at Friedrich Schiller University of Jena (FSU) Germany, fortunate to be advised by [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
+I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>10` conferences (`5` talks; `5` posters)** as well as publishing **`5` research articles**.
+
 Prior to joining FSU, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
 I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
-I am originally from a small, but beautiful town Haldwani, a few minutes from the Nainital in India.
+I am originally from a small, but beautiful town Haldwani, a few minutes from Nainital in India.
 ''')
 
 
@@ -235,33 +241,35 @@ txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality
 txt4('CrysX-AR', 'An android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
 txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
 st.write('#### Web Apps, Tools and Other Projects')
-txt4('CrysX-CompChem File Converter', 'Online demo of frozen density embedding and projection based embedding', '')
+txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', '')
 txt4('CrysX-CompChem File Converter', 'Web app that allows inter-conversion between various chemical file formats in current use', 'https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/')
 txt4('Basis Set Converter', 'Web app to inter-convert between various basis set formats', 'https://www.bragitoff.com/2022/04/basis-set-converter-web-app/')
-txt4('The Math App', '', '')
+txt4('The Math App', 'A suite of mathematical tools that has the potential to act as a substitute for Computer softwares like Matlab/Scilab on Android devices', 'https://play.google.com/store/apps/details?id=com.bragitoff.themathapp&hl=en_US&gl=US')
+txt4('ML: Microstructure Classification Demo', 'A web demo app of a neural network (crysx_nn) model trained to classify microstutures', 'https://www.bragitoff.com/2022/02/microstructure-classification-using-neural-networks-streamlit-app/')
+txt4('ML: MNIST_Plus Digit Classification Demo', 'A web app that classifies user given handwritten digits using a convolutional network model (PyTorch) trained on a modified MNIST dataset', 'https://www.bragitoff.com/2022/01/digit-recognition-app-streamlit-trained-on-the-mnist_plus-dataset-using-pytorch-cnn-model/')
 
-# #####################
-# st.markdown('''
-# ## Skills
-# ''')
-# txt3('Programming', '`Python`, `R`, `Linux`')
-# txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
-# txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `altair`, `ggplot2`')
-# txt3('Machine Learning', '`scikit-learn`')
-# txt3('Deep Learning', '`TensorFlow`')
-# txt3('Web development', '`Flask`, `HTML`, `CSS`')
-# txt3('Model deployment', '`streamlit`, `gradio`, `R Shiny`, `Heroku`, `AWS`, `Digital Ocean`')
 
 
 #####################
 st.markdown('''
-## Publications
+## Selected Publications
 ''')
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
-txt('','')
-txt('','')
-txt('','')
-txt('','')
+# txt('','')
+# txt('','')
+# txt('','')
+txt('''C. Mueller, **M. Sharma**, and D. Mishra,
+[*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
+**J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
+txt('''**M. Sharma**, and D. Mishra,
+[*CrysX: crystallographic tools for the Android platform*](https://onlinelibrary.wiley.com/iucr/doi/10.1107/S1600576719013682),
+**J. Appl. Cryst.** 52, 1449-1454 ***[COVER PAGE]*** ''','31 Oct **2019**')
+txt('''**M. Sharma**, and D. Mishra,
+[*DFT+U study of small ZnO nanoclusters*](https://aip.scitation.org/doi/abs/10.1063/1.5122485),
+**Phys. Rev. B** 100, 045151 ''','31 July **2019**')
+txt('''**M. Sharma**, D. Mishra, and J. Kumar,
+[*First-principles study of the structural and electronic properties of bulk ZnS and small ZnnSn nanoclusters in the framework of the DFT+U method*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.045151),
+**AIP Conference Proceedings** 2142, 110025''','29 Aug **2019**')
 
 
 #####################
@@ -273,9 +281,35 @@ txt4('Talk', 'ETSF 2022', '14 Jun 2022')
 txt4('Talk', 'Turbomole Developers Seminar Series', '14 Jun 2022')
 txt4('Talk', 'NOA Spring Meeting', '14 Jun 2022')
 txt4('Talk', 'CMMS 2021', '14 Jun 2022')
-txt4('Talk', 'EMRS 2021', '14 Jun 2022')
+txt4('Talk', 'EMRS 2021 (***Best Oral Presentation Award***)', '14 Jun 2022')
 txt4('Poster', 'STC 2021', '14 Jun 2022')
 txt4('Poster', 'CMMS 2021', '14 Jun 2022')
+
+
+
+
+
+# #####################
+st.markdown('''
+## Skills
+''')
+txt3('Programming languages', '`C`,  `C++`, `C#`, `Python`, `FORTRAN`, `Java`, `shell scripting`')
+txt3('DFT methods development', '`PySCF`,  `TURBOMOLE`')
+txt3('DFT / Quantum Chemistry packages', '`Quantum ESPRESSO`, `PySCF`,  `TURBOMOLE`, `NWChem`, `Serenity`')
+txt3('Chemical system/material modeling and visualizations/animations', '`VESTA`, `Avogadro`,  `Jmol`, `VMD`, `CrysX-3D Viewer`, `BURAI`, `Py3Dmol`')
+txt3('Machine Learning', '`scikit-learn`')
+txt3('Deep Learning', '`TensorFlow`, `PyTorch`, `CrysX-NN`')
+txt3('App development', '`Android`, `Windows`')
+txt3('Web development', '`Wordpress`, `HTML`')
+txt3('Web app development', '`Streamlit`')
+txt3('Data processing/wrangling', '`pandas`, `numpy`')
+txt3('Data visualization', '`matplotlib`, `seaborn`')
+txt3('Outreach', '[`YouTube videos`](https://www.youtube.com/c/Bragitoff_physics), [`Blog posts`](https://bragitoff.com), [`Instagram posts`](https://www.instagram.com/___physwhiz___)')
+txt3('Debugging and profiling','`ARM forge for FORTRAN`, `VS code for python`')
+txt3('Miscellaneous','`Video editing`, `Molecular animations`,`Graphic designing`, `Photo editing`')
+
+
+
 #####################
 st.markdown('''
 ## Social Media
