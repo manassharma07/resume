@@ -38,11 +38,20 @@ Besides all this, I love making [YouTube tutorials](https://www.youtube.com/c/Br
 
 #####################
 # Navigation
-
-# st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
-st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">', unsafe_allow_html=True)
+st.markdown('''
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+''', unsafe_allow_html=True)
+st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
+# st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">', unsafe_allow_html=True)
+st.markdown('''
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+''', unsafe_allow_html=True)
 st.markdown("""
-<nav class="navbar fixed-top navbar-expand navbar-dark" style="background-color: #16A2CB;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #16A2CB;">
   <a class="navbar-brand" href="https://www.bragitoff.com/about/" target="_blank">Manas Sharma</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavNew" aria-controls="navbarNavNew" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -71,7 +80,7 @@ st.markdown("""
         <a class="nav-link" href="#selected-publications">Publications</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#conferences-and-workshops">Conferences</a>
+        <a class="nav-link" href="#conferences-workshops-and-seminars">Conferences</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#skills">Skills</a>
@@ -281,18 +290,29 @@ txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 
 #####################
 st.markdown('''
-## Conferences and Workshops
+## Conferences, Workshops and Seminars
 ''')
-txt4('Poster', 'WATOC 2022', '4 Jul 2022')
-txt4('Talk', 'ETSF 2022', '14 Jun 2022')
-txt4('Talk', 'Turbomole Developers Seminar Series', '14 Jun 2022')
-txt4('Talk', 'NOA Spring Meeting', '14 Jun 2022')
-txt4('Talk', 'CMMS 2021', '14 Jun 2022')
-txt4('Talk', 'EMRS 2021 (***Best Oral Presentation Award***)', '14 Jun 2022')
-txt4('Poster', 'STC 2021', '14 Jun 2022')
-txt4('Poster', 'CMMS 2021', '14 Jun 2022')
-
-
+txt4('Talk', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
+txt4('Poster', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul, 2022')
+txt4('Talk', 'Turbomole Developers Seminar Series 2021-2022', '21 Feb 2022')
+txt4('Talk', 'NOA Spring Meeting 2022 (ONLINE) ([link](https://www.noa.uni-jena.de/news-events/see-the-agenda-of-2022-spring-meeting))', '21-23 Feb 2022')
+txt4('Talk', 'Computational Methods in Materials Science (CMMS 2021) (ONLINE) ([link](https://cmms2021.ptbm.pl/))', '24-25 Sep 2022')
+txt4('Poster', '57th Symposium on Theoretical Chemistry (STC 2021) (ONLINE) ([link](https://stc2021.uni-wuerzburg.de/))', '20-24 Sep 2021')
+txt4('Talk','EMRS Fall 2021 meeting (Online) *** BEST ORAL PRESENTATION AWARD*** ([link](https://www.european-mrs.com/meetings/2021-fall-meeting))','20-23 Sep 2021')
+txt4('Talk', 'The Materials and Molecular Modelling Hub++ Annual Conference 2021 (ONLINE)', '14-15 Sep 2021')
+txt4('Talk', 'DokDok Lite 2021 in Jena, Germany ([link](https://www.asp.uni-jena.de/dokdok))', '01-3 Sep 2021')
+txt4('Poster', 'International Workshop on Recent Developments in Electronic Structure (ES21) (ONLINE) ([link](https://www.simonsfoundation.org/international-workshop-on-recent-developments-in-electronic-structure-es21/))', '12-15 Jul 2021')
+txt4('Poster','eSSENCE-eMMC eMeeting MMMM 2021 (Online) ([link](https://sites.google.com/view/emultiscale2021/home))','7-8 Jun 2021')
+txt4('Attended','International Workshop on Computer-Aided Materials Discovery (Weekly Online ZOOM Webinars) ([link](https://www.materialssquare.com/workshop))','27 May-24 Jun 2021')
+txt4('Presentation','NOA CRC 1375 Spring Meeting (ONLINE) ','15‐17 Feb 2021')
+txt4('Attended','Intel® Software Development Tools for HPC (Webinar) ([link](https://indico.tpi.uni-jena.de/event/146/))','11-20 Nov 2020')
+txt4('Attended','Intel® Software Development Tools for Artificial Intelligence (Webinar) ([link](https://indico.tpi.uni-jena.de/event/147/))','17 Nov 2020')
+txt4('Attended','NOA Fall PhD School (ONLINE) ([link](https://indico.tpi.uni-jena.de/event/144/timetable/))','26-28 Oct 2020')
+txt4('Poster + Presentation','NOA Spring School and PI Workshop in Jena, Germany ([link](https://www.noa.uni-jena.de/news+_+events/1st+noa+spring+school+and+pi+workshop_+2-6+march+2020))','2-6 Mar 2020')
+txt4('Attended','NOA seminar by Dr. Heiko Appel (MPI Hamburg) in Jena, Germany ([link](https://www.noa.uni-jena.de/news+_+events/21+january+2020_+noa+seminar+by+dr_+heiko+appel+(mpi+hamburg)))','21 Jan 2020')
+txt4('Attended','24th ETSF Workshop on Electronic Excitations in Jena, Germany ([link](https://workshop.etsf.eu/))','16-20 Sep 2019')
+txt4('Poster','ICABS 2019 in Bhiwani, India ([link](http://www.icabs19.com/))','7-9 Feb 2019')
+txt4('Poster','6th ISIF 2017 in New Delhi, India ([link](http://www.meetingsnmore.com/isif%202017/))','13 Dec 2017')
 
 
 
