@@ -68,6 +68,9 @@ st.markdown("""
         <a class="nav-link" href="#about">About</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#education">Education</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="https://www.bragitoff.com/">Blog</a>
       </li>
       <li class="nav-item">
@@ -127,6 +130,17 @@ def txt4(a, b, c):
     st.markdown(c)
 
 ######################
+## NEWS #############
+st.markdown('''
+## News
+''')
+txt('Released [ONLINE DEMO](https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
+txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
+txt('Gave a talk at ETSF 2022 held at imec in Leuven, Belgium','14 Jun 2022')
+txt('Released Basis Set Converter [Web App](https://www.bragitoff.com/2022/04/basis-set-converter-web-app/)','18 Apr 2022')
+txt('Presented my contributions in TURBOMOLE at the TURBOMOLE developers seminar series','22 Feb 2022')
+
+######################
 ## About #############
 st.markdown('''
 ## About
@@ -142,16 +156,7 @@ I am originally from a small, but beautiful town Haldwani, a few minutes from Na
 ''')
 
 
-######################
-## NEWS #############
-st.markdown('''
-## News
-''')
-txt('Released ONLINE DEMO of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
-txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
-txt('Gave a talk at ETSF 2022 held at imec in Leuven, Belgium','14 Jun 2022')
-txt('Released Basis Set Converter [Web App](https://www.bragitoff.com/2022/04/basis-set-converter-web-app/)','18 Apr 2022')
-txt('Presented my contributions in TURBOMOLE at the TURBOMOLE developers seminar series','22 Feb 2022')
+
 # LONG_TEXT = '''ssss
 # sss
 # ss
@@ -166,10 +171,10 @@ txt('Presented my contributions in TURBOMOLE at the TURBOMOLE developers seminar
 # s'''
 # components.html(f"<pre>{LONG_TEXT}</pre>", height=600)
 
-#####################
-# st.markdown('''
-# ## Education
-# ''')
+####################
+st.markdown('''
+## Education
+''')
 
 # txt('**Doctor of Philosophy** (Medical Technology), *Mahidol University*, Thailand',
 # '2002-2006')
@@ -179,12 +184,19 @@ txt('Presented my contributions in TURBOMOLE at the TURBOMOLE developers seminar
 # - Received Royal Golden Jubilee Ph.D. Scholarship of `2.152 million THB` covering tuition and stipend.
 # - Thesis awarded `1st` Prize by the National Research Council of Thailand.
 # ''')
-
-# txt('**Bachelors of Science** (Biological Science), *Mahidol University International College*, Thailand',
-# '1998-2002')
+txt('**PhD candidate** Physics, *Friedrich Schiller University of Jena*, Jena, Germanys',
+'2019-present')
+txt('**Master of Science** Physics, *University of Delhi*, New Delhi, India',
+'2016-2018')
 # st.markdown('''
-# - GPA: `3.65`
-# - Graduated with First Class Honors.
+# - Average: `87.5%`
+# - Ranked second in my College.
+# ''')
+txt('**Bachelor of Science** (Hons) Physics, *University of Delhi*, New Delhi, India',
+'2013-2016')
+# st.markdown('''
+# - Average: `87.5%`
+# - Ranked second in my College.
 # ''')
 
 #####################
@@ -257,7 +269,7 @@ txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality
 txt4('CrysX-AR', 'An android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
 txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
 st.write('#### Web Apps, Tools and Other Projects')
-txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', '')
+txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', 'https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/')
 txt4('CrysX-CompChem File Converter', 'Web app that allows inter-conversion between various chemical file formats in current use', 'https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/')
 txt4('Basis Set Converter', 'Web app to inter-convert between various basis set formats', 'https://www.bragitoff.com/2022/04/basis-set-converter-web-app/')
 txt4('The Math App', 'A suite of mathematical tools that has the potential to act as a substitute for Computer softwares like Matlab/Scilab on Android devices', 'https://play.google.com/store/apps/details?id=com.bragitoff.themathapp&hl=en_US&gl=US')
