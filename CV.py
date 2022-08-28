@@ -304,6 +304,7 @@ txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
+txt4('Poster', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
 txt4('Talk', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
 txt4('Poster', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul, 2022')
 txt4('Talk', 'Turbomole Developers Seminar Series 2021-2022', '21 Feb 2022')
