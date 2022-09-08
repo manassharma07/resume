@@ -123,7 +123,8 @@ def txt3(a, b):
 def txt4(a, b, c):
   col1, col2, col3 = st.columns([1.5,2,2])
   with col1:
-    st.markdown(f'`{a}`')
+    # st.markdown(f'`{a}`')
+    st.markdown(f'<b style="color:#c95593;font-size:16px;">{a}</b>', unsafe_allow_html=True)
   with col2:
     st.markdown(b)
   with col3:
@@ -304,16 +305,18 @@ txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
-txt4('Poster', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
+# txt4('Poster', 'BIOVIA User Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '- Oct 2022')
+# txt4('Poster ([link](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/))', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
+txt4('Poster ([link](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/))', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
 txt4('Talk', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
-txt4('Poster', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul, 2022')
+txt4('Poster', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul 2022')
 txt4('Talk', 'Turbomole Developers Seminar Series 2021-2022', '21 Feb 2022')
 txt4('Talk', 'NOA Spring Meeting 2022 (ONLINE) ([link](https://www.noa.uni-jena.de/news-events/see-the-agenda-of-2022-spring-meeting))', '21-23 Feb 2022')
 txt4('Talk', 'Computational Methods in Materials Science (CMMS 2021) (ONLINE) ([link](https://cmms2021.ptbm.pl/))', '24-25 Sep 2022')
 txt4('Poster', '57th Symposium on Theoretical Chemistry (STC 2021) (ONLINE) ([link](https://stc2021.uni-wuerzburg.de/))', '20-24 Sep 2021')
 txt4('Talk','EMRS Fall 2021 meeting (Online) ***BEST ORAL PRESENTATION AWARD*** ([link](https://www.european-mrs.com/meetings/2021-fall-meeting))','20-23 Sep 2021')
 txt4('Talk', 'The Materials and Molecular Modelling Hub++ Annual Conference 2021 (ONLINE)', '14-15 Sep 2021')
-txt4('Talk', 'DokDok Lite 2021 in Jena, Germany ([link](https://www.asp.uni-jena.de/dokdok))', '01-3 Sep 2021')
+txt4('Talk', 'DokDok Lite 2021 in Jena, Germany ([link](https://www.asp.uni-jena.de/doctoral-phd/former-events/dokdok-lite-2021))', '01-3 Sep 2021')
 txt4('Poster', 'International Workshop on Recent Developments in Electronic Structure (ES21) (ONLINE) ([link](https://www.simonsfoundation.org/international-workshop-on-recent-developments-in-electronic-structure-es21/))', '12-15 Jul 2021')
 txt4('Poster','eSSENCE-eMMC eMeeting MMMM 2021 (Online) ([link](https://sites.google.com/view/emultiscale2021/home))','7-8 Jun 2021')
 txt4('Attended','International Workshop on Computer-Aided Materials Discovery (Weekly Online ZOOM Webinars) ([link](https://www.materialssquare.com/workshop))','27 May-24 Jun 2021')
