@@ -306,8 +306,8 @@ st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
 # txt4('Poster', 'BIOVIA User Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '- Oct 2022')
-# txt4('Poster ([link](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/))', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
-txt4('Poster ([link](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/))', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
+# txt4('Poster [🔗](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/)', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
+txt4('Poster [🔗](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/)', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
 txt4('Talk', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
 txt4('Poster', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul 2022')
 txt4('Talk', 'Turbomole Developers Seminar Series 2021-2022', '21 Feb 2022')
