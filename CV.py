@@ -185,7 +185,7 @@ st.markdown('''
 # - Received Royal Golden Jubilee Ph.D. Scholarship of `2.152 million THB` covering tuition and stipend.
 # - Thesis awarded `1st` Prize by the National Research Council of Thailand.
 # ''')
-txt('**PhD candidate** Physics, *Friedrich Schiller University of Jena*, Jena, Germanys',
+txt('**PhD candidate** Physics, *Friedrich Schiller University Jena*, Jena, Germany',
 '2019-present')
 txt('**Master of Science** Physics, *University of Delhi*, New Delhi, India',
 '2016-2018')
