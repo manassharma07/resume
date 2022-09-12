@@ -136,11 +136,11 @@ st.markdown('''
 ## News
 ''')
 txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Sep 2022')
-txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022)','8 Sep 2022')
-txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/)','23 Aug 2022')
+txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022) in Jena, Germany','8 Sep 2022')
+txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/) in Lausanne, Switzerland','23 Aug 2022')
 txt('Released [ONLINE DEMO](https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
 txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
-txt('Gave a talk at ETSF 2022 held at imec in Leuven, Belgium','14 Jun 2022')
+txt('Gave a talk at [ETSF 2022](https://workshop.etsf.eu/) held at [imec](https://www.imec-int.com/en) in Leuven, Belgium','14 Jun 2022')
 txt('Released Basis Set Converter [Web App](https://www.bragitoff.com/2022/04/basis-set-converter-web-app/)','18 Apr 2022')
 txt('Presented my contributions in TURBOMOLE at the TURBOMOLE developers seminar series','22 Feb 2022')
 
@@ -152,7 +152,7 @@ st.markdown('''
 st.markdown('''
 I am a fourth-year PhD student in Physics at Friedrich Schiller University of Jena (FSU) Germany, fortunate to be advised by [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
-I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>10` conferences (`5` talks; `5` posters)** as well as publishing **`5` research articles**.
+I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>16` conferences (`7` talks; `9` posters)** as well as publishing **`5` research articles**.
 
 Prior to joining FSU, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
 I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
@@ -366,7 +366,7 @@ txt2('YouTube', 'https://www.youtube.com/c/Bragitoff_physics')
 txt2('Twitter', 'https://twitter.com/manassharma07')
 txt2('GitHub', 'https://github.com/manassharma07/')
 txt2('Instagram', 'https://www.instagram.com/___physwhiz___')
-txt2('', 'https://www.instagram.com/ducktape07/')
+txt2('*', 'https://www.instagram.com/ducktape07/')
 txt2('', 'https://www.instagram.com/crysx_3d/')
 txt2('Facebook', 'https://www.facebook.com/ducktape07')
 txt2('', 'https://www.facebook.com/bragitoff/')
