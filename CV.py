@@ -137,7 +137,7 @@ st.markdown('''
 ''')
 txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Sep 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022)','8 Sep 2022')
-txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022]()','23 Aug 2022')
+txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/)','23 Aug 2022')
 txt('Released [ONLINE DEMO](https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
 txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
 txt('Gave a talk at ETSF 2022 held at imec in Leuven, Belgium','14 Jun 2022')
