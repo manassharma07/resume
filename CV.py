@@ -33,7 +33,7 @@ More recently, my work has been focused on accurate molecule-in-periodic embeddi
 Recently, I have also started taking interest in **deep learning** and created a performant neural network library from scratch which supports parallelization and GPUs. 
 I am also experienced in creating GUIs for material modeling, visualizations and input file creations.
 
-Besides all this, I love making [YouTube tutorials](https://www.youtube.com/c/Bragitoff_physics), web & [android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) for researchers and students.
+Besides all this, I love making [YouTube tutorials](https://www.youtube.com/c/Bragitoff_physics), web & [Android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) for researchers and students.
 ''')
 
 #####################
@@ -135,6 +135,9 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Sep 2022')
+txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022)','8 Sep 2022')
+txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022]()','23 Aug 2022')
 txt('Released [ONLINE DEMO](https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
 txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
 txt('Gave a talk at ETSF 2022 held at imec in Leuven, Belgium','14 Jun 2022')
@@ -267,8 +270,8 @@ txt4('TURBOMOLE', 'DFT based embedding coupled with WFT and RT-TDDFT methods wit
 st.write('#### Independently developed software')
 txt4('CrysX-NN', 'An efficient neural network library from scratch that supports parallelization and GPUs', 'https://github.com/manassharma07/crysx_nn')
 txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality visualizations using complex shaders developed using Unity gaming engine. Avaliable on Android, Windows, Mac and Linux','https://www.bragitoff.com/crysx-3d-viewer/')
-txt4('CrysX-AR', 'An android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
-txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
+txt4('CrysX-AR', 'An Android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
+txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an Android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
 st.write('#### Web Apps, Tools and Other Projects')
 txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', 'https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/')
 txt4('CrysX-CompChem File Converter', 'Web app that allows inter-conversion between various chemical file formats in current use', 'https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/')
@@ -306,7 +309,7 @@ st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
 # txt4('Poster', 'BIOVIA User Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '- Oct 2022')
-# txt4('Poster [🔗](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/)', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
+txt4('Poster [🔗](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/)', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/)', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
 txt4('Talk', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
 txt4('Poster', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul 2022')
