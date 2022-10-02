@@ -136,7 +136,7 @@ st.markdown('''
 ## News
 ''')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/) at [BIOVIA Conference 2022](https://events.3ds.com/biovia-conference-2022)','11 Oct 2022')
-txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Sep 2022')
+txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Oct 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022) in Jena, Germany','8 Sep 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/) in Lausanne, Switzerland','23 Aug 2022')
 txt('Released [ONLINE DEMO](https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
@@ -291,7 +291,7 @@ st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citat
 # txt('','')
 # txt('','')
 txt('''**M. Sharma**, and Marek Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*]()',
-**J. Chem. Theo. Comput.** xx, xxx-xxx ***[ON SUPPLEMENTARY COVER]***''', 'Oct 2022')
+**J. Chem. Theo. Comput.** xx, xxx-xxx ***[ON SUPPLEMENTARY COVER🔖]***''', 'Oct **2022**')
 txt('''C. Mueller, **M. Sharma**, and Marek Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
