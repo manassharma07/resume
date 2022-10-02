@@ -109,7 +109,8 @@ def txt(a, b):
 def txt2(a, b):
   col1, col2 = st.columns([1,4])
   with col1:
-    st.markdown(f'`{a}`')
+    # st.markdown(f'`{a}`')
+    st.markdown(f'<b style="color:#c95593;font-size:16px;">{a}</b>', unsafe_allow_html=True)
   with col2:
     st.markdown(b)
 
