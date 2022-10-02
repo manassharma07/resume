@@ -135,6 +135,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Presented a [poster](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/) at [BIOVIA Conference 2022](https://events.3ds.com/biovia-conference-2022)','11 Oct 2022')
 txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Sep 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022) in Jena, Germany','8 Sep 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/) in Lausanne, Switzerland','23 Aug 2022')
@@ -289,13 +290,14 @@ st.markdown('''
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
 # txt('','')
 # txt('','')
-# txt('','')
-txt('''C. Mueller, **M. Sharma**, and D. Mishra,
+txt('''**M. Sharma**, and Marek Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*]()',
+**J. Chem. Theo. Comput.** xx, xxx-xxx ***[ON SUPPLEMENTARY COVER]***''', 'Oct 2022')
+txt('''C. Mueller, **M. Sharma**, and Marek Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
 txt('''**M. Sharma**, and D. Mishra,
 [*CrysX: crystallographic tools for the Android platform*](https://onlinelibrary.wiley.com/iucr/doi/10.1107/S1600576719013682),
-**J. Appl. Cryst.** 52, 1449-1454 ***[COVER PAGE]*** ''','31 Oct **2019**')
+**J. Appl. Cryst.** 52, 1449-1454 ***[ON COVER PAGE🔖]*** ''','31 Oct **2019**')
 txt('''**M. Sharma**, and D. Mishra,
 [*DFT+U study of small ZnO nanoclusters*](https://aip.scitation.org/doi/abs/10.1063/1.5122485),
 **Phys. Rev. B** 100, 045151 ''','31 July **2019**')
@@ -308,7 +310,7 @@ txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
-# txt4('Poster', 'BIOVIA User Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '- Oct 2022')
+txt4('Poster [🔗](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/)', 'BIOVIA Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '11-13 Oct 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/)', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/)', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
 txt4('Talk [🔗](https://youtu.be/PEU5y_BQp1k)', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
@@ -317,7 +319,7 @@ txt4('Talk [🔗]()', 'Turbomole Developers Seminar Series 2021-2022', '21 Feb 2
 txt4('Talk', 'NOA Spring Meeting 2022 (ONLINE) ([link](https://www.noa.uni-jena.de/news-events/see-the-agenda-of-2022-spring-meeting))', '21-23 Feb 2022')
 txt4('Talk', 'Computational Methods in Materials Science (CMMS 2021) (ONLINE) ([link](https://cmms2021.ptbm.pl/))', '24-25 Sep 2022')
 txt4('Poster', '57th Symposium on Theoretical Chemistry (STC 2021) (ONLINE) ([link](https://stc2021.uni-wuerzburg.de/))', '20-24 Sep 2021')
-txt4('Talk [🔗]()','EMRS Fall 2021 meeting (Online) ***BEST ORAL PRESENTATION AWARD*** ([link](https://www.european-mrs.com/meetings/2021-fall-meeting))','20-23 Sep 2021')
+txt4('Talk [🔗]()','EMRS Fall 2021 meeting (Online) ***BEST ORAL PRESENTATION AWARD 🏆*** ([link](https://www.european-mrs.com/meetings/2021-fall-meeting))','20-23 Sep 2021')
 txt4('Talk [🔗](https://youtu.be/Qcgp1qTMyks)', 'The Materials and Molecular Modelling Hub++ Annual Conference 2021 (ONLINE)', '14-15 Sep 2021')
 txt4('Talk [🔗](https://youtu.be/_r1IiEpfKTw)', 'DokDok Lite 2021 in Jena, Germany ([link](https://www.asp.uni-jena.de/doctoral-phd/former-events/dokdok-lite-2021))', '01-3 Sep 2021')
 txt4('Poster', 'International Workshop on Recent Developments in Electronic Structure (ES21) (ONLINE) ([link](https://www.simonsfoundation.org/international-workshop-on-recent-developments-in-electronic-structure-es21/))', '12-15 Jul 2021')
