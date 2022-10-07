@@ -140,7 +140,7 @@ txt('Presented a [poster](https://www.bragitoff.com/2022/09/biovia-conference-20
 txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/journal/jctcce)',' Oct 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022) in Jena, Germany','8 Sep 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/) in Lausanne, Switzerland','23 Aug 2022')
-txt('Released [ONLINE DEMO](https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
+txt('Released [ONLINE DEMO](https://www.bragitoff.com/2022/09/crysx-demo-dft-based-embedding/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
 txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
 txt('Gave a talk at [ETSF 2022](https://workshop.etsf.eu/) held at [imec](https://www.imec-int.com/en) in Leuven, Belgium','14 Jun 2022')
 txt('Released Basis Set Converter [Web App](https://www.bragitoff.com/2022/04/basis-set-converter-web-app/)','18 Apr 2022')
@@ -275,7 +275,7 @@ txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality
 txt4('CrysX-AR', 'An Android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
 txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an Android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
 st.write('#### Web Apps, Tools and Other Projects')
-txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', 'https://manassharma07-crysx-demo-dft-based-embedding--home-oay719.streamlitapp.com/')
+txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', 'https://www.bragitoff.com/2022/09/crysx-demo-dft-based-embedding/')
 txt4('CrysX-CompChem File Converter', 'Web app that allows inter-conversion between various chemical file formats in current use', 'https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/')
 txt4('Basis Set Converter', 'Web app to inter-convert between various basis set formats', 'https://www.bragitoff.com/2022/04/basis-set-converter-web-app/')
 txt4('The Math App', 'A suite of mathematical tools that has the potential to act as a substitute for Computer softwares like Matlab/Scilab on Android devices', 'https://play.google.com/store/apps/details?id=com.bragitoff.themathapp&hl=en_US&gl=US')
@@ -291,9 +291,9 @@ st.markdown('''
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
 # txt('','')
 # txt('','')
-txt('''**M. Sharma**, and Marek Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*]()',
+txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*]()',
 **J. Chem. Theo. Comput.** xx, xxx-xxx ***[ON SUPPLEMENTARY COVER🔖]***''', 'Oct **2022**')
-txt('''C. Mueller, **M. Sharma**, and Marek Sierka,
+txt('''C. Mueller, **M. Sharma**, and M. Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
 txt('''**M. Sharma**, and D. Mishra,
@@ -301,10 +301,10 @@ txt('''**M. Sharma**, and D. Mishra,
 **J. Appl. Cryst.** 52, 1449-1454 ***[ON COVER PAGE🔖]*** ''','31 Oct **2019**')
 txt('''**M. Sharma**, and D. Mishra,
 [*DFT+U study of small ZnO nanoclusters*](https://aip.scitation.org/doi/abs/10.1063/1.5122485),
-**Phys. Rev. B** 100, 045151 ''','31 July **2019**')
+**AIP Conference Proceedings** 2142, 110025 ''','29 Aug **2019**')
 txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 [*First-principles study of the structural and electronic properties of bulk ZnS and small ZnnSn nanoclusters in the framework of the DFT+U method*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.045151),
-**AIP Conference Proceedings** 2142, 110025''','29 Aug **2019**')
+**Phys. Rev. B** 100, 045151''','31 Jul **2019**')
 
 
 #####################
@@ -318,22 +318,22 @@ txt4('Talk [🔗](https://youtu.be/PEU5y_BQp1k)', '25th ETSF Workshop on Electro
 txt4('Poster [🔗]()', '~~12th Triennial Congress of the World Association of Theoretical and Computational Chemists (WATOC 2022) in Vancouver, Canada~~***Could not attend due to VISA issue :(***', '3–8 Jul 2022')
 txt4('Talk [🔗]()', 'Turbomole Developers Seminar Series 2021-2022', '21 Feb 2022')
 txt4('Talk', 'NOA Spring Meeting 2022 (ONLINE) ([link](https://www.noa.uni-jena.de/news-events/see-the-agenda-of-2022-spring-meeting))', '21-23 Feb 2022')
-txt4('Talk', 'Computational Methods in Materials Science (CMMS 2021) (ONLINE) ([link](https://cmms2021.ptbm.pl/))', '24-25 Sep 2022')
+txt4('Talk', 'Computational Methods in Materials Science (CMMS 2021) (ONLINE) ([link](https://cmms2021.ptbm.pl/))', '24-25 Sep 2021')
 txt4('Poster', '57th Symposium on Theoretical Chemistry (STC 2021) (ONLINE) ([link](https://stc2021.uni-wuerzburg.de/))', '20-24 Sep 2021')
 txt4('Talk [🔗]()','EMRS Fall 2021 meeting (Online) ***BEST ORAL PRESENTATION AWARD 🏆*** ([link](https://www.european-mrs.com/meetings/2021-fall-meeting))','20-23 Sep 2021')
 txt4('Talk [🔗](https://youtu.be/Qcgp1qTMyks)', 'The Materials and Molecular Modelling Hub++ Annual Conference 2021 (ONLINE)', '14-15 Sep 2021')
-txt4('Talk [🔗](https://youtu.be/_r1IiEpfKTw)', 'DokDok Lite 2021 in Jena, Germany ([link](https://www.asp.uni-jena.de/doctoral-phd/former-events/dokdok-lite-2021))', '01-3 Sep 2021')
+txt4('Talk [🔗](https://youtu.be/_r1IiEpfKTw)', 'DokDok Lite 2021 in Jena, Germany ([link](https://www.asp.uni-jena.de/doctoral-phd/former-events/dokdok-lite-2021))', '01-03 Sep 2021')
 txt4('Poster', 'International Workshop on Recent Developments in Electronic Structure (ES21) (ONLINE) ([link](https://www.simonsfoundation.org/international-workshop-on-recent-developments-in-electronic-structure-es21/))', '12-15 Jul 2021')
-txt4('Poster','eSSENCE-eMMC eMeeting MMMM 2021 (Online) ([link](https://sites.google.com/view/emultiscale2021/home))','7-8 Jun 2021')
+txt4('Poster','eSSENCE-eMMC eMeeting MMMM 2021 (Online) ([link](https://sites.google.com/view/emultiscale2021/home))','07-08 Jun 2021')
 txt4('Attended','International Workshop on Computer-Aided Materials Discovery (Weekly Online ZOOM Webinars) ([link](https://www.materialssquare.com/workshop))','27 May-24 Jun 2021')
 txt4('Presentation','NOA CRC 1375 Spring Meeting (ONLINE) ','15‐17 Feb 2021')
 txt4('Attended','Intel® Software Development Tools for HPC (Webinar) ([link](https://indico.tpi.uni-jena.de/event/146/))','11-20 Nov 2020')
 txt4('Attended','Intel® Software Development Tools for Artificial Intelligence (Webinar) ([link](https://indico.tpi.uni-jena.de/event/147/))','17 Nov 2020')
 txt4('Attended','NOA Fall PhD School (ONLINE) ([link](https://indico.tpi.uni-jena.de/event/144/timetable/))','26-28 Oct 2020')
-txt4('Poster + Presentation','NOA Spring School and PI Workshop in Jena, Germany ([link](https://www.noa.uni-jena.de/news+_+events/1st+noa+spring+school+and+pi+workshop_+2-6+march+2020))','2-6 Mar 2020')
+txt4('Poster + Presentation','NOA Spring School and PI Workshop in Jena, Germany ([link](https://www.noa.uni-jena.de/news+_+events/1st+noa+spring+school+and+pi+workshop_+2-6+march+2020))','02-06 Mar 2020')
 txt4('Attended','NOA seminar by Dr. Heiko Appel (MPI Hamburg) in Jena, Germany ([link](https://www.noa.uni-jena.de/news+_+events/21+january+2020_+noa+seminar+by+dr_+heiko+appel+(mpi+hamburg)))','21 Jan 2020')
 txt4('Attended','24th ETSF Workshop on Electronic Excitations in Jena, Germany ([link](https://workshop.etsf.eu/))','16-20 Sep 2019')
-txt4('Poster','ICABS 2019 in Bhiwani, India ([link](http://www.icabs19.com/))','7-9 Feb 2019')
+txt4('Poster','ICABS 2019 in Bhiwani, India ([link](http://www.icabs19.com/))','07-09 Feb 2019')
 txt4('Poster','6th ISIF 2017 in New Delhi, India ([link](http://www.meetingsnmore.com/isif%202017/))','13 Dec 2017')
 
 
