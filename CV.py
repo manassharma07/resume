@@ -292,7 +292,7 @@ st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citat
 # txt('','')
 # txt('','')
 txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380)',
-**J. Chem. Theo. Comput.** xx, xxx-xxx ***[ON SUPPLEMENTARY COVER🔖]***''', '12 Oct **2022**')
+**J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]***''', '12 Oct **2022**')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
