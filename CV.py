@@ -91,6 +91,9 @@ st.markdown("""
       <li class="nav-item">
         <a class="nav-link" href="#social-media">Contact</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/manassharma07/resume/blob/main/Manas_Sharma_CV.pdf">CV PDF</a>
+      </li>
     </ul>
   </div>
 </nav>
