@@ -143,7 +143,7 @@ txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/) at [BIOVIA Conference 2022](https://events.3ds.com/biovia-conference-2022)','11 Oct 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022) in Jena, Germany','8 Sep 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/) at [PsiK 2022](https://www.psik2022.net/) in Lausanne, Switzerland','23 Aug 2022')
-txt('Released [ONLINE DEMO](https://www.bragitoff.com/2022/09/crysx-demo-dft-based-embedding/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
+txt('Released [ONLINE DEMO](https://www.bragitoff.com/2022/11/crysx-demo-dft-based-embedding/) of Frozen Density Embedding and Projection Based Embedding','15 Aug 2022')
 txt('Released CompChem Chemical File Format Converter [Web App](https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/)','11 Aug 2022')
 txt('Gave a talk at [ETSF 2022](https://workshop.etsf.eu/) held at [imec](https://www.imec-int.com/en) in Leuven, Belgium','14 Jun 2022')
 txt('Released Basis Set Converter [Web App](https://www.bragitoff.com/2022/04/basis-set-converter-web-app/)','18 Apr 2022')
