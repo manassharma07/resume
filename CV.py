@@ -297,9 +297,6 @@ st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citat
 txt('''W. Li, A. Saleh, **M. Sharma**, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M.
 F. Kling, A. F. Alharbi, and Z. Wang [*Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors*](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070)',
 **Adv. Optical Mater.** 2203070 ''', '22 May **2023**')
-txt('''C. Mueller, **M. Sharma**, and M. Sierka,
-[*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
-**J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
 txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380)',
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]***''', '12 Oct **2022**')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
