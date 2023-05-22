@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Published a collaborative [article](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070) with experimental groups on harmonic generation in [Advanced Optical Materials](https://onlinelibrary.wiley.com/page/journal/21951071/homepage/productinformation.html)','22 May 2023')
 txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380)','12 Oct 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/) at [BIOVIA Conference 2022](https://events.3ds.com/biovia-conference-2022)','11 Oct 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/) at [ICQNN 2022](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022) in Jena, Germany','8 Sep 2022')
@@ -157,7 +158,7 @@ st.markdown('''
 st.markdown('''
 I am a fourth-year PhD student in Physics at Friedrich Schiller University of Jena (FSU) Germany, fortunate to be advised by [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
-I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>16` conferences (`7` talks; `9` posters)** as well as publishing **`5` research articles**.
+I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>16` conferences (`7` talks; `9` posters)** as well as publishing **`6` research articles**.
 
 Prior to joining FSU, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
 I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
@@ -293,7 +294,12 @@ st.markdown('''
 ''')
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
 # txt('','')
-# txt('','')
+txt('''W. Li, A. Saleh, **M. Sharma**, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M.
+F. Kling, A. F. Alharbi, and Z. Wang [*Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors*](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070)',
+**Adv. Optical Mater.** 2203070 ''', '22 May **2023**')
+txt('''C. Mueller, **M. Sharma**, and M. Sierka,
+[*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
+**J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
 txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380)',
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]***''', '12 Oct **2022**')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
