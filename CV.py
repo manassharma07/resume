@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Presented a [poster]() on High Harmonic Generation using Gaussian Basis Functions at the [International Conference of Quantum Chemistry 2023](https://icqc2023.org)','30 June 2023')
 txt('Published a collaborative [article](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070) with experimental groups on harmonic generation in [Advanced Optical Materials](https://onlinelibrary.wiley.com/page/journal/21951071/homepage/productinformation.html)','22 May 2023')
 txt('Published a big part of my PhD work as an [article](https://doi.org/10.1021/acs.jctc.2c00380) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380)','12 Oct 2022')
 txt('Presented a [poster](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/) at [BIOVIA Conference 2022](https://events.3ds.com/biovia-conference-2022)','11 Oct 2022')
@@ -317,6 +318,7 @@ txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
+txt4('Poster [🔗]()', 'International Confenerence of Quantum Chemistry 2023 ([link](https://icqc2023.org)', '25 June - 01 July 2023')
 txt4('Talk', 'VISTA Seminars 2022 (VIRTUAL ([link](https://quantum-dynamics-hub.github.io/VISTA/))', '30 Nov 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/)', 'BIOVIA Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '11-13 Oct 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/)', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
