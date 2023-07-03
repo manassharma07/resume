@@ -160,7 +160,7 @@ st.markdown('''
 st.markdown('''
 I am a fourth-year PhD student in Physics at Friedrich Schiller University of Jena (FSU) Germany, fortunate to be advised by [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
-I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>16` conferences (`7` talks; `9` posters)** as well as publishing **`6` research articles**.
+I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
 
 Prior to joining FSU, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
 I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
