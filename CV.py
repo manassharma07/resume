@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Released [RIPER-TOOLS](https://riper-tools.streamlit.app), for the RIPER module of TURBOMOLE that allows to create input files from CIFs, XYZs, POSCARS, Materials Project database and PubChem.','13 July 2023')
 txt('Presented a [poster](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/) on *High Harmonic Generation using Gaussian Basis Functions* at the [International Congress of Quantum Chemistry 2023](https://icqc2023.org)','30 June 2023')
 txt('Contributed to a perspective on the [TURBOMOLE program package](https://www.turbomole.org) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00347).','29 June 2023')
 txt('Published a collaborative [article](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070) with experimental groups on harmonic generation in [Advanced Optical Materials](https://onlinelibrary.wiley.com/page/journal/21951071/homepage/productinformation.html)','22 May 2023')
@@ -281,6 +282,7 @@ txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality
 txt4('CrysX-AR', 'An Android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
 txt4('CrysX-Crystallographic Tools', 'A set of crystallographic tools available as an Android app ','https://play.google.com/store/apps/details?id=com.bragitoff.powderdiffractionsimulator')
 st.write('#### Web Apps, Tools and Other Projects')
+txt4('RIPER - Tools', 'An online tools that allows to create input files for the RIPER module of TURBOMOLE from MaterialsProject or PubChem database', 'https://riper-tools.streamlit.app')
 txt4('CrysX-Demo DFT based Embedding', 'Online demo of frozen density embedding and projection based embedding', 'https://www.bragitoff.com/2022/09/crysx-demo-dft-based-embedding/')
 txt4('CrysX-CompChem File Converter', 'Web app that allows inter-conversion between various chemical file formats in current use', 'https://www.bragitoff.com/2022/08/crysx-compchem-file-converter-web-app/')
 txt4('Basis Set Converter', 'Web app to inter-convert between various basis set formats', 'https://www.bragitoff.com/2022/04/basis-set-converter-web-app/')
