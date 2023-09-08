@@ -333,15 +333,32 @@ with st.expander("### **See more details**"):
 
 txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380),
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]*** ''', '12 Oct **2022**')
+with st.expander("### **See more details**"):
+    st.write('#### Graphical Abstract')
+    col1, col2, col3 = st.columns(3)
+    with col1:
+      st.write(' ')
+    with col2:
+        st.image('DFET_TOC.png', use_column_width=True)
+    with col3:
+        st.write(' ')
+    st.write('#### Supplemental Cover Page')
+    col1, col2, col3 = st.columns(3)
+    with col1:
+      st.write(' ')
+    with col2:
+      st.image('DFET_Cover.png', use_column_width=True)
+    with col3:
+        st.write(' ')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
 txt('''**M. Sharma**, and D. Mishra,
 [*CrysX: crystallographic tools for the Android platform*](https://onlinelibrary.wiley.com/iucr/doi/10.1107/S1600576719013682),
 **J. Appl. Cryst.** 52, 1449-1454 ***[ON COVER PAGE🔖]*** ''','31 Oct **2019**')
-txt('''**M. Sharma**, and D. Mishra,
-[*DFT+U study of small ZnO nanoclusters*](https://aip.scitation.org/doi/abs/10.1063/1.5122485),
-**AIP Conference Proceedings** 2142, 110025 ''','29 Aug **2019**')
+# txt('''**M. Sharma**, and D. Mishra,
+# [*DFT+U study of small ZnO nanoclusters*](https://aip.scitation.org/doi/abs/10.1063/1.5122485),
+# **AIP Conference Proceedings** 2142, 110025 ''','29 Aug **2019**')
 txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 [*First-principles study of the structural and electronic properties of bulk ZnS and small ZnnSn nanoclusters in the framework of the DFT+U method*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.045151),
 **Phys. Rev. B** 100, 045151''','31 Jul **2019**')
