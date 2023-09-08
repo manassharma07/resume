@@ -301,8 +301,8 @@ st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citat
 txt('''Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Coriani, F. Della Sala, E. Fabiano, D. A. Fedotov, S. Fürst, S. Gillhuber, R. Grotjahn, M. Kaupp, M. Kehry, M. Krstić, F. Mack, S. Majumdar, B. D. Nguyen, S. M. Parker, F. Pauly, A. Pausch, E. Perlt, G. S. Phun, A. Rajabi, D. Rappoport, B. Samal, T. Schrader, **M. Sharma**, E. Tapavicza, R. S. Treß, V. Voora, A. Wodyński, J. M. Yu, B. Zerulla, F. Furche, C. Hättig, M. Sierka, D. P. Tew, and F. Weigend. [*TURBOMOLE: Today and Tomorrow*](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00347),
 **J. Chem. Theo. Comput.** xxxxx ''', '29 Jun **2023**')
 with st.expander("See more details"):
-    image = Image.open('https://pubs.acs.org/cms/10.1021/acs.jctc.3c00347/asset/images/medium/ct3c00347_0026.gif')
-    st.image(image)
+    # image = Image.open('https://pubs.acs.org/cms/10.1021/acs.jctc.3c00347/asset/images/medium/ct3c00347_0026.gif')
+    st.image('https://pubs.acs.org/cms/10.1021/acs.jctc.3c00347/asset/images/medium/ct3c00347_0026.gif')
     st.write('I contributed to the RT-TDDFT code and extended it to perform HHG simulations and also wrote the corresponding section 3.14.  \nAdditionally, I implemented the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods and wrote section 3.15.2.  ')
 
 st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
