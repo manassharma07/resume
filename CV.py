@@ -343,7 +343,9 @@ with st.expander("### **See more details**"):
     with col2:
       st.image('DFET_Cover.jpg', use_column_width=True)
     with col3:
-        st.write(' ')
+        st.write('')
+    st.write('#### My Contribution')
+    st.write('This is the key paper from my PhD thesis. I implemented DFT-based embedding within the `TURBOMOLE` program apckage and coupled it with wavefunction theory mathods like CC2, CCSD, etc. as well as real-time time-dependent density functional theory.  \nWrote the manuscript as well as designed the graphical abstract and the cover using my graphical visualizer CrysX-3D Viewer.')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J Comput Chem.** 41: 2573–2582. ''','10 Sep **2020**')
