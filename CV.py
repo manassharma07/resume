@@ -345,7 +345,7 @@ with st.expander("### **See more details**"):
     with col3:
         st.write('')
     st.write('#### My Contribution')
-    st.write('This is the key paper from my PhD thesis. I implemented DFT-based embedding within the `TURBOMOLE` program package and coupled it with wavefunction theory mathods like CC2, CCSD, etc. as well as real-time time-dependent density functional theory.  \nWrote the manuscript as well as designed the graphical abstract and the cover using my graphical visualizer CrysX-3D Viewer.')
+    st.write("This paper represents the pivotal contribution of my PhD research. I expanded the capabilities of the `TURBOMOLE` quantum chemistry software by implementing a density functional theory (DFT)-based embedding approach for molecular, periodic and hybrid systems. Furthermore, I coupled DFT-based embedding with higher-level wavefunction theory methods and real-time time-dependent DFT. Under my supervisor's guidance, I leveraged these new technical capabilities to undertake computational studies on challenging chemical systems. In addition to performing the calculations and analyzing the results, I prepared the manuscript and crafted the graphical abstract and cover artwork using my software CrysX-3D Viewer. This work required extensive coding efforts to extend `TURBOMOLE`'s functionality, as well as scientific insight to apply the new methods effectively. Overall, it exemplifies my technical and scientific contributions during my PhD.")
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
 [*Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method*](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26412),
 **J. Comput. Chem.** 41: 2573–2582. ''','10 Sep **2020**')
@@ -358,6 +358,9 @@ txt('''**M. Sharma**, and D. Mishra,
 txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 [*First-principles study of the structural and electronic properties of bulk ZnS and small ZnnSn nanoclusters in the framework of the DFT+U method*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.045151),
 **Phys. Rev. B** 100, 045151''','31 Jul **2019**')
+with st.expander("### **See more details**"):
+    st.write('''This paper represents my first foray into computational materials science research. Under the guidance of my supervisor, I conducted an extensive literature review to identify an original research direction. I formulated the core idea behind this study and spearheaded its execution with support from my supervisor. In addition to performing the calculations and analyzing the results, I prepared the manuscript. My supervisor and the third author provided valuable feedback to refine the paper. Overall, this project gave me hands-on experience with density functional theory and allowed me to take ownership over my first computational research publication.
+         ''')
 
 
 #####################
