@@ -320,6 +320,7 @@ with st.expander("### **See more details**"):
     with col3:
         st.write(' ')
     st.write('#### Cover Picture')
+    col1, col2, col3 = st.columns(3)
     with col1:
       st.write(' ')
     with col2:
