@@ -312,6 +312,7 @@ F. Kling, A. F. Alharbi, and Z. Wang [*Resonance Effect in Brunel Harmonic Gener
 **Adv. Optical Mater.** 11, 2203070 ***[ON COVER PAGE🔖]*** ''', '22 May **2023**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
+    col1, col2, col3 = st.columns(3)
     with col1:
       st.write(' ')
     with col2:
