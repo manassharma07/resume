@@ -304,7 +304,7 @@ with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
     st.image('Turbomole_review_TOC.png')
     st.write('#### My Contribution')
-    st.write('I contributed to the RT-TDDFT code and extended it to perform HHG simulations and also wrote the corresponding section 3.14.  \nAdditionally, I implemented the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods and wrote section 3.15.2.  ')
+    st.write('I contributed to the RT-TDDFT code in `TURBOMOLE` and extended it to perform HHG simulations and also wrote the corresponding section 3.14.  \nAdditionally, I implemented the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods and wrote section 3.15.2.  ')
 
 st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
 txt('''W. Li, A. Saleh, **M. Sharma**, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M.
