@@ -342,12 +342,12 @@ with st.expander("### **See more details**"):
         st.image('DFET_TOC.png', use_column_width=True)
     with col3:
         st.write(' ')
-    st.write('#### Supplemental Cover Page')
+    st.write('#### Supplementary Cover Page')
     col1, col2, col3 = st.columns(3)
     with col1:
       st.write(' ')
     with col2:
-      st.image('DFET_Cover.png', use_column_width=True)
+      st.image('DFET_Cover.jpg', use_column_width=True)
     with col3:
         st.write(' ')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
