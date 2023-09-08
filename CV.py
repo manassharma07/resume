@@ -302,7 +302,7 @@ txt('''Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Cor
 **J. Chem. Theo. Comput.** xxxxx ''', '29 Jun **2023**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('Turbomole_review_TOC.png')
+    st.image('Turbomole_review_TOC.png', width=300)
     st.write('#### My Contribution')
     st.write('I contributed to the RT-TDDFT code in `TURBOMOLE` and extended it to perform HHG simulations and also wrote the corresponding section 3.14.  \nAdditionally, I implemented the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods and wrote section 3.15.2.  ')
 
