@@ -335,13 +335,7 @@ txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functi
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]*** ''', '12 Oct **2022**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    col1, col2, col3 = st.columns(3)
-    with col1:
-      st.write(' ')
-    with col2:
-        st.image('DFET_TOC.png', use_column_width=True)
-    with col3:
-        st.write(' ')
+    st.image('DFET_TOC.png', use_column_width=True)
     st.write('#### Supplementary Cover Page')
     col1, col2, col3 = st.columns(3)
     with col1:
