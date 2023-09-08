@@ -312,12 +312,22 @@ F. Kling, A. F. Alharbi, and Z. Wang [*Resonance Effect in Brunel Harmonic Gener
 **Adv. Optical Mater.** 11, 2203070 ***[ON COVER PAGE🔖]*** ''', '22 May **2023**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('TPP_HHG_Graphical_Abstract.jpg')
+    with col1:
+      st.write(' ')
+    with col2:
+        st.image('TPP_HHG_Graphical_Abstract.jpg', use_column_width=True)
+    with col3:
+        st.write(' ')
     st.write('#### Cover Picture')
-    st.image('TPP_HHG_Cover_Picture.png')
+    with col1:
+      st.write(' ')
+    with col2:
+      st.image('TPP_HHG_Cover_Picture.png', use_column_width=True)
+    with col3:
+        st.write(' ')
     st.write('[Cover link](https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.202370058)')
     st.write('#### My Contribution')
-    st.write('Despite being the third author, I contributed substantially to this publication.  \nFor this collaboration I implemented high harmonic generation (HHG) capabilities within the `TURBOMOLE` program.  \nAfter calibrating and validating the implementation, I utilized it to conduct HHG simulations for TPP and ZnTPP molecules to provide theoretical insights to complement the experimental data.  \nIn addition to the theoretical support and analysis, I took charge of crafting Section 4 entirely, along with key segments of Section 2 and a substantial portion of the Supporting Information. Additionally, I played an active role in organizing and scheduling online meetings among the diverse groups participating in this extensive multinational collaboration.')
+    st.write('Despite being the third author, I contributed substantially to this publication.  \nFor this collaboration I implemented high harmonic generation (HHG) capabilities within the `TURBOMOLE` program.  \nAfter calibrating and validating the implementation, I utilized it to conduct HHG simulations for TPP and ZnTPP molecules to provide theoretical insights to complement the experimental data.  \nIn addition to the theoretical support and analysis, I took charge of crafting Section 4 entirely, along with key segments of Section 2 and a substantial portion of the Supporting Information. Additionally, I played an active role in organizing and scheduling online meetings among the diverse groups participating in this extensive multinational collaboration.  \nPS: I also designed the graphical abstract for this publication using my own graphical visualizer (CrysX-3D Viewer).')
 
 txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380),
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]*** ''', '12 Oct **2022**')
