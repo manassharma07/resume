@@ -305,14 +305,14 @@ with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
     st.image('Turbomole_review_TOC.png')
     st.write('#### My Contribution')
-    st.write('I wrote the section 3.14 describing my contributions to the RT-TDDFT code in `TURBOMOLE` which can now perform high harmonic generation simulations.  \nAdditionally, I wrote the section 3.15.2. describing my work on the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods.')
+    st.write('For this review/perspective, I wrote the section 3.14 describing my contributions to the RT-TDDFT code in `TURBOMOLE` which can now perform high harmonic generation simulations.  \nAdditionally, I wrote the section 3.15.2. describing my work on the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods.')
 
 txt('''W. Li, A. Saleh, **M. Sharma**, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M.
 F. Kling, A. F. Alharbi, and Z. Wang [*Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors*](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070),
 **Adv. Optical Mater.** 11, 2203070 ***[ON COVER PAGE🔖]*** ''', '22 May **2023**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('TPP_HHG_Graphical_Abstract.png')
+    st.image('TPP_HHG_Graphical_Abstract.jpg')
     st.write('#### Cover Picture')
     st.image('TPP_HHG_Cover_Picture.png')
     st.write('[Cover link](https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.202370058)')
