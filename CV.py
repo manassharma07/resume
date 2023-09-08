@@ -359,6 +359,7 @@ txt('''**M. Sharma**, D. Mishra, and J. Kumar,
 [*First-principles study of the structural and electronic properties of bulk ZnS and small ZnnSn nanoclusters in the framework of the DFT+U method*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.045151),
 **Phys. Rev. B** 100, 045151''','31 Jul **2019**')
 with st.expander("### **See more details**"):
+    st.write('#### My Contribution')
     st.write('''This paper represents my first foray into computational materials science research. Under the guidance of my supervisor, I conducted an extensive literature review to identify an original research direction. I formulated the core idea behind this study and spearheaded its execution with support from my supervisor. In addition to performing the calculations and analyzing the results, I prepared the manuscript. My supervisor and the third author provided valuable feedback to refine the paper. Overall, this project gave me hands-on experience with density functional theory and allowed me to take ownership over my first computational research publication.
          ''')
 
