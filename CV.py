@@ -302,7 +302,7 @@ txt('''Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Cor
 **J. Chem. Theo. Comput.** xxxxx ''', '29 Jun **2023**')
 with st.expander("See more details"):
     # image = Image.open('https://pubs.acs.org/cms/10.1021/acs.jctc.3c00347/asset/images/medium/ct3c00347_0026.gif')
-    st.image('https://pubs.acs.org/cms/10.1021/acs.jctc.3c00347/asset/images/medium/ct3c00347_0026.gif')
+    st.image('Turbomole_review_TOC.png')
     st.write('I contributed to the RT-TDDFT code and extended it to perform HHG simulations and also wrote the corresponding section 3.14.  \nAdditionally, I implemented the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods and wrote section 3.15.2.  ')
 
 st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
