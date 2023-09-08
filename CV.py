@@ -327,7 +327,7 @@ with st.expander("### **See more details**"):
       st.image('TPP_HHG_Cover_Picture.png', use_column_width=True)
     with col3:
         st.write(' ')
-    st.write('[Cover link](https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.202370058)')
+    col2.write('[Cover link](https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.202370058)')
     st.write('#### My Contribution')
     st.write('Despite being the third author, I contributed substantially to this publication.  \nFor this collaboration I implemented high harmonic generation (HHG) capabilities within the `TURBOMOLE` program.  \nAfter calibrating and validating the implementation, I utilized it to conduct HHG simulations for TPP and ZnTPP molecules to provide theoretical insights to complement the experimental data.  \nIn addition to the theoretical support and analysis, I took charge of crafting Section 4 entirely, along with key segments of Section 2 and a substantial portion of the Supporting Information. Additionally, I played an active role in organizing and scheduling online meetings among the diverse groups participating in this extensive multinational collaboration.  \nPS: I also designed the graphical abstract for this publication using my own graphical visualizer (CrysX-3D Viewer).')
 
