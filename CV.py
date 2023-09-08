@@ -300,17 +300,25 @@ st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citat
 # txt('','')
 txt('''Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Coriani, F. Della Sala, E. Fabiano, D. A. Fedotov, S. Fürst, S. Gillhuber, R. Grotjahn, M. Kaupp, M. Kehry, M. Krstić, F. Mack, S. Majumdar, B. D. Nguyen, S. M. Parker, F. Pauly, A. Pausch, E. Perlt, G. S. Phun, A. Rajabi, D. Rappoport, B. Samal, T. Schrader, **M. Sharma**, E. Tapavicza, R. S. Treß, V. Voora, A. Wodyński, J. M. Yu, B. Zerulla, F. Furche, C. Hättig, M. Sierka, D. P. Tew, and F. Weigend. [*TURBOMOLE: Today and Tomorrow*](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00347),
 **J. Chem. Theo. Comput.** xxxxx ''', '29 Jun **2023**')
+st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('Turbomole_review_TOC.png', width=300)
+    st.image('Turbomole_review_TOC.png')
     st.write('#### My Contribution')
-    st.write('I contributed to the RT-TDDFT code in `TURBOMOLE` and extended it to perform HHG simulations and also wrote the corresponding section 3.14.  \nAdditionally, I implemented the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods and wrote section 3.15.2.  ')
+    st.write('I wrote the section 3.14 describing my contributions to the RT-TDDFT code in `TURBOMOLE` which can now perform high harmonic generation simulations.  \nAdditionally, I wrote the section 3.15.2. describing my work on the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods.')
 
-st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
 txt('''W. Li, A. Saleh, **M. Sharma**, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M.
 F. Kling, A. F. Alharbi, and Z. Wang [*Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors*](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202203070),
 **Adv. Optical Mater.** 11, 2203070 ***[ON COVER PAGE🔖]*** ''', '22 May **2023**')
-# with st.expander("See graphical abstract"):
+with st.expander("### **See more details**"):
+    st.write('#### Graphical Abstract')
+    st.image('TPP_HHG_Graphical_Abstract.png')
+    st.write('#### Cover Picture')
+    st.image('TPP_HHG_Cover_Picture.png')
+    st.write('[Cover link](https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.202370058)')
+    st.write('#### My Contribution')
+    st.write('Despite being the third author, I contributed substantially to this publication.  \nFor this collaboration I implemented high harmonic generation (HHG) capabilities within the `TURBOMOLE` program.  \nAfter calibrating and validating the implementation, I utilized it to conduct HHG simulations for TPP and ZnTPP molecules to provide theoretical insights to complement the experimental data.  \nIn addition to the theoretical support and analysis, I took charge of crafting Section 4 entirely, along with key segments of Section 2 and a substantial portion of the Supporting Information. Additionally, I played an active role in organizing and scheduling online meetings among the diverse groups participating in this extensive multinational collaboration.')
+
 txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions*](https://pubs.acs.org/doi/10.1021/acs.jctc.2c00380),
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]*** ''', '12 Oct **2022**')
 txt('''C. Mueller, **M. Sharma**, and M. Sierka,
