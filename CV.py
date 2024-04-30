@@ -9,7 +9,7 @@ with open("style.css") as f:
 # Header 
 st.write('''
 # Manas Sharma 
-##### **(PhD Student)**
+##### **(PhD)**
 ''')
 
 image = Image.open('dp.png')
@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Defended my PhD with the `summa cum laude` grade.','15 Mar 2024')
 txt('Released [RIPER-TOOLS](https://riper-tools.streamlit.app), for the RIPER module of TURBOMOLE that allows to create input files from CIFs, XYZs, POSCARS, Materials Project database and PubChem.','13 July 2023')
 txt('Presented a [poster](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/) on *High Harmonic Generation using Gaussian Basis Functions* at the [International Congress of Quantum Chemistry 2023](https://icqc2023.org)','30 June 2023')
 txt('Contributed to a perspective on the [TURBOMOLE program package](https://www.turbomole.org) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00347).','29 June 2023')
@@ -159,11 +160,11 @@ st.markdown('''
 ## About
 ''')
 st.markdown('''
-I am a fourth-year PhD student in Physics at Friedrich Schiller University of Jena (FSU) Germany, fortunate to be advised by [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
+I am a computational material scientist with a PhD in Physics obtained at Friedrich Schiller University of Jena (FSU) Germany, under the supervision of [Prof. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
 I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
 
-Prior to joining FSU, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
+Prior to my PhD, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en). I published two papers with him.  
 I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
 I am originally from a small, but beautiful town Haldwani, a few minutes from Nainital in India.
 ''')
@@ -197,8 +198,8 @@ st.markdown('''
 # - Received Royal Golden Jubilee Ph.D. Scholarship of `2.152 million THB` covering tuition and stipend.
 # - Thesis awarded `1st` Prize by the National Research Council of Thailand.
 # ''')
-txt('**PhD candidate** Physics, *Friedrich Schiller University Jena*, Jena, Germany',
-'2019-present')
+txt('**PhD** Physics, *Friedrich Schiller University Jena*, Jena, Germany',
+'2019-2024')
 txt('**Master of Science** Physics, *University of Delhi*, New Delhi, India',
 '2016-2018')
 # st.markdown('''
