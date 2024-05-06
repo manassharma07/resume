@@ -161,7 +161,7 @@ st.markdown('''
 ''')
 st.markdown('''
 I am currently seeking postdoctoral positions in the fields of computational material science or computational chemistry. I recently defended
-my [PhD thesis](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of summa cum laude. I was very
+my [PhD thesis](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was very
 fortunate to be supervised by [Prof. Dr. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
 I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
