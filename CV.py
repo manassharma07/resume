@@ -414,7 +414,7 @@ txt3('Web development', '`Wordpress`, `HTML`')
 txt3('Web app development', '`Streamlit`')
 txt3('Data processing/wrangling', '`pandas`, `numpy`')
 txt3('Data visualization', '`matplotlib`, `seaborn`')
-txt3('Outreach', '[`YouTube videos`](https://www.youtube.com/c/Bragitoff_physics), [`Blog posts`](https://bragitoff.com), [`Instagram posts`](https://www.instagram.com/phys.whiz)')
+txt3('Outreach', '[`YouTube videos`](https://www.youtube.com/@PhysWhiz), [`Blog posts`](https://bragitoff.com), [`Instagram posts`](https://www.instagram.com/phys.whiz)')
 txt3('Debugging and profiling','`ARM forge for FORTRAN`, `VS code for python`')
 txt3('Miscellaneous','`Video editing`, `Molecular animations`,`Graphic designing`, `Photo editing`')
 
