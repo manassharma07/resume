@@ -371,8 +371,8 @@ st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
 txt4('Poster [🔗](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/)', 'International Congress of Quantum Chemistry 2023 in Bratislava, Slovakia ([link](https://icqc2023.org))', '25 June - 01 July 2023')
-txt4('Talk', 'VISTA Seminars 2022 (VIRTUAL ([link](https://quantum-dynamics-hub.github.io/VISTA/))', '30 Nov 2022')
-txt4('Poster [🔗](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/)', 'BIOVIA Conference 2022 (VIRTUAL ([link](https://events.3ds.com/biovia-conference-2022))', '11-13 Oct 2022')
+txt4('Talk', 'VISTA Seminars 2022 [VIRTUAL] ([link](https://quantum-dynamics-hub.github.io/VISTA/))', '30 Nov 2022')
+txt4('Poster [🔗](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/)', 'BIOVIA Conference 2022 [VIRTUAL] ([link](https://events.3ds.com/biovia-conference-2022))', '11-13 Oct 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/09/icqnn-2022-poster-density-functional-theory-based-embedding-for-molecular-and-periodic-systems/)', 'ICQNN 2022 Conference in Jena, Germany ([link](https://www.noa.uni-jena.de/international-conference-of-quantum-nonlinear-and-nanophotonics-2022))', '05-09 Sep 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/08/psik-2022-poster-dft-based-embedding/)', 'Psi-K 2022 Conference at EPFL in Lasuanne, Switzerland ([link](https://www.psik2022.net/))', '22-25 Aug 2022')
 txt4('Talk [🔗](https://youtu.be/PEU5y_BQp1k)', '25th ETSF Workshop on Electronic Excitations 2022 in Leuven, Belgium ([link](https://workshop.etsf.eu/))', '13-17 Jun 2022')
