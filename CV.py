@@ -426,7 +426,7 @@ st.markdown('''
 ''')
 txt2('LinkedIn', 'https://www.linkedin.com/in/manassharma07')
 txt2('Blog', 'https://bragitoff.com')
-txt2('YouTube', 'https://www.youtube.com/c/Bragitoff_physics')
+txt2('YouTube', 'https://www.youtube.com/@PhysWhiz')
 txt2('Twitter', 'https://twitter.com/manassharma07')
 txt2('GitHub', 'https://github.com/manassharma07/')
 txt2('Instagram', '[https://www.instagram.com/phys.whiz](https://www.instagram.com/phys.whiz)')
