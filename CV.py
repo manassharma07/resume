@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Released ✨[**Cube Suite**](https://cubesuite.streamlit.app)✨, for processing and manipulating CUBE files.','10 May 2024')
 txt('Defended my [PhD thesis](https://www.db-thueringen.de/receive/dbt_mods_00059873) with the `summa cum laude` grade. The reviewers were: [Prof. Dr. Karin Fink](https://www.int.kit.edu/staff_karin.fink.php), and [Prof. Dr. Hilke Bahmann](https://www.ptc.uni-wuppertal.de/de/personen/dozentinnen-und-dozenten/bahmann/).','15 Mar 2024')
 txt('Released [RIPER-TOOLS](https://ripertools.turbomole.org), for the RIPER module of TURBOMOLE that allows to create input files from CIFs, XYZs, POSCARS, Materials Project database and PubChem.','13 July 2023')
 txt('Presented a [poster](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/) on *High Harmonic Generation using Gaussian Basis Functions* at the [International Congress of Quantum Chemistry 2023](https://icqc2023.org)','30 June 2023')
