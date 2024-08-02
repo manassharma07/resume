@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Joined [**IISc**](https://iisc.ac.in/) as a postdoctoral researcher in the [Chemical Engineering Department](https://chemeng.iisc.ac.in/).','1 August 2024')
 txt('Released ✨[**Cube Suite**](https://cubesuite.streamlit.app) Web app✨, for processing and manipulating CUBE files.','10 May 2024')
 txt('Defended my 📕[**PhD thesis**](https://www.db-thueringen.de/receive/dbt_mods_00059873) with the `summa cum laude` grade. The reviewers were: [Prof. Dr. Karin Fink](https://www.int.kit.edu/staff_karin.fink.php), and [Prof. Dr. Hilke Bahmann](https://www.ptc.uni-wuppertal.de/de/personen/dozentinnen-und-dozenten/bahmann/).','15 Mar 2024')
 txt('Released ✨[**RIPER-TOOLS**](https://ripertools.turbomole.org)✨, for the RIPER module of TURBOMOLE that allows to create input files from CIFs, XYZs, POSCARS, Materials Project database and PubChem.','13 July 2023')
@@ -161,8 +162,8 @@ st.markdown('''
 ## About
 ''')
 st.markdown('''
-I am currently seeking postdoctoral positions in the fields of computational material science or computational chemistry. I recently defended
-my [PhD thesis](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was very
+I am a postdoctoral researcher at IISc, jointly advised by [Prof. Ananth Govind Rajan](https://agrgroup.org/) and [Prof. Sudeep Punnathanam](https://chemeng.iisc.ac.in/sudeep/). Previously,
+ I obtained my [PhD](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was very
 fortunate to be supervised by [Prof. Dr. Marek Sierka](https://www.cmsg.uni-jena.de/).
 
 I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
