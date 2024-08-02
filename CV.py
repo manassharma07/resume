@@ -163,8 +163,7 @@ st.markdown('''
 ''')
 st.markdown('''
 I am a postdoctoral researcher at IISc, jointly advised by [Prof. Ananth Govind Rajan](https://agrgroup.org/) and [Prof. Sudeep Punnathanam](https://chemeng.iisc.ac.in/sudeep/). Previously,
- I obtained my [PhD](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was very
-fortunate to be supervised by [Prof. Dr. Marek Sierka](https://www.cmsg.uni-jena.de/).
+ I obtained my [PhD](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was supervised by [Prof. Dr. Marek Sierka](https://www.cmsg.uni-jena.de/) during my PhD.
 
 I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
 
