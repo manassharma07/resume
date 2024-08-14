@@ -9,7 +9,7 @@ with open("style.css") as f:
 # Header 
 st.write('''
 # Manas Sharma 
-##### **PhD**
+##### **Postdoctoral Researcher | PhD (Physics)**
 ''')
 
 image = Image.open('dp.png')
@@ -372,6 +372,7 @@ with st.expander("### **See more details**"):
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
+txt4('Lecture + Tutorials', 'Mastering DFT: A Hands‑on Training Workshop, Janardan Singh Foundation (ONLINE)', '27 July 2024')
 txt4('Poster [🔗](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/)', 'International Congress of Quantum Chemistry 2023 in Bratislava, Slovakia ([link](https://icqc2023.org))', '25 June - 01 July 2023')
 txt4('Talk', 'VISTA Seminars 2022 [VIRTUAL] ([link](https://quantum-dynamics-hub.github.io/VISTA/))', '30 Nov 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/)', 'BIOVIA Conference 2022 [VIRTUAL] ([link](https://events.3ds.com/biovia-conference-2022))', '11-13 Oct 2022')
