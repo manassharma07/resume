@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Gave a 🎤**talk** on DFT-based Embedding for periodic systems at [Turbomole 2024 Conference](https://www.meeting2024.turbomole.org/) held at [Oxford University](https://www.meeting2024.turbomole.org/) in UK','19 Sept 2024')
 txt('Joined [**IISc**](https://iisc.ac.in/) as a postdoctoral researcher in the [Chemical Engineering Department](https://chemeng.iisc.ac.in/).','1 August 2024')
 txt('Released ✨[**Cube Suite**](https://cubesuite.streamlit.app) Web app✨, for processing and manipulating CUBE files.','10 May 2024')
 txt('Defended my 📕[**PhD thesis**](https://www.db-thueringen.de/receive/dbt_mods_00059873) with the `summa cum laude` grade. The reviewers were: [Prof. Dr. Karin Fink](https://www.int.kit.edu/staff_karin.fink.php), and [Prof. Dr. Hilke Bahmann](https://www.ptc.uni-wuppertal.de/de/personen/dozentinnen-und-dozenten/bahmann/).','15 Mar 2024')
@@ -372,6 +373,7 @@ with st.expander("### **See more details**"):
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
+txt4('Talk', 'TURBOMOLE Users Meet Developers ([link](https://www.meeting2024.turbomole.org/))', '19 Sept 2024')
 txt4('Lecture + Tutorials', 'Mastering DFT: A Hands‑on Training Workshop, Janardan Singh Foundation (ONLINE)', '27 July 2024')
 txt4('Poster [🔗](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/)', 'International Congress of Quantum Chemistry 2023 in Bratislava, Slovakia ([link](https://icqc2023.org))', '25 June - 01 July 2023')
 txt4('Talk', 'VISTA Seminars 2022 [VIRTUAL] ([link](https://quantum-dynamics-hub.github.io/VISTA/))', '30 Nov 2022')
