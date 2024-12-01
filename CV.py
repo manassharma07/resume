@@ -303,6 +303,11 @@ st.markdown('''
 ''')
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
 # txt('','')
+txt('''**M. Sharma**, and M. Sierka [*Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT*](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819),
+**J. Chem. Theo. Comput.** 20, 21, 9592–9605  ''', '17 Oct **2024**')
+with st.expander("### **See more details**"):
+    st.write('#### Graphical Abstract')
+    st.image('optical_gap_TOC.png', use_column_width=True)
 txt('''Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Coriani, F. Della Sala, E. Fabiano, D. A. Fedotov, S. Fürst, S. Gillhuber, R. Grotjahn, M. Kaupp, M. Kehry, M. Krstić, F. Mack, S. Majumdar, B. D. Nguyen, S. M. Parker, F. Pauly, A. Pausch, E. Perlt, G. S. Phun, A. Rajabi, D. Rappoport, B. Samal, T. Schrader, **M. Sharma**, E. Tapavicza, R. S. Treß, V. Voora, A. Wodyński, J. M. Yu, B. Zerulla, F. Furche, C. Hättig, M. Sierka, D. P. Tew, and F. Weigend. [*TURBOMOLE: Today and Tomorrow*](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00347),
 **J. Chem. Theo. Comput.** 19, 20, 6859‑6890 ''', '29 Jun **2023**')
 st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
@@ -410,8 +415,9 @@ st.markdown('''
 ''')
 txt3('Programming languages', '`C`,  `C++`, `C#`, `Python`, `FORTRAN`, `Java`, `shell scripting`')
 txt3('DFT methods development', '`PySCF`,  `TURBOMOLE`')
-txt3('DFT / Quantum Chemistry packages', '`Quantum ESPRESSO`, `PySCF`,  `TURBOMOLE`, `NWChem`, `Serenity`')
-txt3('Chemical system/material modeling and visualizations/animations', '`VESTA`, `Avogadro`,  `Jmol`, `VMD`, `CrysX-3D Viewer`, `BURAI`, `Py3Dmol`')
+txt3('Quantum Chemistry packages', '`Quantum ESPRESSO`, `PySCF`,  `TURBOMOLE`, `NWChem`, `Serenity`, `VASP`, `ORCA`')
+txt3('Molecular Dynamics packages', '`LAMMPS`, `ASE`')
+txt3('Chemical system/material modeling and visualizations/animations', '`VESTA`, `Avogadro`,  `Jmol`, `VMD`, `CrysX-3D Viewer`, `BURAI`, `Py3Dmol`, `ASE`')
 txt3('Machine Learning', '`scikit-learn`')
 txt3('Deep Learning', '`TensorFlow`, `PyTorch`, `CrysX-NN`')
 txt3('App development', '`Android`, `Windows`')
