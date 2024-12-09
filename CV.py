@@ -139,6 +139,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) on GW/BSE-in-DFT for optical gap calculation of ionic solids.','17 Oct 2024')
 txt('Gave a 🎤**talk** on DFT-based Embedding for periodic systems at [Turbomole 2024 Conference](https://www.meeting2024.turbomole.org/) held at [Oxford University](https://www.meeting2024.turbomole.org/) in UK','19 Sept 2024')
 txt('Joined [**IISc**](https://iisc.ac.in/) as a postdoctoral researcher in the [Chemical Engineering Department](https://chemeng.iisc.ac.in/).','1 August 2024')
 txt('Released ✨[**Cube Suite**](https://cubesuite.streamlit.app) Web app✨, for processing and manipulating CUBE files.','10 May 2024')
