@@ -26,14 +26,15 @@ with col3:
     st.write(' ')
 st.write('## Research Interests', unsafe_allow_html=True)
 st.info('''
-My passion lies in **developing codes and methods** to model the **light-matter interaction of hybrid systems**. More specifically, I am working on improving and accelerating **quantum embedding** techniques for molecular and periodic systems. 
-A core focus of my Ph.D. has been on implementing **density functional theory (DFT) based embedding techniques** and coupling them to real time-time dependent DFT (**RT-TDDFT**) and wavefunction theory (**WFT**) methods. 
-Most notably, I was able to calculate the excitation energies of solvated molecules and adsorption energies of **molecule-periodic** systems using **WFT-in-DFT** method at only a fraction of cost of a traditional calculation.
-More recently, my work has been focused on accurate molecule-in-periodic embedding and high harmonic generation via RT-TDDFT. 
-Recently, I have also started taking interest in **deep learning** and created a performant neural network library from scratch which supports parallelization and GPUs. 
-I am also experienced in creating GUIs for material modeling, visualizations and input file creations.
+My passion lies in developing codes and methods for modeling **light-matter interactions, adsorbate-subtrate interactions, and thin film deposition**. During my Ph.D., I focused on improving and accelerating quantum embedding techniques for molecular and periodic systems. I implemented density functional theory (DFT)-based embedding methods and coupled them with real-time time-dependent DFT (RT-TDDFT) and wavefunction theory (WFT) methods. Notably, I calculated excitation energies of solvated molecules and adsorption energies of molecule-periodic systems using WFT-in-DFT, achieving high accuracy at a fraction of the computational cost. My work also extended to molecule-in-periodic embedding and high harmonic generation via RT-TDDFT.
 
-Besides all this, I love making [YouTube tutorials](https://www.youtube.com/c/Bragitoff_physics), web & [Android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) for researchers and students.
+In my postdoctoral research, I have diversified into machine-learned interatomic potentials (MLIPs), particularly graph neural network (GNN)-based potentials, to study chemical vapor deposition (CVD) of thin films on substrates. 
+To explore deposition processes at the atomic scale, I use DFT calculations and nudged elastic band (NEB) methods to study reaction pathways and energy barriers, as well as ab initio molecular dynamics (AIMD) to study dynamic evolution. 
+Using the data from these simulations, I develop MLIPs trained on high-fidelity data and also leverage foundation models to extend their applicability.
+
+Beyond simulations, I have a keen interest in developing computational tools for researchers. I have built a performant neural network library from scratch, optimized for parallelization and GPU acceleration. Additionally, I have experience creating GUIs for materials modeling, visualization, and input file generation.
+
+Outside research, I enjoy creating [YouTube tutorials](https://www.youtube.com/c/Bragitoff_physics), web and [Android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) to make computational materials science more accessible to researchers and students.        
 ''')
 
 #####################
@@ -379,8 +380,9 @@ with st.expander("### **See more details**"):
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
+txt4('Talk', 'APS Global Physics Summit 2025 ([link](https://summit.aps.org/events/VIR-G02))', '18 Mar 2025')
 txt4('Talk', 'TURBOMOLE Users Meet Developers ([link](https://www.meeting2024.turbomole.org/))', '19 Sept 2024')
-txt4('Lecture + Tutorials', 'Mastering DFT: A Hands‑on Training Workshop, Janardan Singh Foundation (ONLINE)', '27 July 2024')
+txt4('Lecture + Tutorials (INVITED)', 'Mastering DFT: A Hands‑on Training Workshop, Janardan Singh Foundation (ONLINE)', '27 July 2024')
 txt4('Poster [🔗](https://www.bragitoff.com/2023/06/poster-icqc-2023-efficient-simulation-of-high-harmonic-generation-using-gaussian-basis-functions/)', 'International Congress of Quantum Chemistry 2023 in Bratislava, Slovakia ([link](https://icqc2023.org))', '25 June - 01 July 2023')
 txt4('Talk', 'VISTA Seminars 2022 [VIRTUAL] ([link](https://quantum-dynamics-hub.github.io/VISTA/))', '30 Nov 2022')
 txt4('Poster [🔗](https://www.bragitoff.com/2022/09/biovia-conference-2022-poster-wavefunction-in-dft-embedding-for-molecular-and-periodic-systems/)', 'BIOVIA Conference 2022 [VIRTUAL] ([link](https://events.3ds.com/biovia-conference-2022))', '11-13 Oct 2022')
