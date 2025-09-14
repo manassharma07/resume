@@ -140,6 +140,8 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Reached ✨[**20k subscribers on YouTube**](https://youtube.com/@PhysWhiz)✨, where I post tutorials and lectures on Physics, Computational Materials Science, Numerical Methods and more.','08 July 2025')
+txt('Released ✨[**MLIP Playground**](https://huggingface.co/spaces/ManasSharma07/mlip-playground) Web app✨, for running, benchmarking and testing more than 25 Machine Learned Interatomic Potentials (MLIP).','23 May 2025')
 txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) on GW/BSE-in-DFT for optical gap calculation of ionic solids.','17 Oct 2024')
 txt('Gave a 🎤**talk** on DFT-based Embedding for periodic systems at [Turbomole 2024 Conference](https://www.meeting2024.turbomole.org/) held at [Oxford University](https://www.meeting2024.turbomole.org/) in UK','19 Sept 2024')
 txt('Joined [**IISc**](https://iisc.ac.in/) as a postdoctoral researcher in the [Chemical Engineering Department](https://chemeng.iisc.ac.in/).','1 August 2024')
