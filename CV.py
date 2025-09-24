@@ -140,7 +140,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
-txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937) showcasing the recent advances in TURBOMOLE in [JPC A](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819).','23 Sept 2025')
+txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937) showcasing the recent advances in TURBOMOLE in [JPC A](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937).','23 Sept 2025')
 txt('Reached ✨[**20k subscribers on YouTube**](https://youtube.com/@PhysWhiz)✨, where I post tutorials and lectures on Physics, Computational Materials Science, Numerical Methods and more.','08 July 2025')
 txt('Released ✨[**MLIP Playground**](https://huggingface.co/spaces/ManasSharma07/mlip-playground) Web app✨, for running, benchmarking and testing more than 25 Machine Learned Interatomic Potentials (MLIP).','23 May 2025')
 txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) on GW/BSE-in-DFT for optical gap calculation of ionic solids.','17 Oct 2024')
