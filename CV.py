@@ -34,7 +34,7 @@ Using the data from these simulations, I develop MLIPs trained on high-fidelity 
 
 Beyond simulations, I have a keen interest in developing computational tools for researchers. I have built a performant neural network library from scratch, optimized for parallelization and GPU acceleration. Additionally, I have experience creating GUIs for materials modeling, visualization, and input file generation.
 
-Outside research, I enjoy creating [YouTube tutorials](https://www.youtube.com/c/Bragitoff_physics), web and [Android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) to make computational materials science more accessible to researchers and students.        
+Outside research, I enjoy creating [YouTube tutorials](https://www.youtube.com/@PhysWhiz), web and [Android apps](https://play.google.com/store/apps/developer?id=Manas+Sharma), and computer software/[libraries](https://github.com/manassharma07) to make computational materials science more accessible to researchers and students.        
 ''')
 
 #####################
@@ -168,7 +168,7 @@ st.markdown('''
 ## About
 ''')
 st.markdown('''
-I am a postdoctoral researcher at IISc, jointly advised by [Prof. Ananth Govind Rajan](https://agrgroup.org/) and [Prof. Sudeep Punnathanam](https://chemeng.iisc.ac.in/sudeep/). Previously,
+I am a postdoctoral researcher at [IISc](https://iisc.ac.in/), jointly advised by [Prof. Ananth Govind Rajan](https://agrgroup.org/) and [Prof. Sudeep Punnathanam](https://chemeng.iisc.ac.in/sudeep/). Previously,
  I obtained my [PhD](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was supervised by [Prof. Dr. Marek Sierka](https://www.cmsg.uni-jena.de/) during my PhD.
 
 I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
@@ -286,6 +286,7 @@ st.markdown('''
 st.write('#### Contributions')
 txt4('TURBOMOLE', 'DFT based embedding coupled with WFT and RT-TDDFT methods within the RIPER module of the popular TURBOMOLE package', 'https://www.turbomole.org/')
 st.write('#### Independently Developed Software')
+txt4('PyFock', 'PyFock is a pure Python DFT code that achieves performance comparable to traditional C/C++ implementations of molecular integrals (ex: libcint, libint) and DFT—all while being incredibly easy to install and use.', 'https://pyfock.bragitoff.com')
 txt4('CrysX-NN', 'An efficient neural network library from scratch that supports parallelization and GPUs', 'https://github.com/manassharma07/crysx_nn')
 txt4('CrysX-3D Viewer', 'A molecule and crystal viewer that renders high quality visualizations using complex shaders developed using Unity gaming engine. Avaliable on Android, Windows, Mac and Linux','https://www.bragitoff.com/crysx-3d-viewer/')
 txt4('CrysX-AR', 'An Android app for augmented reality visualization of molecules and crystals', 'https://play.google.com/store/apps/details?id=com.bragitoff.crysxar')
@@ -308,6 +309,11 @@ st.markdown('''
 ''')
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
 # txt('','')
+txt('''**M. Sharma**, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka [*Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications*](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937),
+**J. Phys. Chem. A** 129, 39, 9062–9083  ''', '23 Sept **2025**')
+with st.expander("### **See more details**"):
+    st.write('#### Graphical Abstract')
+    st.image('dft_turbomole_toc.png', use_column_width=True)
 txt('''**M. Sharma**, and M. Sierka [*Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT*](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819),
 **J. Chem. Theo. Comput.** 20, 21, 9592–9605  ''', '17 Oct **2024**')
 with st.expander("### **See more details**"):
