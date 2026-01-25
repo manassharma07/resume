@@ -173,7 +173,7 @@ st.markdown('''
 I am a postdoctoral researcher at [IISc](https://iisc.ac.in/), jointly advised by [Prof. Ananth Govind Rajan](https://agrgroup.org/) and [Prof. Sudeep Punnathanam](https://chemeng.iisc.ac.in/sudeep/). Previously,
  I obtained my [PhD](https://www.db-thueringen.de/receive/dbt_mods_00059873) (in Physics) from [Friedrich Schiller University Jena](https://www.uni-jena.de/) (FSU) in Germany, with the highest distinction of *summa cum laude*. I was supervised by [Prof. Dr. Marek Sierka](https://www.cmsg.uni-jena.de/) during my PhD.
 
-I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>17` conferences (`7` talks; `10` posters)** as well as publishing **`7` scientific articles**.
+I possess strong verbal, presentation and written communication skills as demonstrated by extensive **participation in `>20` conferences (`10` talks; `10` posters)** as well as publishing **`8` peer-reviewed scientific articles**.
 
 Prior to my PhD, I obtained a Master's in Physics from University of Delhi (India), where I worked with [Dr. Debabrata Mishra](https://scholar.google.com/citations?user=-vujB0AAAAAJ&hl=en) and published three papers.  
 I obtained my Bachelor's in Physics (Hons) from the University of Delhi as well. 
@@ -391,7 +391,7 @@ with st.expander("### **See more details**"):
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
-txt4('Talk', 'IISc Chemical Engineering Symposium 2026 ([link](https://chemeng.iisc.ac.in/symposium/))', '24 Jan 2026')
+txt4('Talk', 'IISc Chemical Engineering Symposium 2026 ***BEST ORAL PRESENTATION AWARD 🏆*** ([link](https://chemeng.iisc.ac.in/symposium/))', '24 Jan 2026')
 txt4('Talk', 'APS Global Physics Summit 2025 ([link](https://summit.aps.org/events/VIR-G02))', '18 Mar 2025')
 txt4('Talk', 'TURBOMOLE Users Meet Developers ([link](https://www.meeting2024.turbomole.org/))', '19 Sept 2024')
 txt4('Lecture + Tutorials (INVITED)', 'Mastering DFT: A Hands‑on Training Workshop, Janardan Singh Foundation (ONLINE)', '27 July 2024')
