@@ -140,6 +140,8 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Won 🏆**Best Oral Presentation** award for my talk at the [IISc Chemical Engineering Symposium 2026](https://chemeng.iisc.ac.in/symposium/).','24 Jan 2026')
+txt('Released 👨‍💻[**PyFock**](https://pyfock.bragitoff.com), a pure python (MIT licensed) DFT code with implementations of molecular integrals and XC term','01 Jan 2026')
 txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937) showcasing the recent advances in TURBOMOLE in [JPC A](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937).','23 Sept 2025')
 txt('Reached ✨[**20k subscribers on YouTube**](https://youtube.com/@PhysWhiz)✨, where I post tutorials and lectures on Physics, Computational Materials Science, Numerical Methods and more.','08 July 2025')
 txt('Released ✨[**MLIP Playground**](https://huggingface.co/spaces/ManasSharma07/mlip-playground) Web app✨, for running, benchmarking and testing more than 25 Machine Learned Interatomic Potentials (MLIP).','23 May 2025')
@@ -389,6 +391,7 @@ with st.expander("### **See more details**"):
 st.markdown('''
 ## Conferences, Workshops and Seminars
 ''')
+txt4('Talk', 'IISc Chemical Engineering Symposium 2026 ([link](https://chemeng.iisc.ac.in/symposium/))', '24 Jan 2026')
 txt4('Talk', 'APS Global Physics Summit 2025 ([link](https://summit.aps.org/events/VIR-G02))', '18 Mar 2025')
 txt4('Talk', 'TURBOMOLE Users Meet Developers ([link](https://www.meeting2024.turbomole.org/))', '19 Sept 2024')
 txt4('Lecture + Tutorials (INVITED)', 'Mastering DFT: A Hands‑on Training Workshop, Janardan Singh Foundation (ONLINE)', '27 July 2024')
