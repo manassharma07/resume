@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software & Tools — Manas Sharma</title>
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .cat-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem; font-style: italic; font-weight: normal;
+      color: var(--text);
+      margin: 3rem 0 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .cat-title::before { content:''; display:inline-block; width:18px; height:2px; background:var(--accent); }
+    .sw-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:1.3rem; }
+    .sw-card {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:2px;
+      padding:1.5rem; display:flex; flex-direction:column; gap:0.7rem;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      position:relative; overflow:hidden;
+    }
+    .sw-card::after {
+      content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+      background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform 0.3s;
+    }
+    .sw-card:hover { border-color:var(--accent-dim); transform:translateY(-3px); box-shadow:var(--shadow-sm); }
+    .sw-card:hover::after { transform:scaleX(1); }
+    .sw-header { display:flex; align-items:flex-start; gap:0.85rem; }
+    .sw-icon { font-size:1.4rem; flex-shrink:0; line-height:1; }
+    .sw-name { font-family:var(--font-mono); font-size:0.88rem; color:var(--text); display:block; margin-bottom:0.15rem; }
+    .sw-platform { font-family:var(--font-mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
+    .sw-desc { font-size:0.85rem; color:var(--text-muted); line-height:1.65; flex:1; }
+    .sw-links { display:flex; gap:0.5rem; flex-wrap:wrap; }
+    .sw-link {
+      font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.06em; text-transform:uppercase;
+      padding:0.22rem 0.6rem; border:1px solid var(--border); border-radius:2px; color:var(--text-muted);
+      text-decoration:none; transition:all 0.2s;
+    }
+    .sw-link:hover { border-color:var(--accent); color:var(--accent); text-decoration:none; opacity:1; }
+    .contrib-card {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:2px; padding:1.8rem;
+      display:grid; grid-template-columns:auto 1fr; gap:1.5rem; align-items:start; transition:border-color 0.25s;
+    }
+    .contrib-card:hover { border-color:var(--accent-dim); }
+    .contrib-logo {
+      width:56px; height:56px; background:var(--bg-subtle); border:1px solid var(--border); border-radius:2px;
+      display:flex; align-items:center; justify-content:center; font-size:1.6rem;
+    }
+    .contrib-name { font-family:var(--font-mono); font-size:0.9rem; color:var(--text); margin-bottom:0.3rem; }
+    .contrib-desc { font-size:0.86rem; color:var(--text-muted); line-height:1.65; margin-bottom:0.7rem; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">Manas <span>Sharma</span></span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="software.html" class="active">Software</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <span id="theme-icon">☀</span><span id="theme-label">Light</span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="label">Code & Tools</p>
+    <h1>Software & Applications</h1>
+    <p>Open-source libraries, web apps, Android applications, and contributions to quantum chemistry packages.</p>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+
+    <h2 class="cat-title">Contributions to Established Packages</h2>
+    <div class="contrib-card anim d1">
+      <div class="contrib-logo">⚗️</div>
+      <div>
+        <p class="contrib-name">TURBOMOLE</p>
+        <p class="contrib-desc">
+          Developed and implemented DFT-based embedding (frozen density and projection-based) coupled with
+          wavefunction theory (WFT) and real-time TD-DFT within the RIPER module. Enables accurate
+          excited-state and adsorption energy calculations for molecule-in-periodic systems at reduced cost.
+        </p>
+        <div class="sw-links"><a href="https://www.turbomole.org/" class="sw-link" target="_blank">turbomole.org ↗</a></div>
+      </div>
+    </div>
+
+    <h2 class="cat-title">Independent Libraries & Codes</h2>
+    <div class="sw-grid">
+      <div class="sw-card anim d1">
+        <div class="sw-header"><span class="sw-icon">🔵</span><div>
+          <span class="sw-name">PyFock</span>
+          <span class="sw-platform">Python · DFT Code</span>
+        </div></div>
+        <p class="sw-desc">Efficient DFT package based on Gaussian basis functions with multi-core and GPU acceleration, built from scratch for performance and transparency.</p>
+        <div class="sw-links"><a href="https://github.com/manassharma07" class="sw-link" target="_blank">GitHub ↗</a></div>
+      </div>
+      <div class="sw-card anim d2">
+        <div class="sw-header"><span class="sw-icon">🧠</span><div>
+          <span class="sw-name">CrysX-NN</span>
+          <span class="sw-platform">Python · Neural Network Library</span>
+        </div></div>
+        <p class="sw-desc">Performant neural network library from scratch with parallelization and GPU support. Used for microstructure classification and MLIP research workflows.</p>
+        <div class="sw-links"><a href="https://github.com/manassharma07" class="sw-link" target="_blank">GitHub ↗</a></div>
+      </div>
+    </div>
+
+    <h2 class="cat-title">Web Applications</h2>
+    <div class="sw-grid">
+      <div class="sw-card anim d1">
+        <div class="sw-header"><span class="sw-icon">⚡</span><div>
+          <span class="sw-name">MLIP Playground</span>
+          <span class="sw-platform">Web App · No-Code</span>
+        </div></div>
+        <p class="sw-desc">No-code platform to run, test, and compare 22 state-of-the-art universal MLIPs for atomistic simulations of molecules and materials.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Live App ↗</a></div>
+      </div>
+      <div class="sw-card anim d2">
+        <div class="sw-header"><span class="sw-icon">🔗</span><div>
+          <span class="sw-name">CrysX — DFT Embedding Demo</span>
+          <span class="sw-platform">Web App</span>
+        </div></div>
+        <p class="sw-desc">Online demonstration of frozen density and projection-based embedding methods for interactive exploration of quantum embedding techniques.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+      <div class="sw-card anim d3">
+        <div class="sw-header"><span class="sw-icon">📐</span><div>
+          <span class="sw-name">RIPER-Tools</span>
+          <span class="sw-platform">Web App</span>
+        </div></div>
+        <p class="sw-desc">Creates TURBOMOLE RIPER input files from MaterialsProject or PubChem database structures — streamlining periodic DFT setup.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+      <div class="sw-card anim d4">
+        <div class="sw-header"><span class="sw-icon">🖥️</span><div>
+          <span class="sw-name">VASP-GUI</span>
+          <span class="sw-platform">Web App</span>
+        </div></div>
+        <p class="sw-desc">Online GUI for VASP input preparation and output parsing/visualization — no local installation required.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+      <div class="sw-card anim d5">
+        <div class="sw-header"><span class="sw-icon">🔄</span><div>
+          <span class="sw-name">CompChem File Converter</span>
+          <span class="sw-platform">Web App</span>
+        </div></div>
+        <p class="sw-desc">Inter-conversion between chemical file formats: CIF, XYZ, POSCAR, mol, mol2, and many more.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+      <div class="sw-card anim d6">
+        <div class="sw-header"><span class="sw-icon">📚</span><div>
+          <span class="sw-name">Basis Set Converter</span>
+          <span class="sw-platform">Web App</span>
+        </div></div>
+        <p class="sw-desc">Converts between Gaussian, TURBOMOLE, NWChem, and other basis set formats, powered by Basis Set Exchange.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+      <div class="sw-card anim d1">
+        <div class="sw-header"><span class="sw-icon">🔢</span><div>
+          <span class="sw-name">MNIST+ Digit Classifier</span>
+          <span class="sw-platform">Web App · PyTorch</span>
+        </div></div>
+        <p class="sw-desc">Classifies user-drawn handwritten digits using a CNN (PyTorch) trained on a modified MNIST dataset.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+      <div class="sw-card anim d2">
+        <div class="sw-header"><span class="sw-icon">🔭</span><div>
+          <span class="sw-name">Microstructure Classifier</span>
+          <span class="sw-platform">Web App · CrysX-NN</span>
+        </div></div>
+        <p class="sw-desc">Neural network demo (CrysX-NN) trained to classify materials microstructures from image input.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Web App ↗</a></div>
+      </div>
+    </div>
+
+    <h2 class="cat-title">Android & Desktop Applications</h2>
+    <div class="sw-grid">
+      <div class="sw-card anim d1">
+        <div class="sw-header"><span class="sw-icon">💎</span><div>
+          <span class="sw-name">CrysX — 3D Viewer</span>
+          <span class="sw-platform">Android · Windows · Mac · Linux</span>
+        </div></div>
+        <p class="sw-desc">High-quality molecule and crystal viewer using complex Unity shaders, available across all major platforms.</p>
+        <div class="sw-links"><a href="https://manas.bragitoff.com" class="sw-link" target="_blank">Project Page ↗</a></div>
+      </div>
+      <div class="sw-card anim d2">
+        <div class="sw-header"><span class="sw-icon">🥽</span><div>
+          <span class="sw-name">CrysX — AR</span>
+          <span class="sw-platform">Android</span>
+        </div></div>
+        <p class="sw-desc">Augmented reality visualization of molecules and crystal structures overlaid in real-world environments via device camera.</p>
+        <div class="sw-links"><a href="https://play.google.com/store" class="sw-link" target="_blank">Google Play ↗</a></div>
+      </div>
+      <div class="sw-card anim d3">
+        <div class="sw-header"><span class="sw-icon">🔮</span><div>
+          <span class="sw-name">CrysX — Crystallographic Tools</span>
+          <span class="sw-platform">Android</span>
+        </div></div>
+        <p class="sw-desc">XRD pattern simulation, CIF creator/parser, equation of state fitting, and more — all on Android.</p>
+        <div class="sw-links"><a href="https://play.google.com/store" class="sw-link" target="_blank">Google Play ↗</a></div>
+      </div>
+      <div class="sw-card anim d4">
+        <div class="sw-header"><span class="sw-icon">∑</span><div>
+          <span class="sw-name">The Math App</span>
+          <span class="sw-platform">Android</span>
+        </div></div>
+        <p class="sw-desc">Comprehensive mathematical tools — matrices, calculus, plotting — as a mobile substitute for MATLAB/Scilab.</p>
+        <div class="sw-links"><a href="https://play.google.com/store" class="sw-link" target="_blank">Google Play ↗</a></div>
+      </div>
+    </div>
+
+    <h2 class="cat-title" style="margin-top:4rem;">Technical Proficiencies</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem;">
+      <div class="card anim d1">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;">Languages</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="chip">Python</span><span class="chip">Fortran</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">Shell</span>
+        </div>
+      </div>
+      <div class="card anim d2">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;">QC / DFT Packages</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="chip">TURBOMOLE</span><span class="chip">VASP</span><span class="chip">PySCF</span><span class="chip">Q. ESPRESSO</span><span class="chip">ORCA</span>
+        </div>
+      </div>
+      <div class="card anim d3">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;">ML / Deep Learning</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">MACE</span><span class="chip">NequIP</span><span class="chip">FairChem</span>
+        </div>
+      </div>
+      <div class="card anim d4">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;">Simulation & MD</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="chip">LAMMPS</span><span class="chip">ASE</span><span class="chip">AIMD</span><span class="chip">NEB</span>
+        </div>
+      </div>
+      <div class="card anim d5">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;">Visualization</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="chip">VESTA</span><span class="chip">VMD</span><span class="chip">Avogadro</span><span class="chip">CrysX-3D</span><span class="chip">Py3Dmol</span>
+        </div>
+      </div>
+      <div class="card anim d6">
+        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;">Other</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="chip">LaTeX</span><span class="chip">Jupyter</span><span class="chip">Git</span><span class="chip">Markdown</span><span class="chip">Video Editing</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Manas Sharma</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li><li><a href="publications.html">Publications</a></li>
+      <li><a href="cv.html">CV</a></li><li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Manas Sharma</span>
+  </div>
+</footer>
+
+<script>
+  function toggleTheme(){const h=document.documentElement,d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('theme-icon').textContent=d?'☾':'☀';document.getElementById('theme-label').textContent=d?'Dark':'Light';localStorage.setItem('theme',d?'light':'dark');}
+  (function(){const s=localStorage.getItem('theme');if(s){document.documentElement.setAttribute('data-theme',s);const d=s==='dark';document.getElementById('theme-icon').textContent=d?'☀':'☾';document.getElementById('theme-label').textContent=d?'Light':'Dark';}})();
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});},{threshold:0.08});
+  document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Manas Sharma</title>
+  <style>
+    :root {
+      --font-display: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+      --font-body: 'Georgia', 'Times New Roman', Times, serif;
+      --font-mono: 'Courier New', Courier, monospace;
+      --bg:          #0e0f11;
+      --bg-card:     #16181c;
+      --bg-subtle:   #1c1f25;
+      --border:      #2a2d35;
+      --text:        #e8e4dc;
+      --text-muted:  #8a8880;
+      --text-faint:  #4a4845;
+      --accent:      #c9964a;
+      --accent-dim:  #7a5a28;
+      --accent-glow: rgba(201, 150, 74, 0.12);
+      --nav-bg:      rgba(14, 15, 17, 0.85);
+      --shadow:      0 4px 40px rgba(0,0,0,0.6);
+      --shadow-sm:   0 2px 16px rgba(0,0,0,0.4);
+    }
+    [data-theme="light"] {
+      --bg:          #f5f2ec;
+      --bg-card:     #ffffff;
+      --bg-subtle:   #ede9e1;
+      --border:      #d5cfc4;
+      --text:        #1a1714;
+      --text-muted:  #6b6560;
+      --text-faint:  #b5afa7;
+      --accent:      #9a6820;
+      --accent-dim:  #c89040;
+      --accent-glow: rgba(154, 104, 32, 0.08);
+      --nav-bg:      rgba(245, 242, 236, 0.88);
+      --shadow:      0 4px 40px rgba(0,0,0,0.12);
+      --shadow-sm:   0 2px 16px rgba(0,0,0,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); line-height: 1.75;
+      transition: background 0.4s ease, color 0.4s ease; overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.75; text-decoration: underline; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 3px; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border); transition: background 0.4s;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between; height: 60px;
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.02em; color: var(--text); font-weight: normal; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    .nav-links a.active { color: var(--accent); }
+    .theme-toggle {
+      background: none; border: 1px solid var(--border); border-radius: 20px;
+      padding: 5px 12px; cursor: pointer; font-family: var(--font-mono);
+      font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text-muted);
+      transition: all 0.2s; display: flex; align-items: center; gap: 6px;
+    }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+    .theme-icon { font-size: 0.9rem; }
+
+    .page-header {
+      padding: 8rem 2rem 3rem; position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px; opacity: 0.18; pointer-events: none;
+    }
+    .page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-header .section-label {
+      font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .page-header h1 {
+      font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: normal; color: var(--text); margin-bottom: 1rem;
+    }
+    .page-header h1 em { font-style: italic; color: var(--accent); }
+    .page-header .subtitle { font-size: 1rem; color: var(--text-muted); max-width: 640px; line-height: 1.7; }
+
+    section { padding: 4rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: normal; color: var(--text);
+      margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+    }
+
+    /* GALLERY GRID */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+      position: relative;
+    }
+    .gallery-item:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-3px);
+    }
+    .gallery-img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--bg-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover .gallery-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    /* Placeholder for images not yet added */
+    .gallery-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 0.5rem;
+      color: var(--text-faint);
+      font-family: var(--font-mono); font-size: 0.72rem;
+    }
+    .gallery-placeholder svg { opacity: 0.25; }
+
+    .gallery-caption {
+      padding: 1rem 1.25rem;
+    }
+    .gallery-caption h3 {
+      font-family: var(--font-display); font-size: 0.95rem;
+      font-weight: normal; color: var(--text); margin-bottom: 0.25rem;
+    }
+    .gallery-caption p {
+      font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;
+    }
+    .gallery-caption .gallery-tag {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.62rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.12rem 0.45rem; border: 1px solid var(--border);
+      color: var(--text-faint); border-radius: 2px; margin-top: 0.5rem; margin-right: 0.3rem;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.92);
+      align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 90vh;
+      object-fit: contain; border-radius: 2px;
+      box-shadow: var(--shadow);
+    }
+    .lightbox-close {
+      position: absolute; top: 1.5rem; right: 2rem;
+      background: none; border: none; color: #fff;
+      font-size: 2rem; cursor: pointer; opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-name { font-family: var(--font-display); font-style: italic; color: var(--text-muted); font-size: 0.95rem; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a {
+      font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-faint); text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .anim { opacity: 0; }
+    .anim.visible { animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .anim-d1 { animation-delay: 0.05s; }
+    .anim-d2 { animation-delay: 0.15s; }
+    .anim-d3 { animation-delay: 0.25s; }
+    .anim-d4 { animation-delay: 0.35s; }
+    .anim-d5 { animation-delay: 0.45s; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">Manas <span>Sharma</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon" id="theme-icon">☀</span>
+        <span id="theme-label">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Visual Archive</p>
+      <h1>Research <em>Gallery</em></h1>
+      <p class="subtitle">
+        A curated collection of journal covers, conference posters, visualizations, and snapshots from my research journey.
+        Click any image to view it in full resolution.
+      </p>
+    </div>
+  </header>
+
+  <!-- JOURNAL COVERS -->
+  <section>
+    <div class="section-inner">
+      <p class="section-label">Highlights</p>
+      <h2 class="section-title">Journal Covers &amp; Featured Work</h2>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item anim anim-d1" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <!--
+              Replace src with your image path, e.g. src="assets/gallery/jctc-cover-2022.jpg"
+              The onerror handler shows a placeholder if the image is not found.
+            -->
+            <img
+              src="assets/gallery/jctc-cover-2022.jpg"
+              alt="JCTC Supplementary Cover 2022"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>jctc-cover-2022.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>JCTC Supplementary Cover (2022)</h3>
+            <p>Efficient Implementation of DFT-based Embedding for Molecular and Periodic Systems — featured on the supplementary cover of J. Chem. Theory Comput.</p>
+            <span class="gallery-tag">Cover</span>
+            <span class="gallery-tag">JCTC</span>
+            <span class="gallery-tag">Embedding</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d2" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/aom-cover-2023.jpg"
+              alt="Advanced Optical Materials Cover 2023"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>aom-cover-2023.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>Advanced Optical Materials Cover (2023)</h3>
+            <p>Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors — featured on the journal cover and among the top viewed articles.</p>
+            <span class="gallery-tag">Cover</span>
+            <span class="gallery-tag">Adv. Opt. Mater.</span>
+            <span class="gallery-tag">HHG</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d3" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/jac-cover-2019.jpg"
+              alt="J. Appl. Cryst. Cover 2019"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>jac-cover-2019.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>J. Appl. Cryst. Cover (2019)</h3>
+            <p>CrysX: Crystallographic tools for the Android platform — featured on the journal cover and among the top downloaded articles.</p>
+            <span class="gallery-tag">Cover</span>
+            <span class="gallery-tag">CrysX</span>
+            <span class="gallery-tag">Android</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFERENCE POSTERS -->
+  <section style="background: var(--bg-subtle);">
+    <div class="section-inner">
+      <p class="section-label">Presentations</p>
+      <h2 class="section-title">Conference Posters</h2>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item anim anim-d1" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/poster-psik-2022.jpg"
+              alt="Psi-K 2022 Poster"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>poster-psik-2022.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>Psi-K 2022 — EPFL, Lausanne</h3>
+            <p>Poster on DFT-based quantum embedding methods for molecular and periodic systems.</p>
+            <span class="gallery-tag">Poster</span>
+            <span class="gallery-tag">Psi-K</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d2" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/poster-etsf-2022.jpg"
+              alt="ETSF 2022 Poster"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>poster-etsf-2022.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>ETSF 2022 — Leuven, Belgium</h3>
+            <p>Talk on WFT-in-DFT embedding for excited-state calculations and optical gaps of ionic materials.</p>
+            <span class="gallery-tag">Talk</span>
+            <span class="gallery-tag">ETSF</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d3" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/poster-icqc-2023.jpg"
+              alt="ICQC 2023 Poster"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>poster-icqc-2023.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>ICQC 2023 — Bratislava, Slovakia</h3>
+            <p>Poster at the 17th International Congress of Quantum Chemistry on GW/BSE-in-DFT and CC2-in-DFT methods.</p>
+            <span class="gallery-tag">Poster</span>
+            <span class="gallery-tag">ICQC</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH VISUALIZATIONS -->
+  <section>
+    <div class="section-inner">
+      <p class="section-label">Visuals</p>
+      <h2 class="section-title">Research Visualizations &amp; Tools</h2>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item anim anim-d1" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/crysx-3d-viewer.jpg"
+              alt="CrysX-3D Viewer"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>crysx-3d-viewer.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>CrysX-3D Viewer</h3>
+            <p>High-quality molecule and crystal visualization tool built with Unity, available on Android, Windows, Mac, and Linux.</p>
+            <span class="gallery-tag">Software</span>
+            <span class="gallery-tag">Visualization</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d2" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/mlip-playground.jpg"
+              alt="MLIP Playground"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>mlip-playground.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>MLIP Playground</h3>
+            <p>A no-code web application to run, test, and compare 22 state-of-the-art universal machine learning interatomic potentials for atomistic simulations.</p>
+            <span class="gallery-tag">Web App</span>
+            <span class="gallery-tag">MLIP</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d3" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/embedding-schematic.jpg"
+              alt="Embedding Schematic"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>embedding-schematic.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>Quantum Embedding Schematic</h3>
+            <p>Illustration of the DFT-in-DFT and WFT-in-DFT embedding workflow for molecular and periodic systems implemented in TURBOMOLE.</p>
+            <span class="gallery-tag">Illustration</span>
+            <span class="gallery-tag">Embedding</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d1" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/crysx-ar.jpg"
+              alt="CrysX-AR"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>crysx-ar.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>CrysX-AR</h3>
+            <p>Augmented reality visualization of molecules and crystal structures on Android devices.</p>
+            <span class="gallery-tag">Android</span>
+            <span class="gallery-tag">AR</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d2" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/thin-film-simulation.jpg"
+              alt="Thin Film Simulation"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>thin-film-simulation.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>Thin Film Growth Simulation</h3>
+            <p>Atomistic simulation of CVD/PVD thin-film deposition on substrates using GNN-based machine learning interatomic potentials.</p>
+            <span class="gallery-tag">Simulation</span>
+            <span class="gallery-tag">CVD</span>
+          </div>
+        </div>
+
+        <div class="gallery-item anim anim-d3" onclick="openLightbox(this)">
+          <div class="gallery-img-wrap">
+            <img
+              src="assets/gallery/phys-whiz-youtube.jpg"
+              alt="Phys Whiz YouTube"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>phys-whiz-youtube.jpg</span>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <h3>Phys Whiz — YouTube Channel</h3>
+            <p>Science outreach channel with ~20.4k subscribers and 3.6M views, covering computational materials science, physics, and scientific computing.</p>
+            <span class="gallery-tag">Outreach</span>
+            <span class="gallery-tag">YouTube</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 3rem; text-align: center;">
+        <p style="color: var(--text-faint); font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.05em;">
+          ✦ To add images, place them in the <code style="color: var(--accent);">assets/gallery/</code> folder with the filenames shown above.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="Full view" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Manas Sharma</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+      <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">© 2026 Manas Sharma</span>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Dark/Light Toggle ---------- */
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('theme-icon').textContent = isDark ? '☾' : '☀';
+      document.getElementById('theme-label').textContent = isDark ? 'Dark' : 'Light';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    }
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        const isDark = saved === 'dark';
+        document.getElementById('theme-icon').textContent = isDark ? '☀' : '☾';
+        document.getElementById('theme-label').textContent = isDark ? 'Light' : 'Dark';
+      }
+    })();
+
+    /* ---------- Lightbox ---------- */
+    function openLightbox(card) {
+      const img = card.querySelector('.gallery-img-wrap img');
+      if (img && img.style.display !== 'none') {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    /* ---------- Scroll-triggered fade-in ---------- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

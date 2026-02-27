@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Manas Sharma</title>
+  <style>
+    :root {
+      --font-display: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+      --font-body: 'Georgia', 'Times New Roman', Times, serif;
+      --font-mono: 'Courier New', Courier, monospace;
+      --bg:          #0e0f11;
+      --bg-card:     #16181c;
+      --bg-subtle:   #1c1f25;
+      --border:      #2a2d35;
+      --text:        #e8e4dc;
+      --text-muted:  #8a8880;
+      --text-faint:  #4a4845;
+      --accent:      #c9964a;
+      --accent-dim:  #7a5a28;
+      --accent-glow: rgba(201, 150, 74, 0.12);
+      --nav-bg:      rgba(14, 15, 17, 0.85);
+      --shadow:      0 4px 40px rgba(0,0,0,0.6);
+      --shadow-sm:   0 2px 16px rgba(0,0,0,0.4);
+    }
+    [data-theme="light"] {
+      --bg:          #f5f2ec;
+      --bg-card:     #ffffff;
+      --bg-subtle:   #ede9e1;
+      --border:      #d5cfc4;
+      --text:        #1a1714;
+      --text-muted:  #6b6560;
+      --text-faint:  #b5afa7;
+      --accent:      #9a6820;
+      --accent-dim:  #c89040;
+      --accent-glow: rgba(154, 104, 32, 0.08);
+      --nav-bg:      rgba(245, 242, 236, 0.88);
+      --shadow:      0 4px 40px rgba(0,0,0,0.12);
+      --shadow-sm:   0 2px 16px rgba(0,0,0,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.75;
+      transition: background 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.75; text-decoration: underline; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 3px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.4s;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between; height: 60px;
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.02em; color: var(--text); font-weight: normal; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    .nav-links a.active { color: var(--accent); }
+    .theme-toggle {
+      background: none; border: 1px solid var(--border); border-radius: 20px;
+      padding: 5px 12px; cursor: pointer; font-family: var(--font-mono);
+      font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text-muted);
+      transition: all 0.2s; display: flex; align-items: center; gap: 6px;
+    }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+    .theme-icon { font-size: 0.9rem; }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 8rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .page-header-inner {
+      max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;
+    }
+    .page-header .section-label {
+      font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: normal; color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .page-header h1 em { font-style: italic; color: var(--accent); }
+    .page-header .subtitle {
+      font-size: 1rem; color: var(--text-muted); max-width: 640px; line-height: 1.7;
+    }
+    .page-header .subtitle a { color: var(--accent); }
+
+    /* METRICS BAR */
+    .metrics-bar {
+      display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;
+    }
+    .metric {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px;
+      padding: 0.75rem 1.25rem; text-align: center; min-width: 100px;
+    }
+    .metric-val {
+      font-family: var(--font-display); font-size: 1.4rem; font-style: italic;
+      color: var(--accent); display: block;
+    }
+    .metric-label {
+      font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-faint);
+    }
+
+    /* SECTION */
+    section { padding: 4rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: normal; color: var(--text);
+      margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+    }
+
+    /* PUBLICATION LIST */
+    .pub-list { list-style: none; }
+    .pub-item {
+      padding: 1.5rem 0; border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 1.5rem; align-items: start; transition: background 0.2s;
+    }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    .pub-year {
+      font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);
+      letter-spacing: 0.05em; padding-top: 0.2rem; min-width: 3.5rem;
+    }
+    .pub-title {
+      font-family: var(--font-display); font-size: 1rem; font-style: italic;
+      color: var(--text); margin-bottom: 0.3rem;
+    }
+    .pub-authors { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .pub-authors strong {
+      color: var(--text); font-weight: normal;
+      text-decoration: underline; text-decoration-color: var(--accent);
+    }
+    .pub-journal {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      color: var(--text-faint); letter-spacing: 0.03em;
+    }
+    .pub-badge {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.65rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.15rem 0.5rem; border: 1px solid var(--accent-dim);
+      color: var(--accent); border-radius: 2px; margin-left: 0.5rem;
+    }
+    .pub-note {
+      font-size: 0.78rem; color: var(--text-faint); font-style: italic; margin-top: 0.3rem;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.5rem; border-radius: 2px;
+      font-family: var(--font-mono); font-size: 0.78rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; transition: all 0.25s; cursor: pointer;
+    }
+    .btn-outline {
+      background: transparent; color: var(--text-muted); border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; opacity: 1; }
+
+    /* REVIEW */
+    .review-list { list-style: none; }
+    .review-list li {
+      padding: 0.6rem 0; font-size: 0.92rem; color: var(--text-muted);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .review-list li::before {
+      content: '→'; color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;
+    }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-name { font-family: var(--font-display); font-style: italic; color: var(--text-muted); font-size: 0.95rem; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a {
+      font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-faint); text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .anim { opacity: 0; }
+    .anim.visible { animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .anim-d1 { animation-delay: 0.05s; }
+    .anim-d2 { animation-delay: 0.15s; }
+    .anim-d3 { animation-delay: 0.25s; }
+    .anim-d4 { animation-delay: 0.35s; }
+    .anim-d5 { animation-delay: 0.45s; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .metrics-bar { gap: 1rem; }
+      .metric { flex: 1; min-width: 80px; }
+    }
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+      .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .pub-year { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">Manas <span>Sharma</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon" id="theme-icon">☀</span>
+        <span id="theme-label">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Scholarly Output</p>
+      <h1>All <em>Publications</em></h1>
+      <p class="subtitle">
+        A complete list of peer-reviewed journal articles.
+        See also my <a href="https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en" target="_blank">Google Scholar</a>
+        and <a href="https://orcid.org/0000-0002-5346-6280" target="_blank">ORCID</a> profiles.
+      </p>
+      <div class="metrics-bar">
+        <div class="metric">
+          <span class="metric-val">10</span>
+          <span class="metric-label">Papers</span>
+        </div>
+        <div class="metric">
+          <span class="metric-val">362+</span>
+          <span class="metric-label">Citations</span>
+        </div>
+        <div class="metric">
+          <span class="metric-val">6</span>
+          <span class="metric-label">h-index</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PUBLICATIONS -->
+  <section>
+    <div class="section-inner">
+      <p class="section-label">Journal Articles</p>
+      <h2 class="section-title">Peer-Reviewed Publications</h2>
+
+      <ul class="pub-list">
+
+        <li class="pub-item anim anim-d1">
+          <span class="pub-year">2025</span>
+          <div class="pub-content">
+            <p class="pub-title">Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka</p>
+            <p class="pub-journal">J. Phys. Chem. A 129, 39, 9062–9083 (2025)
+              <span class="pub-badge">Accepted</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d2">
+          <span class="pub-year">2025</span>
+          <div class="pub-content">
+            <p class="pub-title">Tailored Vapor Deposition Unlocks Large-Grain, Wafer-Scale Epitaxial Growth of 2D Magnetic CrCl₃</p>
+            <p class="pub-authors">V. Kumar, A. Jangid†, <strong>M. Sharma</strong>†, M. Verma, J. Pasyanthi, K. S. Kumar, P. Sharma, E. O. Chiglintsev, M. I. Panin, S. N. Punnathanam, A. I. Chernov, A. G. Rajan, A. Singh</p>
+            <p class="pub-journal">Submitted to Adv. Mater. (preprint available on arXiv) (2025)
+              <span class="pub-badge">Submitted</span>
+            </p>
+            <p class="pub-note">† Equal contribution</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d3">
+          <span class="pub-year">2024</span>
+          <div class="pub-content">
+            <p class="pub-title">Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 20, 21, 9592–9605 (2024)</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d4">
+          <span class="pub-year">2023</span>
+          <div class="pub-content">
+            <p class="pub-title">TURBOMOLE: Today and Tomorrow</p>
+            <p class="pub-authors">Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Coriani, F. Della Sala, E. Fabiano, D. A. Fedotov, S. Fürst, S. Gillhuber, R. Grotjahn, M. Kaupp, M. Kehry, M. Krstić, F. Mack, S. Majumdar, B. D. Nguyen, S. M. Parker, F. Pauly, A. Pausch, E. Perlt, G. S. Phun, A. Rajabi, D. Rappoport, B. Samal, T. Schrader, <strong>M. Sharma</strong>, E. Tapavicza, R. S. Treß, V. Voora, A. Wodyński, J. M. Yu, B. Zerulla, F. Furche, C. Hättig, M. Sierka, D. P. Tew, and F. Weigend</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 19, 20, 6859–6890 (2023)
+              <span class="pub-badge">Highly Cited</span>
+            </p>
+            <p class="pub-note">Note: Author list determined alphabetically, except first two and last five corresponding authors.</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d5">
+          <span class="pub-year">2023</span>
+          <div class="pub-content">
+            <p class="pub-title">Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors</p>
+            <p class="pub-authors">W. Li, A. Saleh, <strong>M. Sharma</strong>, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M. F. Kling, A. F. Alharbi, and Z. Wang</p>
+            <p class="pub-journal">Adv. Optical Mater. 2203070 (2023)
+              <span class="pub-badge">On Cover</span>
+              <span class="pub-badge">Top Viewed</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d1">
+          <span class="pub-year">2022</span>
+          <div class="pub-content">
+            <p class="pub-title">Efficient Implementation of Density Functional Theory based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 18, 11, 6892–6904 (2022)
+              <span class="pub-badge">Cover</span>
+              <span class="pub-badge">Most Viewed</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d2">
+          <span class="pub-year">2020</span>
+          <div class="pub-content">
+            <p class="pub-title">Real-time time-dependent density functional theory using density fitting and the continuous fast multipole method</p>
+            <p class="pub-authors">C. Mueller, <strong>M. Sharma</strong>, and M. Sierka</p>
+            <p class="pub-journal">J. Comput. Chem. 41, 2573–2582 (2020)</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d3">
+          <span class="pub-year">2019</span>
+          <div class="pub-content">
+            <p class="pub-title">CrysX: crystallographic tools for the Android platform</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and D. Mishra</p>
+            <p class="pub-journal">J. Appl. Cryst. 52, 1449–1454 (2019)
+              <span class="pub-badge">Cover</span>
+              <span class="pub-badge">Top Downloaded</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d4">
+          <span class="pub-year">2019</span>
+          <div class="pub-content">
+            <p class="pub-title">First-principles study of the structural and electronic properties of bulk ZnS and small Zn<sub>n</sub>S<sub>n</sub> nanoclusters in the framework of the DFT+U method</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, D. Mishra, and J. Kumar</p>
+            <p class="pub-journal">Phys. Rev. B 100, 045151 (2019)</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d5">
+          <span class="pub-year">2019</span>
+          <div class="pub-content">
+            <p class="pub-title">DFT+U study of small ZnO nanoclusters</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and D. Mishra</p>
+            <p class="pub-journal">AIP Conf. Proc. 2142, 110025 (2019)</p>
+          </div>
+        </li>
+
+      </ul>
+
+      <div style="margin-top: 2.5rem;">
+        <a href="https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en" class="btn btn-outline" target="_blank">Google Scholar ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW ACTIVITIES -->
+  <section style="background: var(--bg-subtle);">
+    <div class="section-inner">
+      <p class="section-label">Service</p>
+      <h2 class="section-title">Peer Review Activities</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Served as a peer reviewer for the following journals published by the American Chemical Society:
+      </p>
+      <ul class="review-list">
+        <li>The Journal of Physical Chemistry A</li>
+        <li>ACS Omega</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Manas Sharma</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">© 2026 Manas Sharma</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('theme-icon').textContent = isDark ? '☾' : '☀';
+      document.getElementById('theme-label').textContent = isDark ? 'Dark' : 'Light';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    }
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        const isDark = saved === 'dark';
+        document.getElementById('theme-icon').textContent = isDark ? '☀' : '☾';
+        document.getElementById('theme-label').textContent = isDark ? 'Light' : 'Dark';
+      }
+    })();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

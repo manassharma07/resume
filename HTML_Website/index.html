@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manas Sharma — Physicist & Computational Scientist</title>
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — Edit colors/fonts here
+       ============================================================ */
+    :root {
+      --font-display: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+      --font-body: 'Georgia', 'Times New Roman', Times, serif;
+      --font-mono: 'Courier New', Courier, monospace;
+
+      /* Dark theme (default) */
+      --bg:          #0e0f11;
+      --bg-card:     #16181c;
+      --bg-subtle:   #1c1f25;
+      --border:      #2a2d35;
+      --text:        #e8e4dc;
+      --text-muted:  #8a8880;
+      --text-faint:  #4a4845;
+      --accent:      #c9964a;   /* amber gold */
+      --accent-dim:  #7a5a28;
+      --accent-glow: rgba(201, 150, 74, 0.12);
+      --nav-bg:      rgba(14, 15, 17, 0.85);
+      --hero-grain:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      --shadow:      0 4px 40px rgba(0,0,0,0.6);
+      --shadow-sm:   0 2px 16px rgba(0,0,0,0.4);
+    }
+
+    [data-theme="light"] {
+      --bg:          #f5f2ec;
+      --bg-card:     #ffffff;
+      --bg-subtle:   #ede9e1;
+      --border:      #d5cfc4;
+      --text:        #1a1714;
+      --text-muted:  #6b6560;
+      --text-faint:  #b5afa7;
+      --accent:      #9a6820;
+      --accent-dim:  #c89040;
+      --accent-glow: rgba(154, 104, 32, 0.08);
+      --nav-bg:      rgba(245, 242, 236, 0.88);
+      --shadow:      0 4px 40px rgba(0,0,0,0.12);
+      --shadow-sm:   0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.75;
+      transition: background 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    a:hover { opacity: 0.75; text-decoration: underline; }
+
+    /* ============================================================
+       SCROLLBAR
+       ============================================================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 3px; }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.4s;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      font-weight: normal;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* Dark/Light toggle */
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .theme-icon { font-size: 0.9rem; }
+
+    /* ============================================================
+       HERO SECTION
+       ============================================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle grid background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    /* Radial glow behind photo */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* LEFT: Text */
+    .hero-text { }
+
+    .hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-tag::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: normal;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-desc strong { color: var(--text); font-weight: normal; }
+
+    /* CTA Buttons */
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+    }
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    /* RIGHT: Photo */
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      width: 340px;
+      height: 400px;
+    }
+
+    /* Decorative offset border */
+    .hero-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      right: -16px;
+      bottom: -16px;
+      border: 1px solid var(--accent-dim);
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    .hero-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: grayscale(15%);
+      box-shadow: var(--shadow);
+      display: block;
+    }
+
+    /* Placeholder if no photo */
+    .hero-photo-placeholder {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--text-faint);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-photo-placeholder svg {
+      opacity: 0.3;
+    }
+
+    /* Stats strip */
+    .hero-stats {
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      right: -16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      gap: 1.5rem;
+      z-index: 2;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat { text-align: center; flex: 1; }
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--accent);
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+
+    /* ============================================================
+       SECTION COMMON
+       ============================================================ */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: normal;
+      color: var(--text);
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ============================================================
+       ABOUT SECTION
+       ============================================================ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: normal;
+    }
+
+    .about-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .keyword {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      transition: all 0.2s;
+    }
+    .keyword:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Side info card */
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1.5rem;
+    }
+
+    .about-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-list { list-style: none; }
+    .info-list li {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      align-items: flex-start;
+    }
+    .info-list .info-icon {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+    }
+    .info-list a { color: var(--text-muted); }
+    .info-list a:hover { color: var(--accent); }
+
+    /* ============================================================
+       RESEARCH INTERESTS SECTION
+       ============================================================ */
+    #research { background: var(--bg-subtle); }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .research-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1.75rem;
+      transition: border-color 0.25s, transform 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .research-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--accent);
+      transition: height 0.3s ease;
+    }
+    .research-card:hover::before { height: 100%; }
+    .research-card:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-3px);
+    }
+
+    .research-icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .research-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    .research-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       SELECTED PUBLICATIONS
+       ============================================================ */
+    .pub-list { list-style: none; }
+
+    .pub-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      transition: background 0.2s;
+    }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+
+    .pub-year {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      padding-top: 0.2rem;
+      min-width: 3.5rem;
+    }
+
+    .pub-content {}
+    .pub-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .pub-authors {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .pub-authors strong { color: var(--text); font-weight: normal; text-decoration: underline; text-decoration-color: var(--accent); }
+
+    .pub-journal {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-faint);
+      letter-spacing: 0.03em;
+    }
+
+    .pub-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid var(--accent-dim);
+      color: var(--accent);
+      border-radius: 2px;
+      margin-left: 0.5rem;
+    }
+
+    /* ============================================================
+       FOOTER (minimal)
+       ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-name {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .anim { opacity: 0; }
+    .anim.visible {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .anim-d1 { animation-delay: 0.05s; }
+    .anim-d2 { animation-delay: 0.15s; }
+    .anim-d3 { animation-delay: 0.25s; }
+    .anim-d4 { animation-delay: 0.35s; }
+    .anim-d5 { animation-delay: 0.45s; }
+
+    /* Hero loads immediately */
+    .hero-text .hero-tag   { animation: fadeUp 0.7s 0.1s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-text .hero-name  { animation: fadeUp 0.7s 0.2s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-text .hero-title { animation: fadeUp 0.7s 0.3s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-text .hero-desc  { animation: fadeUp 0.7s 0.4s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-text .hero-cta   { animation: fadeUp 0.7s 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-photo-wrap       { animation: fadeUp 0.9s 0.35s cubic-bezier(0.22,1,0.36,1) both; }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-photo-wrap { order: -1; }
+      .hero-photo-frame { width: 260px; height: 310px; }
+      .hero-stats { right: 0; }
+      .hero-tag { justify-content: center; }
+      .hero-desc { max-width: 100%; }
+      .hero-cta { justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; }
+      .research-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .research-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Manas <span>Sharma</span></span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon" id="theme-icon">☀</span>
+        <span id="theme-label">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+
+      <!-- LEFT: Text -->
+      <div class="hero-text">
+        <div class="hero-tag">Postdoctoral Researcher · IISc Bengaluru</div>
+        <h1 class="hero-name">Manas<br><em>Sharma</em></h1>
+        <p class="hero-title">PhD in Physics · Computational Materials Scientist</p>
+        <p class="hero-desc">
+          I develop <strong>quantum embedding methods</strong>, <strong>machine-learned interatomic potentials</strong>,
+          and computational tools to understand light–matter interactions, thin-film growth,
+          and the electronic structure of complex materials — at the atomic scale.
+        </p>
+        <div class="hero-cta">
+          <a href="publications.html" class="btn btn-primary">View Publications</a>
+          <a href="Manas_Sharma_CV.pdf" class="btn btn-outline" target="_blank">Download CV ↗</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photo -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <!--
+            PHOTO: Replace the src below with the path to your photo.
+            Example: src="assets/photo.jpg"
+          -->
+          <img
+            src="display picture for resume_new.png"
+            alt="Manas Sharma"
+            class="hero-photo"
+            onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';"
+          />
+          <div id="photo-placeholder" class="hero-photo-placeholder" style="display:none;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+            <span>photo.jpg</span>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-val">10</span>
+              <span class="stat-label">Papers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">362+</span>
+              <span class="stat-label">Citations</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">17+</span>
+              <span class="stat-label">Conferences</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-label">Background</p>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <!--
+            ABOUT TEXT: Edit the paragraphs below freely.
+            Add or remove <p> blocks as needed.
+          -->
+          <p class="anim anim-d1">
+            I am a <strong>postdoctoral researcher</strong> in the Chemical Engineering Department at the
+            <strong>Indian Institute of Science (IISc)</strong>, jointly advised by
+            Prof. Ananth Govind Rajan and Prof. Sudeep Punnathanam.
+            My current work focuses on developing graph neural network (GNN)-based interatomic potentials
+            for simulating thin-film growth processes such as CVD and PVD.
+          </p>
+          <p class="anim anim-d2">
+            Previously, I obtained my <strong>Ph.D. (Physics)</strong> from Friedrich Schiller University Jena, Germany,
+            with the highest distinction of <em>summa cum laude</em>, under Prof. Dr. Marek Sierka.
+            During my doctorate I developed and implemented advanced DFT-based quantum embedding methods
+            coupled with wavefunction and real-time TDDFT approaches,
+            contributing new capabilities to the TURBOMOLE quantum chemistry package.
+          </p>
+          <p class="anim anim-d3">
+            Beyond research, I am deeply invested in <strong>scientific outreach</strong>:
+            I run the <em>Phys Whiz</em> YouTube channel (~20k subscribers, 3.6M views),
+            build open-source computational tools, and mentor students worldwide.
+          </p>
+
+          <!-- Keywords / Tags -->
+          <div class="about-keywords anim anim-d4">
+            <span class="keyword">DFT</span>
+            <span class="keyword">RT-TDDFT</span>
+            <span class="keyword">Quantum Embedding</span>
+            <span class="keyword">GNN Potentials</span>
+            <span class="keyword">MLIPs</span>
+            <span class="keyword">CVD / PVD</span>
+            <span class="keyword">NEB</span>
+            <span class="keyword">TURBOMOLE</span>
+            <span class="keyword">PySCF</span>
+            <span class="keyword">VASP</span>
+            <span class="keyword">Python</span>
+            <span class="keyword">Fortran</span>
+          </div>
+        </div>
+
+        <!-- Side card -->
+        <div class="about-card anim anim-d2">
+          <h3>Quick Info</h3>
+          <ul class="info-list">
+            <!--
+              QUICK INFO: Add or remove <li> items as needed.
+            -->
+            <li>
+              <span class="info-icon">📍</span>
+              <span>IISc, Bengaluru, India</span>
+            </li>
+            <li>
+              <span class="info-icon">🎓</span>
+              <span>PhD, Friedrich Schiller University Jena (2024)</span>
+            </li>
+            <li>
+              <span class="info-icon">✉</span>
+              <span><a href="mailto:manassharma07@live.com">manassharma07@live.com</a></span>
+            </li>
+            <li>
+              <span class="info-icon">🌐</span>
+              <span><a href="https://manas.bragitoff.com" target="_blank">manas.bragitoff.com</a></span>
+            </li>
+            <li>
+              <span class="info-icon">💻</span>
+              <span><a href="https://github.com/manassharma07" target="_blank">github.com/manassharma07</a></span>
+            </li>
+            <li>
+              <span class="info-icon">📄</span>
+              <span>ORCID: <a href="https://orcid.org/0000-0002-5346-6280" target="_blank">0000-0002-5346-6280</a></span>
+            </li>
+            <li>
+              <span class="info-icon">📺</span>
+              <span><a href="https://www.youtube.com/@PhysWhiz" target="_blank">Phys Whiz — YouTube</a></span>
+            </li>
+            <li>
+              <span class="info-icon">✍</span>
+              <span><a href="https://bragitoff.com" target="_blank">bragitoff.com</a> — Blog</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESEARCH INTERESTS
+       ============================================================ -->
+  <section id="research">
+    <div class="section-inner">
+      <p class="section-label">Focus Areas</p>
+      <h2 class="section-title">Research Interests</h2>
+
+      <div class="research-grid">
+        <!--
+          RESEARCH CARDS: Add, remove, or edit cards below.
+          Each card has: icon (emoji or text), title, description.
+        -->
+        <div class="research-card anim anim-d1">
+          <span class="research-icon">⚛️</span>
+          <h3>Quantum Embedding Methods</h3>
+          <p>Developing DFT-based embedding methods coupled with wavefunction theory (WFT) and RT-TDDFT
+          to achieve high-accuracy excited-state and adsorption energy calculations at reduced cost.</p>
+        </div>
+
+        <div class="research-card anim anim-d2">
+          <span class="research-icon">🧠</span>
+          <h3>Machine-Learned Potentials</h3>
+          <p>Training graph neural network (GNN)-based interatomic potentials on high-fidelity DFT data
+          to enable large-scale atomistic simulations of thin-film deposition (CVD/PVD).</p>
+        </div>
+
+        <div class="research-card anim anim-d3">
+          <span class="research-icon">💡</span>
+          <h3>Light–Matter Interactions</h3>
+          <p>Studying high harmonic generation and optical excitations in molecular thin films using
+          real-time TDDFT and GW/BSE approaches within periodic and molecular frameworks.</p>
+        </div>
+
+        <div class="research-card anim anim-d1">
+          <span class="research-icon">🔬</span>
+          <h3>Thin-Film Growth</h3>
+          <p>Investigating reaction pathways and energy barriers for CVD/PVD using DFT, nudged elastic band
+          (NEB), and ab initio molecular dynamics (AIMD) simulations.</p>
+        </div>
+
+        <div class="research-card anim anim-d2">
+          <span class="research-icon">🛠️</span>
+          <h3>Computational Tool Development</h3>
+          <p>Building performant DFT codes, neural network libraries, and GUI applications — optimized for
+          parallelization and GPU acceleration — to serve the research community.</p>
+        </div>
+
+        <div class="research-card anim anim-d3">
+          <span class="research-icon">📡</span>
+          <h3>Scientific Outreach</h3>
+          <p>Creating YouTube tutorials, web and Android apps, and blog content to make computational
+          materials science accessible to students and researchers worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SELECTED PUBLICATIONS
+       ============================================================ -->
+  <section id="publications">
+    <div class="section-inner">
+      <p class="section-label">Recent Work</p>
+      <h2 class="section-title">Selected Publications</h2>
+
+      <ul class="pub-list">
+        <!--
+          PUBLICATIONS: Add or remove <li class="pub-item"> blocks.
+          Fields: pub-year, pub-title (italic), pub-authors (bold your name), pub-journal, optional pub-badge.
+        -->
+
+        <li class="pub-item anim anim-d1">
+          <span class="pub-year">2025</span>
+          <div class="pub-content">
+            <p class="pub-title">Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka</p>
+            <p class="pub-journal">J. Phys. Chem. A 129, 39, 9062–9083 (2025)
+              <span class="pub-badge">Accepted</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d2">
+          <span class="pub-year">2024</span>
+          <div class="pub-content">
+            <p class="pub-title">Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 20, 21, 9592–9605 (2024)</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d3">
+          <span class="pub-year">2023</span>
+          <div class="pub-content">
+            <p class="pub-title">TURBOMOLE: Today and Tomorrow</p>
+            <p class="pub-authors">Y. J. Franzke, C. Holzer, …, <strong>M. Sharma</strong>, et al.</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 19, 20, 6859–6890 (2023)
+              <span class="pub-badge">Highly Cited</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d4">
+          <span class="pub-year">2023</span>
+          <div class="pub-content">
+            <p class="pub-title">Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors</p>
+            <p class="pub-authors">W. Li, A. Saleh, <strong>M. Sharma</strong>, et al.</p>
+            <p class="pub-journal">Adv. Optical Mater. 2203070 (2023)
+              <span class="pub-badge">On Cover</span>
+              <span class="pub-badge">Top Viewed</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d5">
+          <span class="pub-year">2022</span>
+          <div class="pub-content">
+            <p class="pub-title">Efficient Implementation of DFT-based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions</p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 18, 11, 6892–6904 (2022)
+              <span class="pub-badge">Cover</span>
+            </p>
+          </div>
+        </li>
+
+      </ul>
+
+      <div style="margin-top: 2rem;">
+        <a href="publications.html" class="btn btn-outline">All Publications →</a>
+        &nbsp;
+        <a href="https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en" class="btn btn-outline" target="_blank">Google Scholar ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT (minimal)
+       ============================================================ -->
+  <section id="contact" style="background: var(--bg-subtle);">
+    <div class="section-inner" style="text-align:center; max-width: 640px;">
+      <p class="section-label" style="justify-content:center; display:flex;">Get in Touch</p>
+      <h2 class="section-title" style="border:none; margin-bottom:1rem;">Let's Connect</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-style: italic;">
+        Whether it's research collaboration, outreach, or just a conversation about computational physics —
+        I'd love to hear from you.
+      </p>
+      <a href="mailto:manassharma07@live.com" class="btn btn-primary" style="margin: 0 auto;">
+        manassharma07@live.com
+      </a>
+      <div style="margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/manassharma07" target="_blank" class="btn btn-outline">GitHub</a>
+        <a href="https://www.linkedin.com/in/manassharma07" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="https://twitter.com/manassharma07" target="_blank" class="btn btn-outline">Twitter / X</a>
+        <a href="https://www.youtube.com/@PhysWhiz" target="_blank" class="btn btn-outline">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Manas Sharma</span>
+      <ul class="footer-links">
+        <li><a href="#home">Top</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+      <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">
+        © 2026 Manas Sharma
+      </span>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — Theme toggle & scroll animations
+       ============================================================ -->
+  <script>
+    /* ---------- Dark/Light Toggle ---------- */
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('theme-icon').textContent  = isDark ? '☾' : '☀';
+      document.getElementById('theme-label').textContent = isDark ? 'Dark' : 'Light';
+      // Persist preference
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    }
+
+    // Restore preference on load
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        const isDark = saved === 'dark';
+        document.getElementById('theme-icon').textContent  = isDark ? '☀' : '☾';
+        document.getElementById('theme-label').textContent = isDark ? 'Light' : 'Dark';
+      }
+    })();
+
+    /* ---------- Scroll-triggered fade-in ---------- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
