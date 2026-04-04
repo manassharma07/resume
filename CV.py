@@ -140,6 +140,7 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('Published an 📄[**article**](https://doi.org/10.1002/adma.202514405) in [Advanced Materials](https://doi.org/10.1002/adma.202514405) as second author where I provided theory support to experiments on CrCl3 2D MM synthesis.','29 March 2026')
 txt('Won 🏆**Best Oral Presentation** award for my talk at the [IISc Chemical Engineering Symposium 2026](https://chemeng.iisc.ac.in/symposium/).','24 Jan 2026')
 txt('Released 👨‍💻[**PyFock**](https://pyfock.bragitoff.com), a pure python (MIT licensed) DFT code with implementations of molecular integrals and XC term','01 Jan 2026')
 txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937) showcasing the recent advances in TURBOMOLE in [JPC A](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937).','23 Sept 2025')
@@ -311,6 +312,13 @@ st.markdown('''
 ''')
 st.write('Here is a link to my [Google Scholar](https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en)')
 # txt('','')
+txt('''V. Kumar, A. Jangid, M. Sharma, M. Verma, J. Pasyanthi, K. S. Kumar, P. Sharma, E. O. Chiglintsev, M. I. Panin, S. N. Punnathanam, A. I. Chernov, A. G. Rajan, and A. Singh [*Tailored Vapor Deposition Unlocks Large-Grain, Wafer-Scale Epitaxial Growth of 2D Magnetic CrCl3*](https://doi.org/10.1002/adma.202514405),
+**Advanced Materials**, e14405.  ''', '29 Mar **2026**')
+with st.expander("### **See more details**"):
+    st.write('#### Graphical Abstract')
+    # st.image('dft_turbomole_toc.png', use_column_width=True)
+    st.write('#### My Contribution')
+    st.write('For this work, I led the theory and simulations portion of the study. I employed universal machine elarning interatomic potentials and DFT calculations, to explain the difference in the CrCl3 growth on different substrates as well as the epitaxial growth on F-mica.')
 txt('''**M. Sharma**, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka [*Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications*](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937),
 **J. Phys. Chem. A** 129, 39, 9062–9083  ''', '23 Sept **2025**')
 with st.expander("### **See more details**"):
