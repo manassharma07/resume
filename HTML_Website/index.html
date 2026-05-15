@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manas Sharma — Physicist & Computational Scientist</title>
+  <meta name="description" content="Manas Sharma is a computational materials scientist and postdoctoral researcher at IISc working on DFT, machine-learned interatomic potentials, quantum embedding, TURBOMOLE, PyFock, and CrysX tools." />
+  <meta name="author" content="Manas Sharma" />
+  <meta name="keywords" content="Manas Sharma, computational materials science, DFT, MLIP, TURBOMOLE, PyFock, CrysX, quantum chemistry, IISc" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://manas.bragitoff.com/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Manas Sharma — Physicist & Computational Scientist" />
+  <meta property="og:description" content="Computational materials scientist working on DFT, MLIPs, quantum embedding, and scientific software." />
+  <meta property="og:url" content="https://manas.bragitoff.com/" />
+  <meta property="og:image" content="https://manas.bragitoff.com/display%20picture%20for%20resume_new.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
     /* ============================================================
        CSS CUSTOM PROPERTIES — Edit colors/fonts here
@@ -547,7 +558,11 @@
     }
 
     .research-icon {
-      font-size: 1.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
       margin-bottom: 1rem;
       display: block;
     }
@@ -624,6 +639,72 @@
       color: var(--accent);
       border-radius: 2px;
       margin-left: 0.5rem;
+    }
+
+    /* ============================================================
+       NEWS / TIMELINE / CODE ADDITIONS
+       ============================================================ */
+    .news-list, .timeline-list, .code-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .news-item, .timeline-item, .code-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .news-item:hover, .timeline-item:hover, .code-card:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .news-date, .timeline-date, .code-kind {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .news-item h3, .timeline-item h3, .code-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .news-item p, .timeline-item p, .code-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .timeline-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .code-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mini-link {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     /* ============================================================
@@ -709,11 +790,13 @@
       .hero-cta { justify-content: center; }
       .about-grid { grid-template-columns: 1fr; }
       .research-grid { grid-template-columns: 1fr 1fr; }
+      .timeline-list, .code-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
 
     @media (max-width: 600px) {
       .research-grid { grid-template-columns: 1fr; }
+      .news-item { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
     }
   </style>
@@ -728,10 +811,12 @@
       <span class="nav-logo">Manas <span>Sharma</span></span>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="publications.html">Publications</a></li>
+        <li><a href="software.html">Code</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
         <li><a href="cv.html">CV</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -766,10 +851,6 @@
       <!-- RIGHT: Photo -->
       <div class="hero-photo-wrap">
         <div class="hero-photo-frame">
-          <!--
-            PHOTO: Replace the src below with the path to your photo.
-            Example: src="assets/photo.jpg"
-          -->
           <img
             src="display picture for resume_new.png"
             alt="Manas Sharma"
@@ -780,27 +861,124 @@
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
               <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
             </svg>
-            <span>photo.jpg</span>
+            <span>Manas Sharma</span>
           </div>
 
           <!-- Quick stats -->
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-val">10</span>
+              <span class="stat-val">11</span>
               <span class="stat-label">Papers</span>
             </div>
             <div class="stat">
-              <span class="stat-val">362+</span>
+              <span class="stat-val">442+</span>
               <span class="stat-label">Citations</span>
             </div>
             <div class="stat">
-              <span class="stat-val">17+</span>
-              <span class="stat-label">Conferences</span>
+              <span class="stat-val">8</span>
+              <span class="stat-label">h-index</span>
             </div>
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NEWS
+       ============================================================ -->
+  <section id="news" style="background: var(--bg-subtle);">
+    <div class="section-inner">
+      <p class="section-label">Updates</p>
+      <h2 class="section-title">News</h2>
+
+      <div class="news-list">
+        <article class="news-item anim anim-d1">
+          <span class="news-date">Mar 2026</span>
+          <div>
+            <h3>Advanced Materials paper published</h3>
+            <p><a href="https://doi.org/10.1002/adma.202514405" target="_blank" rel="noopener noreferrer">Tailored vapor deposition for wafer-scale epitaxial 2D magnetic CrCl3</a> was published in Advanced Materials, with theory support for experiments on 2D magnetic material synthesis.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d2">
+          <span class="news-date">Jan 2026</span>
+          <div>
+            <h3>Best Oral Presentation Award</h3>
+            <p>Won the Best Oral Presentation Award for a talk at the <a href="https://chemeng.iisc.ac.in/symposium/" target="_blank" rel="noopener noreferrer">IISc Chemical Engineering Symposium 2026</a>.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d3">
+          <span class="news-date">Jan 2026</span>
+          <div>
+            <h3>PyFock released</h3>
+            <p><a href="https://pyfock.bragitoff.com" target="_blank" rel="noopener noreferrer">PyFock</a>, a pure-Python MIT-licensed DFT code with molecular integrals and exchange-correlation terms, was released.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d4">
+          <span class="news-date">Sept 2025</span>
+          <div>
+            <h3>JPC A article on TURBOMOLE DFT published</h3>
+            <p>A <a href="https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937" target="_blank" rel="noopener noreferrer">review of DFT for molecular and periodic systems in TURBOMOLE</a> was published in The Journal of Physical Chemistry A.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d5">
+          <span class="news-date">Jul 2025</span>
+          <div>
+            <h3>Phys Whiz crossed 20k subscribers</h3>
+            <p><a href="https://youtube.com/@PhysWhiz" target="_blank" rel="noopener noreferrer">Phys Whiz</a> reached 20k subscribers with tutorials and lectures on physics, computational materials science, and numerical methods.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d1">
+          <span class="news-date">May 2025</span>
+          <div>
+            <h3>MLIP Playground released</h3>
+            <p><a href="https://huggingface.co/spaces/ManasSharma07/mlip-playground" target="_blank" rel="noopener noreferrer">MLIP Playground</a> launched for running, benchmarking, and testing machine-learned interatomic potentials.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d2">
+          <span class="news-date">Oct 2024</span>
+          <div>
+            <h3>JCTC article on optical gaps published</h3>
+            <p>An article on <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819" target="_blank" rel="noopener noreferrer">GW/BSE-in-DFT and CC2-in-DFT optical gap calculations for ionic solids</a> was published in JCTC.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d3">
+          <span class="news-date">Sept 2024</span>
+          <div>
+            <h3>Talk at TURBOMOLE 2024</h3>
+            <p>Presented DFT-based embedding for periodic systems at the <a href="https://www.meeting2024.turbomole.org/" target="_blank" rel="noopener noreferrer">TURBOMOLE Users Meet Developers Conference</a> at the University of Oxford.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d4">
+          <span class="news-date">Aug 2024</span>
+          <div>
+            <h3>Joined IISc</h3>
+            <p>Joined <a href="https://iisc.ac.in/" target="_blank" rel="noopener noreferrer">IISc</a> as a postdoctoral researcher in the <a href="https://chemeng.iisc.ac.in/" target="_blank" rel="noopener noreferrer">Chemical Engineering Department</a>.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d5">
+          <span class="news-date">May 2024</span>
+          <div>
+            <h3>Cube Suite released</h3>
+            <p><a href="https://cubesuite.streamlit.app" target="_blank" rel="noopener noreferrer">Cube Suite</a>, a web app for processing and manipulating CUBE files, was released.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d1">
+          <span class="news-date">Mar 2024</span>
+          <div>
+            <h3>PhD thesis defended</h3>
+            <p>Defended the <a href="https://www.db-thueringen.de/receive/dbt_mods_00059873" target="_blank" rel="noopener noreferrer">PhD thesis</a> with the <em>summa cum laude</em> grade.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d2">
+          <span class="news-date">Jul 2023</span>
+          <div>
+            <h3>RIPER-TOOLS released</h3>
+            <p><a href="https://ripertools.turbomole.org" target="_blank" rel="noopener noreferrer">RIPER-TOOLS</a> launched for creating TURBOMOLE RIPER input files from CIF, XYZ, POSCAR, Materials Project, and PubChem sources.</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -814,28 +992,28 @@
 
       <div class="about-grid">
         <div class="about-text">
-          <!--
-            ABOUT TEXT: Edit the paragraphs below freely.
-            Add or remove <p> blocks as needed.
-          -->
           <p class="anim anim-d1">
-            I am a <strong>postdoctoral researcher</strong> in the Chemical Engineering Department at the
-            <strong>Indian Institute of Science (IISc)</strong>, jointly advised by
-            Prof. Ananth Govind Rajan and Prof. Sudeep Punnathanam.
+            I am a <strong>postdoctoral researcher</strong> in the
+            <a href="https://chemeng.iisc.ac.in/" target="_blank" rel="noopener noreferrer">Chemical Engineering Department</a> at the
+            <a href="https://iisc.ac.in/" target="_blank" rel="noopener noreferrer"><strong>Indian Institute of Science (IISc)</strong></a>, jointly advised by
+            <a href="https://agrgroup.org/" target="_blank" rel="noopener noreferrer">Prof. Ananth Govind Rajan</a> and
+            <a href="https://chemeng.iisc.ac.in/sudeep/" target="_blank" rel="noopener noreferrer">Prof. Sudeep Punnathanam</a>.
             My current work focuses on developing graph neural network (GNN)-based interatomic potentials
             for simulating thin-film growth processes such as CVD and PVD.
           </p>
           <p class="anim anim-d2">
-            Previously, I obtained my <strong>Ph.D. (Physics)</strong> from Friedrich Schiller University Jena, Germany,
-            with the highest distinction of <em>summa cum laude</em>, under Prof. Dr. Marek Sierka.
+            Previously, I obtained my <a href="https://www.db-thueringen.de/receive/dbt_mods_00059873" target="_blank" rel="noopener noreferrer"><strong>Ph.D. (Physics)</strong></a> from
+            <a href="https://www.uni-jena.de/" target="_blank" rel="noopener noreferrer">Friedrich Schiller University Jena</a>, Germany,
+            with the highest distinction of <em>summa cum laude</em>, under
+            <a href="https://www.cmsg.uni-jena.de/" target="_blank" rel="noopener noreferrer">Prof. Dr. Marek Sierka</a>.
             During my doctorate I developed and implemented advanced DFT-based quantum embedding methods
             coupled with wavefunction and real-time TDDFT approaches,
-            contributing new capabilities to the TURBOMOLE quantum chemistry package.
+            contributing new capabilities to the <a href="https://www.turbomole.org/" target="_blank" rel="noopener noreferrer">TURBOMOLE</a> quantum chemistry package.
           </p>
           <p class="anim anim-d3">
             Beyond research, I am deeply invested in <strong>scientific outreach</strong>:
-            I run the <em>Phys Whiz</em> YouTube channel (~20k subscribers, 3.6M views),
-            build open-source computational tools, and mentor students worldwide.
+            I run the <a href="https://www.youtube.com/@PhysWhiz" target="_blank" rel="noopener noreferrer"><em>Phys Whiz</em></a> YouTube channel (~21k subscribers, 3.6M views),
+            build <a href="software.html">open-source computational tools</a>, and mentor students worldwide.
           </p>
 
           <!-- Keywords / Tags -->
@@ -859,40 +1037,37 @@
         <div class="about-card anim anim-d2">
           <h3>Quick Info</h3>
           <ul class="info-list">
-            <!--
-              QUICK INFO: Add or remove <li> items as needed.
-            -->
             <li>
               <span class="info-icon">📍</span>
-              <span>IISc, Bengaluru, India</span>
+              <span><a href="https://iisc.ac.in/" target="_blank" rel="noopener noreferrer">IISc</a>, Bengaluru, India</span>
             </li>
             <li>
               <span class="info-icon">🎓</span>
-              <span>PhD, Friedrich Schiller University Jena (2024)</span>
+              <span>PhD, <a href="https://www.uni-jena.de/" target="_blank" rel="noopener noreferrer">Friedrich Schiller University Jena</a> (2024)</span>
             </li>
             <li>
               <span class="info-icon">✉</span>
-              <span><a href="mailto:manassharma07@live.com">manassharma07@live.com</a></span>
+              <span><a href="mailto:manas.sharma@uni-jena.de">manas.sharma@uni-jena.de</a></span>
             </li>
             <li>
               <span class="info-icon">🌐</span>
-              <span><a href="https://manas.bragitoff.com" target="_blank">manas.bragitoff.com</a></span>
+              <span><a href="https://manas.bragitoff.com" target="_blank" rel="noopener noreferrer">manas.bragitoff.com</a></span>
             </li>
             <li>
               <span class="info-icon">💻</span>
-              <span><a href="https://github.com/manassharma07" target="_blank">github.com/manassharma07</a></span>
+              <span><a href="https://github.com/manassharma07" target="_blank" rel="noopener noreferrer">github.com/manassharma07</a></span>
             </li>
             <li>
               <span class="info-icon">📄</span>
-              <span>ORCID: <a href="https://orcid.org/0000-0002-5346-6280" target="_blank">0000-0002-5346-6280</a></span>
+              <span>ORCID: <a href="https://orcid.org/0000-0002-5346-6280" target="_blank" rel="noopener noreferrer">0000-0002-5346-6280</a></span>
             </li>
             <li>
               <span class="info-icon">📺</span>
-              <span><a href="https://www.youtube.com/@PhysWhiz" target="_blank">Phys Whiz — YouTube</a></span>
+              <span><a href="https://www.youtube.com/@PhysWhiz" target="_blank" rel="noopener noreferrer">Phys Whiz — YouTube</a></span>
             </li>
             <li>
               <span class="info-icon">✍</span>
-              <span><a href="https://bragitoff.com" target="_blank">bragitoff.com</a> — Blog</span>
+              <span><a href="https://bragitoff.com" target="_blank" rel="noopener noreferrer">bragitoff.com</a> — Blog</span>
             </li>
           </ul>
         </div>
@@ -911,49 +1086,92 @@
       <div class="research-grid">
         <!--
           RESEARCH CARDS: Add, remove, or edit cards below.
-          Each card has: icon (emoji or text), title, description.
+          Each card has: label, title, description.
         -->
         <div class="research-card anim anim-d1">
-          <span class="research-icon">⚛️</span>
+          <span class="research-icon">Embedding</span>
           <h3>Quantum Embedding Methods</h3>
           <p>Developing DFT-based embedding methods coupled with wavefunction theory (WFT) and RT-TDDFT
           to achieve high-accuracy excited-state and adsorption energy calculations at reduced cost.</p>
         </div>
 
         <div class="research-card anim anim-d2">
-          <span class="research-icon">🧠</span>
+          <span class="research-icon">MLIPs</span>
           <h3>Machine-Learned Potentials</h3>
           <p>Training graph neural network (GNN)-based interatomic potentials on high-fidelity DFT data
           to enable large-scale atomistic simulations of thin-film deposition (CVD/PVD).</p>
         </div>
 
         <div class="research-card anim anim-d3">
-          <span class="research-icon">💡</span>
+          <span class="research-icon">RT-TDDFT</span>
           <h3>Light–Matter Interactions</h3>
           <p>Studying high harmonic generation and optical excitations in molecular thin films using
           real-time TDDFT and GW/BSE approaches within periodic and molecular frameworks.</p>
         </div>
 
         <div class="research-card anim anim-d1">
-          <span class="research-icon">🔬</span>
+          <span class="research-icon">Growth</span>
           <h3>Thin-Film Growth</h3>
           <p>Investigating reaction pathways and energy barriers for CVD/PVD using DFT, nudged elastic band
           (NEB), and ab initio molecular dynamics (AIMD) simulations.</p>
         </div>
 
         <div class="research-card anim anim-d2">
-          <span class="research-icon">🛠️</span>
+          <span class="research-icon">Code</span>
           <h3>Computational Tool Development</h3>
           <p>Building performant DFT codes, neural network libraries, and GUI applications — optimized for
           parallelization and GPU acceleration — to serve the research community.</p>
         </div>
 
         <div class="research-card anim anim-d3">
-          <span class="research-icon">📡</span>
+          <span class="research-icon">Outreach</span>
           <h3>Scientific Outreach</h3>
           <p>Creating YouTube tutorials, web and Android apps, and blog content to make computational
           materials science accessible to students and researchers worldwide.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION & EXPERIENCE
+       ============================================================ -->
+  <section id="education-experience">
+    <div class="section-inner">
+      <p class="section-label">Trajectory</p>
+      <h2 class="section-title">Education & Experience</h2>
+
+      <div class="timeline-list">
+        <article class="timeline-item anim anim-d1">
+          <p class="timeline-date">2024 - Present</p>
+          <h3>Postdoctoral Researcher · IISc Bangalore</h3>
+          <p>Developing GNN-based MLIPs for thin-film deposition and materials design, with DFT, NEB, AIMD, and molecular dynamics workflows.</p>
+        </article>
+        <article class="timeline-item anim anim-d2">
+          <p class="timeline-date">2019 - 2024</p>
+          <h3>PhD Physics · Friedrich Schiller University Jena</h3>
+          <p>Summa cum laude. Thesis on density functional theory based embedding for molecular and periodic systems.</p>
+        </article>
+        <article class="timeline-item anim anim-d3">
+          <p class="timeline-date">2019 - 2024</p>
+          <h3>Scientific Employee · FSU Jena</h3>
+          <p>Implemented quantum embedding and real-time TDDFT capabilities in the TURBOMOLE RIPER module using Fortran and Python.</p>
+        </article>
+        <article class="timeline-item anim anim-d4">
+          <p class="timeline-date">2016 - 2018</p>
+          <h3>MSc Physics · University of Delhi</h3>
+          <p>Specialized in nanoscience, ranked third, and completed DFT-based research that led to publications.</p>
+        </article>
+        <article class="timeline-item anim anim-d5">
+          <p class="timeline-date">2013 - 2016</p>
+          <h3>BSc (Hons.) Physics · University of Delhi</h3>
+          <p>Acharya Narendra Dev College. Ranked second with 87.08 percent and received the DC Arora scholarship.</p>
+        </article>
+        <article class="timeline-item anim anim-d5">
+          <p class="timeline-date">2014 - Present</p>
+          <h3>BragitOff & Phys Whiz</h3>
+          <p>Writing tutorials, building apps, and creating physics outreach content through BragitOff.com and Phys Whiz.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -967,47 +1185,60 @@
       <h2 class="section-title">Selected Publications</h2>
 
       <ul class="pub-list">
-        <!--
-          PUBLICATIONS: Add or remove <li class="pub-item"> blocks.
-          Fields: pub-year, pub-title (italic), pub-authors (bold your name), pub-journal, optional pub-badge.
-        -->
-
         <li class="pub-item anim anim-d1">
-          <span class="pub-year">2025</span>
+          <span class="pub-year">2026</span>
           <div class="pub-content">
-            <p class="pub-title">Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications</p>
-            <p class="pub-authors"><strong>M. Sharma</strong>, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka</p>
-            <p class="pub-journal">J. Phys. Chem. A 129, 39, 9062–9083 (2025)
-              <span class="pub-badge">Accepted</span>
-            </p>
+            <p class="pub-title"><a href="https://doi.org/10.1021/acs.nanolett.6c00590" target="_blank" rel="noopener noreferrer">Direct Nanoscale Mapping of Band Alignment in Single-Layer Semiconducting Lateral Heterojunctions</a></p>
+            <p class="pub-authors">C. Sahoo*, S. K. Chakraborty, A. Kousika, A. J. H. Jones, <strong>M. Sharma</strong>, T. S. Nielsen, Z. Jiang, I. A. Kolasseri, S. Das, M. D. Watson, C. Cacho, K. Watanabe, T. Taniguchi, Y. P. Chen, T. F. Heinz, A. G. Rajan, P. K. Sahoo*, S. Ulstrup*</p>
+            <p class="pub-journal">Nano Lett., ASAP Article (2026), published online April 13, 2026</p>
           </div>
         </li>
 
         <li class="pub-item anim anim-d2">
-          <span class="pub-year">2024</span>
+          <span class="pub-year">2026</span>
           <div class="pub-content">
-            <p class="pub-title">Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT</p>
-            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka</p>
-            <p class="pub-journal">J. Chem. Theo. Comput. 20, 21, 9592–9605 (2024)</p>
+            <p class="pub-title"><a href="https://doi.org/10.1002/adma.202514405" target="_blank" rel="noopener noreferrer">Tailored Vapor Deposition Unlocks Large-Grain, Wafer-Scale Epitaxial Growth of 2D Magnetic CrCl3</a></p>
+            <p class="pub-authors">V. Kumar, A. Jangid&dagger;, <strong>M. Sharma&dagger;</strong>, M. Verma, J. Pasyanthi, K. S. Kumar, P. Sharma, E. O. Chiglintsev, M. I. Panin, S. N. Punnathanam, A. I. Chernov, A. G. Rajan, A. Singh*</p>
+            <p class="pub-journal">Advanced Materials, e14405 (2026). &dagger; contributed equally</p>
           </div>
         </li>
 
         <li class="pub-item anim anim-d3">
+          <span class="pub-year">2025</span>
+          <div class="pub-content">
+            <p class="pub-title"><a href="https://doi.org/10.1021/acs.jpca.5c02937" target="_blank" rel="noopener noreferrer">Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications</a></p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka*</p>
+            <p class="pub-journal">J. Phys. Chem. A 129, 39, 9062–9083 (2025)
+              <span class="pub-badge">Highly Viewed</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d4">
+          <span class="pub-year">2024</span>
+          <div class="pub-content">
+            <p class="pub-title"><a href="https://doi.org/10.1021/acs.jctc.4c00819" target="_blank" rel="noopener noreferrer">Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT</a></p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka*</p>
+            <p class="pub-journal">J. Chem. Theo. Comput. 20, 21, 9592–9605 (2024)</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d5">
           <span class="pub-year">2023</span>
           <div class="pub-content">
-            <p class="pub-title">TURBOMOLE: Today and Tomorrow</p>
-            <p class="pub-authors">Y. J. Franzke, C. Holzer, …, <strong>M. Sharma</strong>, et al.</p>
+            <p class="pub-title"><a href="https://doi.org/10.1021/acs.jctc.3c00347" target="_blank" rel="noopener noreferrer">TURBOMOLE: Today and Tomorrow</a></p>
+            <p class="pub-authors">Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Coriani, F. Della Sala, E. Fabiano, D. A. Fedotov, S. Fürst, S. Gillhuber, R. Grotjahn, M. Kaupp, M. Kehry, M. Krstić, F. Mack, S. Majumdar, B. D. Nguyen, S. M. Parker, F. Pauly, A. Pausch, E. Perlt, G. S. Phun, A. Rajabi, D. Rappoport, B. Samal, T. Schrader, <strong>M. Sharma</strong>, E. Tapavicza, R. S. Treß, V. Voora, A. Wodyński, J. M. Yu, B. Zerulla, F. Furche*, C. Hättig*, M. Sierka*, D. P. Tew*, and F. Weigend*</p>
             <p class="pub-journal">J. Chem. Theo. Comput. 19, 20, 6859–6890 (2023)
               <span class="pub-badge">Highly Cited</span>
             </p>
           </div>
         </li>
 
-        <li class="pub-item anim anim-d4">
+        <li class="pub-item anim anim-d5">
           <span class="pub-year">2023</span>
           <div class="pub-content">
-            <p class="pub-title">Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors</p>
-            <p class="pub-authors">W. Li, A. Saleh, <strong>M. Sharma</strong>, et al.</p>
+            <p class="pub-title"><a href="https://doi.org/10.1002/adom.202203070" target="_blank" rel="noopener noreferrer">Resonance Effect in Brunel Harmonic Generation in Thin Film Organic Semiconductors</a></p>
+            <p class="pub-authors">W. Li, A. Saleh, <strong>M. Sharma</strong>, C. Huenecke, M. Sierka, M. Neuhaus, L. Hedewig, B. Bergues, M. Alharbi, H. ALQahtani, A. M. Azeer, S. Graefe, M. F. Kling, A. F. Alharbi, and Z. Wang*</p>
             <p class="pub-journal">Adv. Optical Mater. 2203070 (2023)
               <span class="pub-badge">On Cover</span>
               <span class="pub-badge">Top Viewed</span>
@@ -1018,8 +1249,8 @@
         <li class="pub-item anim anim-d5">
           <span class="pub-year">2022</span>
           <div class="pub-content">
-            <p class="pub-title">Efficient Implementation of DFT-based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions</p>
-            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka</p>
+            <p class="pub-title"><a href="https://doi.org/10.1021/acs.jctc.2c00380" target="_blank" rel="noopener noreferrer">Efficient Implementation of DFT-based Embedding for Molecular and Periodic Systems using Gaussian Basis Functions</a></p>
+            <p class="pub-authors"><strong>M. Sharma</strong>, and M. Sierka*</p>
             <p class="pub-journal">J. Chem. Theo. Comput. 18, 11, 6892–6904 (2022)
               <span class="pub-badge">Cover</span>
             </p>
@@ -1037,9 +1268,58 @@
   </section>
 
   <!-- ============================================================
+       CODE
+       ============================================================ -->
+  <section id="code" style="background: var(--bg-subtle);">
+    <div class="section-inner">
+      <p class="section-label">Code Development</p>
+      <h2 class="section-title">Tools & Applications</h2>
+
+      <div class="code-grid">
+        <article class="code-card anim anim-d1">
+          <p class="code-kind">Python DFT</p>
+          <h3>PyFock</h3>
+          <p>Pure-Python DFT code with molecular integrals and exchange-correlation terms.</p>
+          <a class="mini-link" href="https://pyfock.bragitoff.com" target="_blank" rel="noopener noreferrer">Project site</a>
+        </article>
+        <article class="code-card anim anim-d2">
+          <p class="code-kind">MLIP Web App</p>
+          <h3>MLIP Playground</h3>
+          <p>No-code web app for running, testing, and comparing machine-learned interatomic potentials.</p>
+          <a class="mini-link" href="https://huggingface.co/spaces/ManasSharma07/mlip-playground" target="_blank" rel="noopener noreferrer">Launch app</a>
+        </article>
+        <article class="code-card anim anim-d3">
+          <p class="code-kind">Quantum Chemistry</p>
+          <h3>RIPER-Tools</h3>
+          <p>Input generation tools for the RIPER module of TURBOMOLE from structure files and databases.</p>
+          <a class="mini-link" href="https://ripertools.turbomole.org" target="_blank" rel="noopener noreferrer">Open tool</a>
+        </article>
+        <article class="code-card anim anim-d4">
+          <p class="code-kind">Visualization</p>
+          <h3>CrysX 3D Viewer</h3>
+          <p>Molecule and crystal visualizer for publication-quality structures and animations.</p>
+          <a class="mini-link" href="https://www.bragitoff.com/crysx-3d-viewer/" target="_blank" rel="noopener noreferrer">Project page</a>
+        </article>
+        <article class="code-card anim anim-d5">
+          <p class="code-kind">CUBE Files</p>
+          <h3>Cube Suite</h3>
+          <p>Web app for processing and manipulating CUBE files from quantum chemistry programs.</p>
+          <a class="mini-link" href="https://cubesuite.streamlit.app" target="_blank" rel="noopener noreferrer">Open app</a>
+        </article>
+        <article class="code-card anim anim-d5">
+          <p class="code-kind">More Tools</p>
+          <h3>CrysX, converters, demos</h3>
+          <p>Android apps, file converters, basis-set tools, DFT embedding demos, and ML demos.</p>
+          <a class="mini-link" href="software.html">All code projects</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        CONTACT (minimal)
        ============================================================ -->
-  <section id="contact" style="background: var(--bg-subtle);">
+  <section id="contact">
     <div class="section-inner" style="text-align:center; max-width: 640px;">
       <p class="section-label" style="justify-content:center; display:flex;">Get in Touch</p>
       <h2 class="section-title" style="border:none; margin-bottom:1rem;">Let's Connect</h2>
@@ -1047,8 +1327,8 @@
         Whether it's research collaboration, outreach, or just a conversation about computational physics —
         I'd love to hear from you.
       </p>
-      <a href="mailto:manassharma07@live.com" class="btn btn-primary" style="margin: 0 auto;">
-        manassharma07@live.com
+      <a href="mailto:manas.sharma@uni-jena.de" class="btn btn-primary" style="margin: 0 auto;">
+        manas.sharma@uni-jena.de
       </a>
       <div style="margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
         <a href="https://github.com/manassharma07" target="_blank" class="btn btn-outline">GitHub</a>
@@ -1068,7 +1348,8 @@
       <ul class="footer-links">
         <li><a href="#home">Top</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="software.html">Code</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
         <li><a href="cv.html">CV</a></li>
       </ul>
       <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">
