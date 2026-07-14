@@ -140,12 +140,13 @@ def txt4(a, b, c):
 st.markdown('''
 ## News
 ''')
+txt('[MLIP Studio](https://mlipstudio.iisc.ac.in) released officially for public use accompanied by a [**preprint**](https://arxiv.org/abs/2607.07606)📄 on arXiv.','08 July 2026')
+txt('PyFock [**preprint**](https://doi.org/10.26434/chemrxiv.15003943/v1)📄 posted on ChemRxiv','26 May 2026')
 txt('Published an 📄[**article**](https://doi.org/10.1002/adma.202514405) in [Advanced Materials](https://doi.org/10.1002/adma.202514405) as second author where I provided theory support to experiments on CrCl3 2D MM synthesis.','29 March 2026')
 txt('Won 🏆**Best Oral Presentation** award for my talk at the [IISc Chemical Engineering Symposium 2026](https://chemeng.iisc.ac.in/symposium/).','24 Jan 2026')
 txt('Released 👨‍💻[**PyFock**](https://pyfock.bragitoff.com), a pure python (MIT licensed) DFT code with implementations of molecular integrals and XC term','01 Jan 2026')
 txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937) showcasing the recent advances in TURBOMOLE in [JPC A](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937).','23 Sept 2025')
 txt('Reached ✨[**20k subscribers on YouTube**](https://youtube.com/@PhysWhiz)✨, where I post tutorials and lectures on Physics, Computational Materials Science, Numerical Methods and more.','08 July 2025')
-txt('Released ✨[**MLIP Playground**](https://huggingface.co/spaces/ManasSharma07/mlip-playground) Web app✨, for running, benchmarking and testing more than 25 Machine Learned Interatomic Potentials (MLIP).','23 May 2025')
 txt('Published an 📄[**article**](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) in [JCTC](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819) on GW/BSE-in-DFT for optical gap calculation of ionic solids.','17 Oct 2024')
 txt('Gave a 🎤**talk** on DFT-based Embedding for periodic systems at [Turbomole 2024 Conference](https://www.meeting2024.turbomole.org/) held at [Oxford University](https://www.meeting2024.turbomole.org/) in UK','19 Sept 2024')
 txt('Joined [**IISc**](https://iisc.ac.in/) as a postdoctoral researcher in the [Chemical Engineering Department](https://chemeng.iisc.ac.in/).','1 August 2024')
@@ -473,4 +474,3 @@ txt2('•', 'https://www.facebook.com/physwhizforum/')
 txt2('ORCID', 'https://orcid.org/0000-0002-5346-6280')
 txt2('Google Scholar', 'https://scholar.google.com/citations?user=WYOEL94AAAAJ&hl=en')
 txt2('ResearchGate', 'https://www.researchgate.net/profile/Manas-Sharma-5')
-
