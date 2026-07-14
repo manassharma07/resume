@@ -12,7 +12,7 @@ st.write('''
 ##### **Postdoctoral Researcher | PhD (Physics)**
 ''')
 
-image = Image.open('dp.png')
+image = Image.open('dp.webp')
 # st.image(image, width=450)
 col1, col2, col3 = st.columns([1, 2.5, 1])
 
@@ -317,25 +317,25 @@ txt('''V. Kumar, A. Jangid, M. Sharma, M. Verma, J. Pasyanthi, K. S. Kumar, P. S
 **Advanced Materials**, e14405.  ''', '29 Mar **2026**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    # st.image('dft_turbomole_toc.png', use_column_width=True)
+    # st.image('dft_turbomole_toc.webp', use_column_width=True)
     st.write('#### My Contribution')
     st.write('For this work, I led the theory and simulations portion of the study. I employed universal machine elarning interatomic potentials and DFT calculations, to explain the difference in the CrCl3 growth on different substrates as well as the epitaxial growth on F-mica.')
 txt('''**M. Sharma**, Y. J. Franzke, C. Holzer, F. Pauly, and M. Sierka [*Density Functional Theory for Molecular and Periodic Systems in TURBOMOLE: Theory, Implementation, and Applications*](https://pubs.acs.org/doi/10.1021/acs.jpca.5c02937),
 **J. Phys. Chem. A** 129, 39, 9062–9083  ''', '23 Sept **2025**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('dft_turbomole_toc.png', use_column_width=True)
+    st.image('dft_turbomole_toc.webp', use_column_width=True)
 txt('''**M. Sharma**, and M. Sierka [*Optical Gaps of Ionic Materials from GW/BSE-in-DFT and CC2-in-DFT*](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00819),
 **J. Chem. Theo. Comput.** 20, 21, 9592–9605  ''', '17 Oct **2024**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('optical_gap_TOC.png', use_column_width=True)
+    st.image('optical_gap_TOC.webp', use_column_width=True)
 txt('''Y. J. Franzke, C. Holzer, J. H. Andersen, T. Begušić, F. Bruder, S. Coriani, F. Della Sala, E. Fabiano, D. A. Fedotov, S. Fürst, S. Gillhuber, R. Grotjahn, M. Kaupp, M. Kehry, M. Krstić, F. Mack, S. Majumdar, B. D. Nguyen, S. M. Parker, F. Pauly, A. Pausch, E. Perlt, G. S. Phun, A. Rajabi, D. Rappoport, B. Samal, T. Schrader, **M. Sharma**, E. Tapavicza, R. S. Treß, V. Voora, A. Wodyński, J. M. Yu, B. Zerulla, F. Furche, C. Hättig, M. Sierka, D. P. Tew, and F. Weigend. [*TURBOMOLE: Today and Tomorrow*](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00347),
 **J. Chem. Theo. Comput.** 19, 20, 6859‑6890 ''', '29 Jun **2023**')
 st.write('**Note:** The author list for the above publication was determined using alphabetical order, with the exception of the first two authors and the last five corresponding authors.')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('Turbomole_review_TOC.png')
+    st.image('Turbomole_review_TOC.webp')
     st.write('#### My Contribution')
     st.write('For this review/perspective, I wrote the section 3.14 describing my contributions to the RT-TDDFT code in `TURBOMOLE` which can now perform high harmonic generation simulations.  \nAdditionally, I wrote the section 3.15.2. describing my work on the molecular and periodic DFT-based embedding coupled with RT-TDDFT and wave function methods.')
 
@@ -356,7 +356,7 @@ with st.expander("### **See more details**"):
     with col1:
       st.write(' ')
     with col2:
-      st.image('TPP_HHG_Cover_Picture.png', use_column_width=True)
+      st.image('TPP_HHG_Cover_Picture.webp', use_column_width=True)
     with col3:
         st.write(' ')
     col2.write('[Cover link](https://onlinelibrary.wiley.com/doi/abs/10.1002/adom.202370058)')
@@ -367,7 +367,7 @@ txt('''**M. Sharma**, and M. Sierka [*Efficient Implementation of Density Functi
 **J. Chem. Theo. Comput.** 18, 11, 6892-6904 ***[ON SUPPLEMENTARY COVER🔖]*** ''', '12 Oct **2022**')
 with st.expander("### **See more details**"):
     st.write('#### Graphical Abstract')
-    st.image('DFET_TOC.png', use_column_width=True)
+    st.image('DFET_TOC.webp', use_column_width=True)
     st.write('#### Supplementary Cover Page')
     col1, col2, col3 = st.columns(3)
     with col1:
