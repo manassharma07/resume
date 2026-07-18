@@ -868,15 +868,15 @@
           <!-- Quick stats -->
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-val">13</span>
+              <span class="stat-val">14</span>
               <span class="stat-label">Publications</span>
             </div>
             <div class="stat">
-              <span class="stat-val">488</span>
+              <span class="stat-val" data-scholar-metric="citations">491+</span>
               <span class="stat-label">Citations</span>
             </div>
             <div class="stat">
-              <span class="stat-val">8</span>
+              <span class="stat-val" data-scholar-metric="h_index">8</span>
               <span class="stat-label">h-index</span>
             </div>
           </div>
@@ -896,6 +896,13 @@
 
       <div class="news-list">
         <article class="news-item anim anim-d1">
+          <span class="news-date">Jul 17, 2026</span>
+          <div>
+            <h3>NPDF awarded</h3>
+            <p>Awarded an NPDF for a project on the ML-accelerated study of MoS<sub>2</sub> thin-film deposition.</p>
+          </div>
+        </article>
+        <article class="news-item anim anim-d1">
           <span class="news-date">Jul 8, 2026</span>
           <div>
             <h3>MLIP Studio launched</h3>
@@ -910,14 +917,14 @@
           </div>
         </article>
         <article class="news-item anim anim-d2">
-          <span class="news-date">Jan 2026</span>
+          <span class="news-date">Jan 24, 2026</span>
           <div>
             <h3>Best Oral Presentation Award</h3>
             <p>Won the Best Oral Presentation Award for a talk at the <a href="https://chemeng.iisc.ac.in/symposium/" target="_blank" rel="noopener noreferrer">IISc Chemical Engineering Symposium 2026</a>.</p>
           </div>
         </article>
         <article class="news-item anim anim-d3">
-          <span class="news-date">Jan 2026</span>
+          <span class="news-date">Jan 01, 2026</span>
           <div>
             <h3>PyFock released</h3>
             <p><a href="https://pyfock.bragitoff.com" target="_blank" rel="noopener noreferrer">PyFock</a>, a pure-Python MIT-licensed DFT code with molecular integrals and exchange-correlation terms, was released.</p>
@@ -1191,6 +1198,15 @@
         <li class="pub-item anim anim-d1">
           <span class="pub-year">2026</span>
           <div class="pub-content">
+            <p class="pub-title">Recent Developments in TURBOMOLE</p>
+            <p class="pub-authors">Y. J. Franzke&dagger;, <strong>M. Sharma&dagger;</strong>, P. Bhasin, F. Bruder, U. Huniar, P. Komonvasee, M. Krstić, A. Nejad, A. Pausch, K. Sorathia, N. Sülzner, Ö. F. C. Tiska, A. Zhu, R. Zielke, C. Hättig*, C. Holzer*, M. Sierka*, D. P. Tew*, and F. Weigend</p>
+            <p class="pub-journal">In review at The Journal of Chemical Physics (2026) · Co-first author (&dagger; equal contribution with Yannick Franzke, whose name appears first in alphabetical order)</p>
+          </div>
+        </li>
+
+        <li class="pub-item anim anim-d1">
+          <span class="pub-year">2026</span>
+          <div class="pub-content">
             <p class="pub-title"><a href="https://arxiv.org/abs/2607.07606" target="_blank" rel="noopener noreferrer">MLIP Studio: An Open Platform for Interactive Benchmarking and Atomistic Simulations Using Machine Learning Interatomic Potentials</a></p>
             <p class="pub-authors"><strong>M. Sharma*</strong>, S. Punnathanam, and A. G. Rajan*</p>
             <p class="pub-journal">arXiv:2607.07606 (2026) · Preprint · Co-corresponding author</p>
@@ -1202,7 +1218,7 @@
           <div class="pub-content">
             <p class="pub-title"><a href="https://doi.org/10.26434/chemrxiv.15003943/v1" target="_blank" rel="noopener noreferrer">PyFock: A Just-In-Time Compiled Gaussian Basis DFT Python Code for CPU and GPU Architectures</a></p>
             <p class="pub-authors"><strong>M. Sharma*</strong> and M. Sierka*</p>
-            <p class="pub-journal">ChemRxiv (2026) · Preprint · Co-corresponding author</p>
+            <p class="pub-journal">ChemRxiv (2026) · Preprint · In review at The Journal of Physical Chemistry A · Co-corresponding author</p>
           </div>
         </li>
 
@@ -1417,6 +1433,7 @@
 
     document.querySelectorAll('.anim').forEach(el => observer.observe(el));
   </script>
+  <script src="scholar-metrics.js" defer></script>
 
 </body>
 </html>
