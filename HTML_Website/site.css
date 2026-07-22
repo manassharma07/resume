@@ -628,6 +628,11 @@ h3 {
   transition: transform 0.4s ease;
 }
 
+.tool-card img.contain-image {
+  object-fit: contain;
+  padding: 0.6rem;
+}
+
 .tool-card:hover img,
 .media-card:hover img {
   transform: scale(1.04);

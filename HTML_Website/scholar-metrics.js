@@ -36,7 +36,7 @@
     const timeout = window.setTimeout(() => controller.abort(), 9000);
 
     try {
-      const metricsUrl = new URL("api/scholar-metrics.php", document.baseURI);
+      const metricsUrl = new URL("api/scholar-profile.php", document.baseURI);
       const response = await fetch(metricsUrl, {
         cache: "no-store",
         credentials: "same-origin",
