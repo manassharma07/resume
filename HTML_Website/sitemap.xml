@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://manas.bragitoff.com/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -11,6 +12,45 @@
   <url>
     <loc>https://manas.bragitoff.com/gallery.html</loc>
     <lastmod>2026-08-01</lastmod>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/iisc-chemical-engineering-symposium-2026/answering-audience-question.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/iisc-chemical-engineering-symposium-2026/best-oral-presentation-award.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/iisc-chemical-engineering-symposium-2026/presenting-crcl3-thin-film-growth.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/iisc-chemical-engineering-symposium-2026/talk-title-slide.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/closing-acknowledgements.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/conference-dinner.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/conference-gardens.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/embedding-methods.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/embedding-results.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/embedding-talk-stage.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/embedding-talk-title.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/invited-talk-discussion.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/oxford-campus.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/periodic-embedding-applications.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/presenting-invited-talk.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/st-hildas-college.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/absorption-spectra-slide.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/celebratory-molecular-model-hat.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/high-harmonic-generation-slide.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/high-harmonic-generation-water-slide.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/molecular-model-demonstration.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/molecular-model-during-defence.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/presenting-thesis-research.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/thesis-defence-group-photo.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/wavefunction-in-dft-embedding-slide.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/phd-thesis-defence-2024/with-phd-supervisor.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/biovia-2022-wavefunction-in-dft-embedding-poster.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/icqc-2023-high-harmonic-generation-poster.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/icqc-2023-poster-presentation.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/icqnn-2022-dft-embedding-poster.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/icqnn-2022-poster-presentation.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/psi-k-2022-dft-embedding-poster.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/aicte-fdp-machine-learning-talk-2026.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/etsf-workshop-2022-imec-auditorium.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/quantum-pitch-fest-iisc-2026.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/videos/dokdok-lite-2021-talk.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/videos/emrs-fall-2021-award-winning-talk.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/videos/mmm-hub-2021-talk.webp</image:loc></image:image>
+    <image:image><image:loc>https://manas.bragitoff.com/assets/gallery/optimized/videos/turbomole-seminar-series-2022.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://manas.bragitoff.com/software.html</loc>

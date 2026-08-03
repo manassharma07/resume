@@ -6,7 +6,7 @@ header('Cache-Control: no-store, max-age=0');
 header('X-Content-Type-Options: nosniff');
 
 const SCHOLAR_AUTHOR_ID = 'WYOEL94AAAAJ';
-const REFRESH_INTERVAL = 259200; // Three days.
+const REFRESH_INTERVAL = 86400; // One day.
 
 $cacheFile = dirname(__DIR__) . '/data/scholar-metrics.json';
 $lockFile = sys_get_temp_dir() . '/manas-scholar-metrics.lock';
@@ -16,11 +16,11 @@ function fallbackMetrics(): array
 {
     return [
         'author_id' => SCHOLAR_AUTHOR_ID,
-        'citations' => 491,
+        'citations' => 503,
         'h_index' => 8,
         'i10_index' => 8,
         'source' => 'Bundled fallback',
-        'updated_at' => '2026-07-18T00:00:00Z',
+        'updated_at' => '2026-08-03T06:43:41Z',
     ];
 }
 

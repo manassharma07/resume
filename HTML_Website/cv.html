@@ -25,10 +25,37 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li class="nav-dropdown">
+          <details>
+            <summary>Gallery</summary>
+            <ul class="nav-dropdown-menu">
+              <li><a href="gallery.html">Gallery overview</a></li>
+              <li><a href="gallery.html#covers-title">Covers</a></li>
+              <li><a href="gallery.html#tocs-title">TOC Graphics</a></li>
+              <li><a href="gallery.html#research-visuals-title">Research Visuals</a></li>
+              <li><a href="gallery.html#event-albums-title">Event Albums</a></li>
+              <li><a href="gallery.html#recorded-talks-title">Recorded Talks</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="software.html">Code</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a class="active" href="cv.html">CV</a></li>
+        <li class="nav-dropdown">
+          <details>
+            <summary class="active">CV</summary>
+            <ul class="nav-dropdown-menu">
+              <li><a href="cv.html">CV overview</a></li>
+              <li><a href="cv.html#profile-title">Research</a></li>
+              <li><a href="cv.html#experience-title">Experience</a></li>
+              <li><a href="cv.html#education-title">Education</a></li>
+              <li><a href="cv.html#code-title">Software</a></li>
+              <li><a href="cv.html#awards-title">Awards</a></li>
+              <li><a href="cv.html#conferences-title">Conferences</a></li>
+              <li><a href="cv.html#skills-title">Skills</a></li>
+              <li><a href="cv.html#profiles-title">Links</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="index.html#contact">Contact</a></li>
         <li><button class="theme-toggle" type="button" data-theme-toggle onclick="toggleTheme()">Light</button></li>
       </ul>
@@ -48,6 +75,18 @@
         </div>
       </div>
     </section>
+
+    <nav class="page-index" aria-label="CV section index">
+      <span class="page-index-label">Jump to</span>
+      <a href="#profile-title">Research</a>
+      <a href="#experience-title">Experience</a>
+      <a href="#education-title">Education</a>
+      <a href="#code-title">Software</a>
+      <a href="#awards-title">Awards</a>
+      <a href="#conferences-title">Conferences</a>
+      <a href="#skills-title">Skills</a>
+      <a href="#profiles-title">Links</a>
+    </nav>
 
     <section class="section" aria-labelledby="profile-title">
       <div class="section-head">

@@ -20,6 +20,26 @@
     updateThemeLabel();
   };
 
+  function setupNavDropdowns() {
+    const dropdowns = Array.from(document.querySelectorAll(".nav-dropdown details"));
+    if (!dropdowns.length) return;
+
+    document.addEventListener("click", (event) => {
+      dropdowns.forEach((dropdown) => {
+        if (!dropdown.contains(event.target)) dropdown.removeAttribute("open");
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      dropdowns.forEach((dropdown) => {
+        if (!dropdown.open) return;
+        dropdown.removeAttribute("open");
+        dropdown.querySelector("summary")?.focus();
+      });
+    });
+  }
+
   function shuffleResearchVisuals() {
     document.querySelectorAll(".research-visuals-grid").forEach((grid, gridIndex) => {
       const originalOrder = Array.from(grid.children);
@@ -120,6 +140,14 @@
         video.playsInline = true;
         video.preload = "metadata";
         media.appendChild(video);
+      } else if (type === "youtube") {
+        const iframe = document.createElement("iframe");
+        iframe.src = src;
+        iframe.title = captionFor(trigger);
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        media.appendChild(iframe);
       } else {
         const image = document.createElement("img");
         image.src = src;
@@ -151,7 +179,8 @@
 
     triggers.forEach((trigger) => {
       trigger.style.cursor = "zoom-in";
-      trigger.addEventListener("click", () => {
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
         currentGroup = groupFor(trigger);
         currentIndex = currentGroup.indexOf(trigger);
         lastTrigger = trigger;
@@ -179,6 +208,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     updateThemeLabel();
+    setupNavDropdowns();
     shuffleResearchVisuals();
     setupLightbox();
   });

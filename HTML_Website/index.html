@@ -132,7 +132,8 @@
       list-style: none;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .nav-dropdown summary {
       font-family: var(--font-mono);
       font-size: 0.78rem;
       letter-spacing: 0.08em;
@@ -141,7 +142,53 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    .nav-links a:hover,
+    .nav-dropdown summary:hover,
+    .nav-dropdown details[open] summary { color: var(--accent); text-decoration: none; }
+
+    .nav-dropdown details { position: relative; }
+    .nav-dropdown summary { list-style: none; cursor: pointer; user-select: none; }
+    .nav-dropdown summary::-webkit-details-marker { display: none; }
+    .nav-dropdown summary::after {
+      content: "▾";
+      display: inline-block;
+      margin-left: 0.35rem;
+      color: var(--accent);
+      font-size: 0.72rem;
+      transition: transform 0.2s ease;
+    }
+    .nav-dropdown details[open] summary::after { transform: rotate(180deg); }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 0.75rem);
+      left: 50%;
+      min-width: 230px;
+      padding: 0.45rem;
+      list-style: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      box-shadow: var(--shadow-sm);
+      transform: translateX(-50%);
+    }
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 100%;
+      left: 0;
+      height: 0.8rem;
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.55rem 0.65rem;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover,
+    .nav-dropdown-menu a:focus-visible {
+      background: var(--bg-subtle);
+      outline: none;
+    }
 
     /* Dark/Light toggle */
     .theme-toggle {
@@ -649,6 +696,33 @@
       gap: 1rem;
     }
 
+    .news-list {
+      max-height: 28rem;
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent-dim) var(--bg-subtle);
+      padding-right: 0.75rem;
+    }
+
+    .news-list:focus-visible {
+      outline: 1px solid var(--accent);
+      outline-offset: 0.45rem;
+    }
+
+    .news-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .news-list::-webkit-scrollbar-track {
+      background: var(--bg-subtle);
+    }
+
+    .news-list::-webkit-scrollbar-thumb {
+      background: var(--accent-dim);
+      border-radius: 8px;
+    }
+
     .news-item, .timeline-item, .code-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -812,10 +886,37 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li class="nav-dropdown">
+          <details>
+            <summary>Gallery</summary>
+            <ul class="nav-dropdown-menu">
+              <li><a href="gallery.html">Gallery overview</a></li>
+              <li><a href="gallery.html#covers-title">Covers</a></li>
+              <li><a href="gallery.html#tocs-title">TOC Graphics</a></li>
+              <li><a href="gallery.html#research-visuals-title">Research Visuals</a></li>
+              <li><a href="gallery.html#event-albums-title">Event Albums</a></li>
+              <li><a href="gallery.html#recorded-talks-title">Recorded Talks</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="software.html">Code</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li class="nav-dropdown">
+          <details>
+            <summary>CV</summary>
+            <ul class="nav-dropdown-menu">
+              <li><a href="cv.html">CV overview</a></li>
+              <li><a href="cv.html#profile-title">Research</a></li>
+              <li><a href="cv.html#experience-title">Experience</a></li>
+              <li><a href="cv.html#education-title">Education</a></li>
+              <li><a href="cv.html#code-title">Software</a></li>
+              <li><a href="cv.html#awards-title">Awards</a></li>
+              <li><a href="cv.html#conferences-title">Conferences</a></li>
+              <li><a href="cv.html#skills-title">Skills</a></li>
+              <li><a href="cv.html#profiles-title">Links</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -871,7 +972,7 @@
               <span class="stat-label">Publications</span>
             </div>
             <div class="stat">
-              <span class="stat-val" data-scholar-metric="citations">491+</span>
+              <span class="stat-val" data-scholar-metric="citations">503</span>
               <span class="stat-label">Citations</span>
             </div>
             <div class="stat">
@@ -893,7 +994,7 @@
       <p class="section-label">Updates</p>
       <h2 class="section-title">News</h2>
 
-      <div class="news-list">
+      <div class="news-list" tabindex="0" aria-label="Scrollable news updates">
         <article class="news-item anim anim-d1">
           <span class="news-date">Jul 17, 2026</span>
           <div>
@@ -1432,6 +1533,24 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+
+    /* ---------- Navigation dropdowns ---------- */
+    const navDropdowns = Array.from(document.querySelectorAll('.nav-dropdown details'));
+    if (navDropdowns.length) {
+      document.addEventListener('click', event => {
+        navDropdowns.forEach(dropdown => {
+          if (!dropdown.contains(event.target)) dropdown.removeAttribute('open');
+        });
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') return;
+        navDropdowns.forEach(dropdown => {
+          if (!dropdown.open) return;
+          dropdown.removeAttribute('open');
+          dropdown.querySelector('summary').focus();
+        });
+      });
+    }
   </script>
   <script src="scholar-metrics.js?v=20260718-2" defer></script>
 
