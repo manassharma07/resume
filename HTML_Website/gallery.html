@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://manas.bragitoff.com/gallery.html">
   <meta property="og:image" content="https://manas.bragitoff.com/assets/gallery/optimized/iisc-chemical-engineering-symposium-2026/best-oral-presentation-award.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="site.css?v=20260808-3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,7 +78,8 @@
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a class="brand" href="index.html">Manas <span>Sharma</span></a>
-      <ul class="nav-links">
+      <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      <ul class="nav-links" id="primary-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li class="nav-dropdown">
@@ -196,7 +197,8 @@
         </div>
         <p>These research visuals were designed by me. The molecular and crystal structures shown throughout were visualized using <a href="software.html#visual-tools-title">CrysX 3D Viewer</a>, my in-house visualization application.</p>
       </div>
-      <div class="research-visuals-grid">
+      <div class="research-visuals-scroll" role="region" aria-labelledby="research-visuals-title" tabindex="0">
+        <div class="research-visuals-grid">
         <button class="research-visual" type="button" data-lightbox="assets/publications/research_visuals/computational-material-science.webp" data-lightbox-group="research-visuals" data-caption="Computational materials science" aria-label="Open computational materials science visual">
           <img src="assets/publications/research_visuals/computational-material-science.webp" alt="Computational materials science visual" loading="lazy" decoding="async">
           <span class="research-visual-caption">Computational materials science</span>
@@ -372,6 +374,7 @@
           <span class="research-visual-type">Video</span>
           <span class="research-visual-caption">Hexagonal boron nitride animation</span>
         </button>
+        </div>
       </div>
     </section>
 
@@ -615,6 +618,6 @@
       <span><a href="index.html">Home</a> | <a href="publications.html">Publications</a> | <a href="gallery.html">Gallery</a> | <a href="software.html">Code</a> | <a href="teaching.html">Teaching</a> | <a href="cv.html">CV</a></span>
     </div>
   </footer>
-  <script src="site.js" defer></script>
+  <script src="site.js?v=20260808-1" defer></script>
 </body>
 </html>

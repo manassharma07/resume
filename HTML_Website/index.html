@@ -65,6 +65,8 @@
     html {
       scroll-behavior: smooth;
       font-size: 16px;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -124,6 +126,29 @@
       font-weight: normal;
     }
     .nav-logo span { color: var(--accent); }
+
+    .nav-menu-toggle {
+      display: none;
+      min-height: 38px;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--text);
+      background: var(--bg-card);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .nav-menu-toggle:hover,
+    .nav-menu-toggle:focus-visible,
+    .nav-inner.menu-open .nav-menu-toggle {
+      color: var(--accent);
+      border-color: var(--accent);
+      outline: none;
+    }
 
     .nav-links {
       display: flex;
@@ -852,6 +877,78 @@
        RESPONSIVE
        ============================================================ */
     @media (max-width: 900px) {
+      .nav-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0 0.75rem;
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 0 1.25rem;
+      }
+
+      .nav-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        max-height: calc(100vh - 60px);
+        max-height: calc(100dvh - 60px);
+        padding: 0.35rem 0 1rem;
+        overflow-y: auto;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-inner.menu-open .nav-links {
+        display: flex;
+      }
+
+      .nav-links > li {
+        width: 100%;
+        border-top: 1px solid var(--border);
+      }
+
+      .nav-links > li > a,
+      .nav-dropdown summary {
+        display: block;
+        width: 100%;
+        padding: 0.72rem 0.15rem;
+      }
+
+      .nav-links .theme-toggle {
+        margin-top: 0.65rem;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0 0 0.5rem;
+        padding: 0.25rem 0 0.35rem 0.65rem;
+        border: 0;
+        border-left: 1px solid var(--accent-dim);
+        box-shadow: none;
+        transform: none;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 0.55rem 0.65rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+
       .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -865,7 +962,6 @@
       .about-grid { grid-template-columns: 1fr; }
       .research-grid { grid-template-columns: 1fr 1fr; }
       .timeline-list, .code-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
     }
 
     @media (max-width: 600px) {
@@ -883,7 +979,8 @@
   <nav>
     <div class="nav-inner">
       <span class="nav-logo">Manas <span>Sharma</span></span>
-      <ul class="nav-links">
+      <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      <ul class="nav-links" id="primary-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li class="nav-dropdown">
@@ -918,11 +1015,13 @@
           </details>
         </li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <span class="theme-icon" id="theme-icon">☀</span>
+            <span id="theme-label">Light</span>
+          </button>
+        </li>
       </ul>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon" id="theme-icon">☀</span>
-        <span id="theme-label">Light</span>
-      </button>
     </div>
   </nav>
 
@@ -1534,6 +1633,37 @@
 
     document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
+    /* ---------- Mobile navigation ---------- */
+    const navInner = document.querySelector('nav .nav-inner');
+    const navMenuToggle = navInner?.querySelector('.nav-menu-toggle');
+    const navMenuId = navMenuToggle?.getAttribute('aria-controls');
+    const navMenu = navMenuId ? document.getElementById(navMenuId) : null;
+
+    function closeMobileMenu(restoreFocus = false) {
+      if (!navInner || !navMenuToggle) return;
+      navInner.classList.remove('menu-open');
+      navMenuToggle.setAttribute('aria-expanded', 'false');
+      navMenuToggle.textContent = 'Menu';
+      if (restoreFocus) navMenuToggle.focus();
+    }
+
+    if (navInner && navMenuToggle && navMenu) {
+      navMenuToggle.addEventListener('click', () => {
+        const willOpen = !navInner.classList.contains('menu-open');
+        navInner.classList.toggle('menu-open', willOpen);
+        navMenuToggle.setAttribute('aria-expanded', String(willOpen));
+        navMenuToggle.textContent = willOpen ? 'Close' : 'Menu';
+      });
+
+      navMenu.addEventListener('click', event => {
+        if (event.target.closest('a')) closeMobileMenu();
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) closeMobileMenu();
+      });
+    }
+
     /* ---------- Navigation dropdowns ---------- */
     const navDropdowns = Array.from(document.querySelectorAll('.nav-dropdown details'));
     if (navDropdowns.length) {
@@ -1544,6 +1674,7 @@
       });
       document.addEventListener('keydown', event => {
         if (event.key !== 'Escape') return;
+        if (navInner?.classList.contains('menu-open')) closeMobileMenu(true);
         navDropdowns.forEach(dropdown => {
           if (!dropdown.open) return;
           dropdown.removeAttribute('open');
