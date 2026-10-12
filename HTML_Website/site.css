@@ -850,6 +850,7 @@ h3 {
   position: relative;
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 10;
   padding: 0;
   overflow: hidden;
   border: 0;
@@ -864,7 +865,8 @@ h3 {
 .album-cover img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
+  aspect-ratio: auto;
   object-fit: cover;
   transition: transform 0.35s ease, filter 0.35s ease;
 }

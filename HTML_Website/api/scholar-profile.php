@@ -16,7 +16,7 @@ function fallbackMetrics(): array
 {
     return [
         'author_id' => SCHOLAR_AUTHOR_ID,
-        'citations' => 503,
+        'citations' => 545,
         'h_index' => 8,
         'i10_index' => 8,
         'source' => 'Bundled fallback',
