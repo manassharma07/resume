@@ -32,3 +32,21 @@ Upload all of `HTML_Website`, including the three new HTML pages, `album.css`, t
 Use URL Inspection to check that Google can retrieve each page and its images. Google controls indexing and rankings; these changes improve discoverability without guaranteeing placement. Photographs are associated with their subject and conference, without assigning unverified photographer credits or licenses.
 
 Google's guidance: [image SEO](https://developers.google.com/search/docs/appearance/google-images), [image sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps), and [requesting a recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
+
+## November 2026 image metadata update
+
+The existing layout, navigation, photo order, image URLs, and visible captions are preserved. The homepage and album pages share a stable Person identity linked to Manas Sharma's ORCID and academic profiles. The main gallery now includes ImageObject descriptions, dimensions, full image URLs, and researcher associations for the existing album photographs. Large image previews are permitted on the homepage as well as the gallery/album pages.
+
+After uploading the updated HTML and sitemap to the existing host, submit `https://manas.bragitoff.com/sitemap.xml` in Google Search Console. Request indexing of the homepage, gallery, ICMS 2026, TURBOMOLE Oxford 2024, and research-poster pages. Use URL Inspection to check canonical selection and image crawlability; hosting headers or bot protection must not block Googlebot-Image. Monitor Performance with Search type set to Image for name/conference/poster queries.
+
+These changes do not publish the site or guarantee Google Images rankings. No photographer credits, licenses, or copyright ownership are inferred. Google's guidance: [image SEO](https://developers.google.com/search/docs/appearance/google-images), [recrawling](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
+
+## PyFock media coverage archive
+
+The homepage news links to `gallery.html#media-coverage`. The media section is appended after existing gallery sections; all clipping links use `data-lightbox-group="pyfock-media"`, so the existing carousel automatically includes new clippings without changes to JavaScript. Links also open the original image when JavaScript is unavailable.
+
+To add coverage, copy the original clipping into `HTML_Website/assets/media/` with a descriptive publisher/date filename, duplicate a `media-clipping` figure in `gallery.html`, and set its original dimensions, alt text, visible caption, and `data-caption`. Include newspaper name, publication date, edition, and page when known; mark missing edition details explicitly instead of inferring them from a city dateline. Add the image to `media-coverage-schema` and the gallery entry in `sitemap.xml`. Keep figures and structured data in this order: Times of India, Dainik Bhaskar, Punjab Kesari, Dainik Jagran, Amar Ujala, then others. Add further online reports to the list beneath the clippings.
+
+Dates for the Hindustan and Punjab Kesari crops come from the supplied filenames; their editions are not visible. Other captions use the printed mastheads. The original clipping files are preserved unchanged. Upload the updated homepage, gallery, stylesheet, sitemap, and assets/media directory to publish this addition.

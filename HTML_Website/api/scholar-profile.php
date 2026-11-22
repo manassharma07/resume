@@ -16,11 +16,12 @@ function fallbackMetrics(): array
 {
     return [
         'author_id' => SCHOLAR_AUTHOR_ID,
-        'citations' => 545,
+        'citations' => 588,
+        'citations_lower_bound' => true,
         'h_index' => 8,
         'i10_index' => 8,
-        'source' => 'Bundled fallback',
-        'updated_at' => '2026-08-03T06:43:41Z',
+        'source' => 'CV + Google Scholar cache',
+        'updated_at' => '2026-11-20T00:00:00Z',
     ];
 }
 

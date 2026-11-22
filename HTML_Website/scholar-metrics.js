@@ -15,7 +15,8 @@
     metricTargets.forEach((target) => {
       const key = target.getAttribute("data-scholar-metric");
       if (!metricKeys.has(key) || !isMetric(data[key])) return;
-      target.textContent = numberFormatter.format(data[key]);
+      const prefix = key === "citations" && data.citations_lower_bound === true ? ">" : "";
+      target.textContent = prefix + numberFormatter.format(data[key]);
     });
 
     const updatedAt = new Date(data.updated_at);
@@ -24,10 +25,13 @@
     const formattedDate = updatedAt.toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
-      day: "numeric"
+      day: "numeric",
+      timeZone: "UTC"
     });
     document.querySelectorAll("[data-scholar-updated]").forEach((target) => {
-      target.textContent = `last refreshed ${formattedDate}`;
+      target.textContent = data.source === "CV + Google Scholar cache"
+        ? `from the ${formattedDate} CV (citations and h-index); i10-index from the previous Scholar cache`
+        : `last refreshed ${formattedDate}`;
     });
   }
 

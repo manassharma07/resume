@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://manas.bragitoff.com/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://manas.bragitoff.com/publications.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://manas.bragitoff.com/gallery.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image>
       <image:loc>https://manas.bragitoff.com/assets/gallery/optimized/iisc-chemical-engineering-symposium-2026/answering-audience-question.webp</image:loc>
     </image:image>
@@ -188,6 +188,27 @@
     <image:image>
       <image:loc>https://manas.bragitoff.com/assets/gallery/optimized/icms-2026/conference-discussion.webp</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-times-of-india-2026-11-22.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-dainik-bhaskar-2026-11-22.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-punjab-kesari-2026-11-22.jpeg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-dainik-jagran-2026-11-22.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-amar-ujala-2026-11-22.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-hindustan-2026-11-22.jpeg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://manas.bragitoff.com/assets/media/pyfock-manas-sharma-padhan-times-2026-11-22.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://manas.bragitoff.com/software.html</loc>
@@ -199,11 +220,11 @@
   </url>
   <url>
     <loc>https://manas.bragitoff.com/cv.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://manas.bragitoff.com/icms-2026.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <image:image>
       <image:loc>https://manas.bragitoff.com/assets/gallery/optimized/icms-2026/mlip-studio-poster-presentation.webp</image:loc>
     </image:image>
@@ -267,7 +288,7 @@
   </url>
   <url>
     <loc>https://manas.bragitoff.com/turbomole-oxford-2024.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <image:image>
       <image:loc>https://manas.bragitoff.com/assets/gallery/optimized/turbomole-oxford-2024/closing-acknowledgements.webp</image:loc>
     </image:image>
@@ -307,7 +328,7 @@
   </url>
   <url>
     <loc>https://manas.bragitoff.com/research-posters.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <image:image>
       <image:loc>https://manas.bragitoff.com/assets/gallery/optimized/posters/icms-2026-ml-crcl3-thin-film-poster.webp</image:loc>
     </image:image>
